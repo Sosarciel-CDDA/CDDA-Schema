@@ -57,7 +57,7 @@ export async function buildCddaSchema(outPath?:string){
     outPath = outPath??path.join(process.cwd(),"CddaSchema");
     //编译schema
     //await UtilFunc.exec("npm run generate-schema");
-    await UtilFunc.exec(`typescript-json-schema schema-tsconfig.json * --out ${outPath}/schemas.json --required --strictNullChecks --aliasRefs`);
+    await UtilFunc.exec(`typescript-json-schema tsconfig.json * --out ${outPath}/schemas.json --required --strictNullChecks --aliasRefs`);
     //await UtilFunc.exec("typescript-json-schema tsconfig.json * --out schema/schemas.json --required --strictNullChecks");
     //展开
     const schemasPath = path.join(outPath,"schemas.json");

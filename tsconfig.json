@@ -15,5 +15,5 @@
         }
     },
     "include": ["./src/**/*.ts", "./src/**/*.js"],
-    "exclude": ["./node_modules/**/*", "./src/Schema/**/*.ts"]
+    "exclude": ["./node_modules/**/*"]
 }

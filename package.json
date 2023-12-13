@@ -1,0 +1,22 @@
+{
+  "name": "cdda-schema",
+  "version": "1.0.0",
+  "description": "cdda的schema验证",
+  "main": "index.js",
+  "bin": {
+    "build-cdda-schema": "./command/build-cdda-schema.js"
+  },
+  "scripts": {
+    "build": "npx tsc & npx tsc-alias",
+    "build-cdda-schema": "node ./command/build-cdda-schema.js"
+  },
+  "author": "zwa73",
+  "license": "ISC",
+  "dependencies": {
+    "@zwa73/utils": "^1.0.47",
+    "commander": "^11.1.0",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.3.3",
+    "typescript-json-schema": "^0.62.0"
+  }
+}

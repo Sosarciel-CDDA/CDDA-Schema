@@ -1,0 +1,2 @@
+node "./dist/SchemaTest"
+pause

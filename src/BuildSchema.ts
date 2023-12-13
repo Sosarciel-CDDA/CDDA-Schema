@@ -55,11 +55,12 @@ export async function expandSchema(schemasPath:string,withOutTypes:string[]=[]){
         if(schema.type != "object" && schema.type != undefined && !withOutTypes.includes(typeName)) continue;
         if((/^.+_[0-9]/).test(typeName) || (/^{./).test(typeName)) continue;
 
+        const basename = path.basename(schemasPath);
         const tpath = path.join(path.dirname(schemasPath),`${typeName}.schema.json`);
         if(!isPathValid(tpath)) continue;
         UtilFT.writeJSONFile(path.join(path.dirname(schemasPath),`${typeName}.schema.json`),{
             "$schema": "http://json-schema.org/draft-07/schema#",
-            "$ref": `schemas.json#/definitions/${typeName}`
+            "$ref": `${basename}#/definitions/${typeName}`
         });
     }
 }

@@ -19,7 +19,7 @@ const outputDir = opts.output;
 async function main() {
     // 调用 buildSchema 函数
     await buildCddaSchema(outputDir);
-    console.log("完成");
+    console.log("完成 buildCddaSchema");
 }
 
 main().catch(error => {

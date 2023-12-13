@@ -7,7 +7,7 @@
     "build-cdda-schema": "./command/build-cdda-schema.js"
   },
   "scripts": {
-    "build": "npx tsc & npx tsc-alias",
+    "build": "node generate-exports.js & npx tsc & npx tsc-alias",
     "build-cdda-schema": "node ./command/build-cdda-schema.js"
   },
   "author": "zwa73",

@@ -34,7 +34,7 @@ UtilFT.writeJSONFile(path.join(process.cwd(),"schemas"),schema as any);
 function isPathValid(filePath) {
     if (filePath.length > 255)
         return false;
-    const invalidCharacters = ['<', '>', ':', '"', '|', '?', '*'];
+    const invalidCharacters = ['<', '>', '"', '|', '?', '*'];
     for (let i = 0; i < invalidCharacters.length; i++) {
         if (filePath.includes(invalidCharacters[i]))
             return false;
@@ -60,7 +60,7 @@ async function expandSchema(schemasPath, withOutTypes = []) {
         const tpath = path.join(path.dirname(schemasPath), `${typeName}.schema.json`);
         if (!isPathValid(tpath))
             continue;
-        utils_1.UtilFT.writeJSONFile(path.join(path.dirname(schemasPath), `${typeName}.schema.json`), {
+        utils_1.UtilFT.writeJSONFile(tpath, {
             "$schema": "http://json-schema.org/draft-07/schema#",
             "$ref": `${basename}#/definitions/${typeName}`
         });
@@ -70,12 +70,13 @@ exports.expandSchema = expandSchema;
 async function buildCddaSchema(outPath) {
     outPath = outPath ?? path.join(process.cwd(), "CddaSchema");
     const configPath = path.join(__dirname, "..", "tsconfig.json");
+    const schemasPath = path.join(outPath, "CddaSchemas.json");
     //编译schema
     //await UtilFunc.exec("npm run generate-schema");
-    await utils_1.UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${outPath}/CddaSchemas.json --required --strictNullChecks --aliasRefs`);
+    await utils_1.UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${schemasPath} --required --strictNullChecks --aliasRefs`);
     //await UtilFunc.exec("typescript-json-schema tsconfig.json * --out schema/schemas.json --required --strictNullChecks");
     //展开
-    const schemasPath = path.join(outPath, "CddaSchemas.json");
+    console.log(schemasPath);
     await expandSchema(schemasPath, ["AnyCddaJsonList"]);
 }
 exports.buildCddaSchema = buildCddaSchema;

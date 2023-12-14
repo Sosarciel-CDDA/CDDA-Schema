@@ -39,6 +39,7 @@ export type EocEffectList = [
     LoseEffect,
     SetHP,
     AddStrVar,
+    SetString,
     AddTimeVar,
     AddRandStrVar,
     NoParamEffect,
@@ -271,6 +272,15 @@ type AddStrVar = TalkerVar<{
     /**变量值 */
     value: string;
 }, "add_var"> & VarComment;
+/**赋值文本变量 */
+type SetString = {
+    /**文本值 */
+    set_string_var: StrObj | StrObj[];
+    /**赋值目标 */
+    target_var: StrObj;
+    /**格式化文本标签 */
+    parse_tags?: boolean;
+};
 /**添加时间变量 */
 type AddTimeVar = TalkerVar<{
     add_var: string;

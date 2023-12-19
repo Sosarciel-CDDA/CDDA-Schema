@@ -90,7 +90,7 @@ export type EnchCon =(
 /**附魔数值增幅 */
 export type EnchModVal = {
     /**附魔增幅类型 */
-    value    :EnchValType;
+    value    : EnchValType;
     /**倍率增幅 1为+100% */
     multiply?: (NumObj);
     /**加值增幅 在计算倍率前先添加 */

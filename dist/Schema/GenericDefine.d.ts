@@ -19,6 +19,10 @@ import { DamageInfoOrder, DamageType, DamageTypeID } from "./DameType";
 import { AmmoEffect } from "./AmmoEffect";
 import { ModTileset } from "./ModTileset";
 import { ActivityType } from "./ActivityType";
+import { VehiclePart } from "./VehiclePart";
+import { ToolQuality } from "./ToolQuality";
+import { TalkTopic } from "./TalkTopic";
+import { Requirement } from "./Requirement";
 /**描述性文本 */
 export type DescText = string | {
     /**单数名 */
@@ -250,6 +254,6 @@ export declare const RatTypeList: readonly ["good", "neutral", "bad", "mixed"];
 /**效果评价 */
 export type RatType = typeof RatTypeList[number];
 /**任何Cdda的Json */
-export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType;
+export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic;
 /**任何Cdda的Json 组成的数组*/
-export type AnyCddaJsonList = AnyCddaJson[];
+export type AnyCddaJsonList = (AnyCddaJson)[];

@@ -1,4 +1,4 @@
-import { JObject } from "@zwa73/utils";
+import { JObject, JToken } from "@zwa73/utils";
 import { AmmunitionType } from "./AmmiunitionType";
 import { Effect } from "./Effect";
 import { Enchantment } from "./Enchantment";
@@ -20,6 +20,10 @@ import { DamageInfoOrder, DamageType, DamageTypeID } from "./DameType";
 import { AmmoEffect } from "./AmmoEffect";
 import { ModTileset } from "./ModTileset";
 import { ActivityType } from "./ActivityType";
+import { VehiclePart } from "./VehiclePart";
+import { ToolQuality } from "./ToolQuality";
+import { TalkTopic } from "./TalkTopic";
+import { Requirement } from "./Requirement";
 
 /**描述性文本 */
 export type DescText = string|{
@@ -329,11 +333,16 @@ export const RatTypeList = [
 /**效果评价 */
 export type RatType = typeof RatTypeList[number];
 
+/**任何其他 */
+type AnyOtherObject = {
+    "type":JToken;
+};
+
 /**任何Cdda的Json */
-export type AnyCddaJson =AnyItem|Eoc|Mutation|DamageType|DamageInfoOrder|
+export type AnyCddaJson = AnyItem|Eoc|Mutation|DamageType|DamageInfoOrder|
     AmmunitionType|Enchantment|Flag|ItemGroup|Monster|
-    NpcClass|NpcInstance|OverlayOrdering|SoundEffect|
+    NpcClass|NpcInstance|OverlayOrdering|SoundEffect|Requirement|
     Effect|Spell|MathFunction|AmmoEffect|MissionDefinition|
-    ModTileset|ActivityType;
+    ModTileset|ActivityType|VehiclePart|ToolQuality|TalkTopic;
 /**任何Cdda的Json 组成的数组*/
-export type AnyCddaJsonList = AnyCddaJson[];
+export type AnyCddaJsonList = (AnyCddaJson)[];

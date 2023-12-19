@@ -36,22 +36,22 @@ export type DescText = string|{
     /**翻译上下文 */
     ctxt?: string;
 };
-/**辅助Schema解析的字符串构造数字 */
+/**辅助Schema解析的字符串构造浮点数字 */
 type SchemaNumber = `${number}${"."|""}${number|""}`;
 /**重量 */
-export type Weight = number|`${SchemaNumber} ${"kg"|"g"}`;
+export type Weight = number|`${number} ${"kg"|"g"}`;
 /**体积 */
-export type Volume = number|`${SchemaNumber} ${"L"|"ml"}`;
+export type Volume = number|`${number} ${"L"|"ml"}`;
 /**长度 */
-export type Length = number|`${SchemaNumber} ${"mm"|"cm"|"m"|"km"}`;
+export type Length = number|`${number} ${"mm"|"cm"|"m"|"km"}`;
 /**能量 */
-export type Energy = number|`${SchemaNumber} ${"mJ"|"kJ"}`;
+export type Energy = number|`${number} ${"mJ"|"kJ"}`;
 /**能耗 */
-export type Power = number|`${SchemaNumber} ${"mW"}`;
+export type Power = number|`${number} ${"mW"}`;
 /**价格 */
-export type Price = number|`${SchemaNumber} ${"USD"|"cent"|"kUSD"}`;
+export type Price = number|`${number} ${"USD"|"cent"|"kUSD"}`;
 /**时间 PERMANENT 为永久 */
-export type Time = number|`${SchemaNumber} ${"s"|"m"|"h"|"d"}`|"PERMANENT";
+export type Time = number|`${number} ${"s"|"m"|"h"|"d"}`|"PERMANENT";
 /**可用的颜色列表 */
 export const ColorList = [
     "black"         ,

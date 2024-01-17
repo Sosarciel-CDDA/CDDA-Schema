@@ -4,7 +4,7 @@ import {
     ItemGroupID,MonsterID,MutationID,NpcClassID,NpcInstanceID, EnchantmentID
 } from "./Schema";
 
-
+/**ModID生成工具 */
 export class ModDefine{
     /**mod物品前缀 */
     MOD_PREFIX:string;
@@ -75,9 +75,12 @@ export class ModDefine{
     genTalkTopicID(id:string):TalkTopicID{
         return `${this.MOD_PREFIX}_TALKTC_${id}`;
     }
-    /**生成适用此mod的触发eoc 
-     * @param forceId 强制使用原id
-    */
+    /**生成适用此mod的触发eoc  
+     * @param id        - eocid  
+     * @param effect    - eoc效果数组  
+     * @param condition - eoc条件  
+     * @param forceId   - 强制使用原id  
+     */
     genActEoc(id:string,effect:EocEffect[],condition?: (BoolObj),forceId:boolean=false):Eoc{
         return {
             type:"effect_on_condition",

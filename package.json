@@ -13,7 +13,9 @@
   "author": "zwa73",
   "license": "ISC",
   "dependencies": {
-    "@zwa73/utils": "^1.0.47",
+    "@zwa73/utils": "^1.0.60",
+    "cdda-event": "file:CDDA-Event",
+    "cdda-schema": "file:CDDA-Schema",
     "commander": "^11.1.0",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.3.3",

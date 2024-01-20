@@ -1,4 +1,5 @@
 import { AmmunitionTypeID, BoolObj, Eoc, EocEffect, SpellID, EffectID, TalkTopicID, EocID, FlagID, AmmoID, ArmorID, GenericID, GunID, ItemGroupID, MonsterID, MutationID, NpcClassID, NpcInstanceID, EnchantmentID } from "./Schema";
+/**ModID生成工具 */
 export declare class ModDefine {
     /**mod物品前缀 */
     MOD_PREFIX: string;
@@ -36,7 +37,10 @@ export declare class ModDefine {
     /**生成适用于此mod的 TalkTopic ID */
     genTalkTopicID(id: string): TalkTopicID;
     /**生成适用此mod的触发eoc
-     * @param forceId 强制使用原id
-    */
+     * @param id        - eocid
+     * @param effect    - eoc效果数组
+     * @param condition - eoc条件
+     * @param forceId   - 强制使用原id
+     */
     genActEoc(id: string, effect: EocEffect[], condition?: (BoolObj), forceId?: boolean): Eoc;
 }

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModDefine = void 0;
+/**ModID生成工具 */
 class ModDefine {
     /**mod物品前缀 */
     MOD_PREFIX;
@@ -72,8 +73,11 @@ class ModDefine {
         return `${this.MOD_PREFIX}_TALKTC_${id}`;
     }
     /**生成适用此mod的触发eoc
-     * @param forceId 强制使用原id
-    */
+     * @param id        - eocid
+     * @param effect    - eoc效果数组
+     * @param condition - eoc条件
+     * @param forceId   - 强制使用原id
+     */
     genActEoc(id, effect, condition, forceId = false) {
         return {
             type: "effect_on_condition",

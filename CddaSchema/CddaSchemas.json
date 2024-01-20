@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"definitions": {
 		"ActivityType": {
-			"$ref": "#/definitions/__type_121"
+			"$ref": "#/definitions/__type_122"
 		},
 		"ActivityTypeID": {
 			"anyOf": [
@@ -286,7 +286,7 @@
 										},
 										{
 											"items": {
-												"$ref": "#/definitions/__type_62",
+												"$ref": "#/definitions/__type_63",
 												"description": "远程武器伤害"
 											},
 											"type": "array"
@@ -1172,10 +1172,10 @@
 			"description": "弹药AOE效果"
 		},
 		"AmmoAoe_1": {
-			"$ref": "#/definitions/__type_59"
+			"$ref": "#/definitions/__type_60"
 		},
 		"AmmoEffect": {
-			"$ref": "#/definitions/__type_110"
+			"$ref": "#/definitions/__type_111"
 		},
 		"AmmoEffectID": {
 			"anyOf": [
@@ -1289,10 +1289,10 @@
 			"description": "弹药轨迹效果"
 		},
 		"AmmoTrail_1": {
-			"$ref": "#/definitions/__type_60"
+			"$ref": "#/definitions/__type_61"
 		},
 		"AmmunitionType": {
-			"$ref": "#/definitions/__type_114"
+			"$ref": "#/definitions/__type_115"
 		},
 		"AmmunitionTypeID": {
 			"anyOf": [
@@ -22153,16 +22153,8 @@
 			"description": "施法"
 		},
 		"CddaID": {
-			"anyOf": [
-				{
-					"pattern": "^_.*$",
-					"type": "string"
-				},
-				{
-					"pattern": "^.*_.*$",
-					"type": "string"
-				}
-			]
+			"description": "自定义的ID",
+			"type": "string"
 		},
 		"Color": {
 			"description": "可用的颜色",
@@ -23718,7 +23710,7 @@
 			"description": "控制要求"
 		},
 		"ControlReq_1": {
-			"$ref": "#/definitions/__type_93"
+			"$ref": "#/definitions/__type_94"
 		},
 		"Copyfrom": {
 			"allOf": [
@@ -23774,7 +23766,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_72"
+					"$ref": "#/definitions/__type_73"
 				}
 			],
 			"description": "copyfrom变体"
@@ -23882,7 +23874,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_74"
+					"$ref": "#/definitions/__type_75"
 				}
 			],
 			"description": "copyfrom变体"
@@ -23941,7 +23933,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_75"
+					"$ref": "#/definitions/__type_76"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24000,7 +23992,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_76"
+					"$ref": "#/definitions/__type_77"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24059,7 +24051,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_84"
+					"$ref": "#/definitions/__type_85"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24118,7 +24110,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_85"
+					"$ref": "#/definitions/__type_86"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24219,7 +24211,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_86"
+					"$ref": "#/definitions/__type_87"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24278,7 +24270,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_87"
+					"$ref": "#/definitions/__type_88"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24324,7 +24316,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_95"
+					"$ref": "#/definitions/__type_96"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24373,7 +24365,7 @@
 					"type": "object"
 				},
 				{
-					"$ref": "#/definitions/__type_96"
+					"$ref": "#/definitions/__type_97"
 				}
 			],
 			"description": "copyfrom变体"
@@ -24396,10 +24388,10 @@
 			"description": "自定义的肢体"
 		},
 		"DamageInfoOrder": {
-			"$ref": "#/definitions/__type_101"
+			"$ref": "#/definitions/__type_102"
 		},
 		"DamageType": {
-			"$ref": "#/definitions/__type_100"
+			"$ref": "#/definitions/__type_101"
 		},
 		"DamageTypeID": {
 			"anyOf": [
@@ -24629,12 +24621,31 @@
 		"DefineGenericFlag": {
 			"enum": [
 				"ACTIVATE_ON_PLACE",
+				"ALLOWS_BODY_BLOCK",
+				"ALWAYS_TWOHAND",
+				"BIONIC_WEAPON",
+				"DIAMOND",
 				"DURABLE_MELEE",
+				"MESSY",
+				"NONCONDUCTIVE",
+				"NO_CVD",
 				"NO_RELOAD",
+				"NO_SALVAGE",
+				"NO_UNWIELD",
+				"POLEARM",
+				"REACH3",
+				"REACH_ATTACK",
+				"SHEATH_AXE",
+				"SHEATH_GOLF",
+				"SHEATH_KNIFE",
+				"SHEATH_SWORD",
 				"SINGLE_USE",
+				"SPEAR",
 				"TARDIS",
 				"TRADER_KEEP",
+				"UNARMED_WEAPON",
 				"UNBREAKABLE",
+				"WHIP",
 				"ZERO_WEIGHT"
 			],
 			"type": "string"
@@ -29646,7 +29657,7 @@
 			"type": "array"
 		},
 		"Effect": {
-			"$ref": "#/definitions/__type_104"
+			"$ref": "#/definitions/__type_105"
 		},
 		"EffectID": {
 			"anyOf": [
@@ -30776,7 +30787,7 @@
 			"type": "string"
 		},
 		"Enchantment": {
-			"$ref": "#/definitions/__type_102"
+			"$ref": "#/definitions/__type_103"
 		},
 		"EnchantmentID": {
 			"anyOf": [
@@ -30828,7 +30839,7 @@
 			"description": "能量"
 		},
 		"Eoc": {
-			"$ref": "#/definitions/__type_112"
+			"$ref": "#/definitions/__type_113"
 		},
 		"EocCond": {
 			"anyOf": [
@@ -32562,6 +32573,10 @@
 					]
 				},
 				{
+					"$ref": "#/definitions/Foreach",
+					"description": "遍历"
+				},
+				{
 					"enum": [
 						"drop_weapon",
 						"follow_only",
@@ -32706,10 +32721,14 @@
 				},
 				{
 					"$ref": "#/definitions/UnsetFlag"
+				},
+				{
+					"$ref": "#/definitions/Foreach",
+					"description": "遍历"
 				}
 			],
-			"maxItems": 36,
-			"minItems": 36,
+			"maxItems": 37,
+			"minItems": 37,
 			"type": "array"
 		},
 		"EocID": {
@@ -32742,10 +32761,10 @@
 			"description": "爆炸"
 		},
 		"Explosion_1": {
-			"$ref": "#/definitions/__type_61"
+			"$ref": "#/definitions/__type_62"
 		},
 		"FakeSpell": {
-			"$ref": "#/definitions/__type_52"
+			"$ref": "#/definitions/__type_53"
 		},
 		"FakeSpell_1": {
 			"$ref": "#/definitions/FakeSpell",
@@ -32917,7 +32936,7 @@
 			"type": "string"
 		},
 		"Flag": {
-			"$ref": "#/definitions/__type_99"
+			"$ref": "#/definitions/__type_100"
 		},
 		"FlagID": {
 			"anyOf": [
@@ -32939,6 +32958,67 @@
 				}
 			],
 			"description": "Flag ID格式"
+		},
+		"Foreach": {
+			"$ref": "#/definitions/__type_47"
+		},
+		"ForeachTarget": {
+			"anyOf": [
+				{
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				{
+					"pattern": "^.*$",
+					"type": "string"
+				},
+				{
+					"pattern": "^ITEMGP_.*$",
+					"type": "string"
+				},
+				{
+					"pattern": "^.*_ITEMGP_.*$",
+					"type": "string"
+				},
+				{
+					"enum": [
+						"afs_advanced_biomaterial_scrapgroup",
+						"afs_advanced_circuitry_scrapgroup",
+						"afs_advanced_energy_storage_scrapgroup",
+						"afs_advanced_heat_scrapgroup",
+						"afs_advanced_magnet_scrapgroup",
+						"afs_advanced_material_scrapgroup",
+						"afs_advanced_neural_io_scrapgroup",
+						"afs_advanced_optics_scrapgroup",
+						"afs_common_biomaterial_scrapgroup",
+						"afs_common_circuitry_scrapgroup",
+						"afs_common_energy_storage_scrapgroup",
+						"afs_common_heat_scrapgroup",
+						"afs_common_magnet_scrapgroup",
+						"afs_common_material_scrapgroup",
+						"afs_common_neural_io_scrapgroup",
+						"bionics",
+						"bodypart",
+						"flag",
+						"trait",
+						"vitamin"
+					],
+					"type": "string"
+				}
+			],
+			"description": "遍历目标  \n根据遍历类型变化"
+		},
+		"ForeachType": {
+			"description": "遍历类型  \n影响 target 的类型  \n== ids 时 target 可为 \"bodypart\"|\"flag\"|\"trait\"|\"vitamin\"  \n== item_group 时 item_group 可为 ItemGroupID  \n== monstergroup 时 item_group 可为 MonsterGroupID  \n== array 时 item_group 可为 string[]",
+			"enum": [
+				"array",
+				"ids",
+				"item_group",
+				"monstergroup"
+			],
+			"type": "string"
 		},
 		"FuelData": {
 			"$ref": "#/definitions/FuelData_1",
@@ -40025,7 +40105,7 @@
 				},
 				{
 					"items": {
-						"$ref": "#/definitions/__type_90",
+						"$ref": "#/definitions/__type_91",
 						"description": "已打包的图片对象格式"
 					},
 					"type": "array"
@@ -40037,7 +40117,7 @@
 			"description": "已打包的图片格式"
 		},
 		"ImageCfgObj": {
-			"$ref": "#/definitions/__type_90"
+			"$ref": "#/definitions/__type_91"
 		},
 		"ImageCfg_1": {
 			"anyOf": [
@@ -40071,7 +40151,7 @@
 			"$ref": "#/definitions/__type_31"
 		},
 		"InlineItemGroup": {
-			"$ref": "#/definitions/__type_51"
+			"$ref": "#/definitions/__type_52"
 		},
 		"InvSearchData": {
 			"$ref": "#/definitions/InvSearchData_1",
@@ -40709,7 +40789,7 @@
 			"description": "物品快速定义  \n物品id 或者 [物品id,概率(100为100%)]"
 		},
 		"ItemGroup": {
-			"$ref": "#/definitions/__type_105"
+			"$ref": "#/definitions/__type_106"
 		},
 		"ItemGroupEntrie": {
 			"anyOf": [
@@ -41000,7 +41080,7 @@
 			"$ref": "#/definitions/Array_6"
 		},
 		"JObject": {
-			"$ref": "#/definitions/__type_98"
+			"$ref": "#/definitions/__type_99"
 		},
 		"JToken": {
 			"anyOf": [
@@ -42376,7 +42456,7 @@
 			"$ref": "#/definitions/__type_9"
 		},
 		"MathFunction": {
-			"$ref": "#/definitions/__type_115"
+			"$ref": "#/definitions/__type_116"
 		},
 		"MathFunctionID": {
 			"anyOf": [
@@ -42431,7 +42511,7 @@
 			"description": "发送消息"
 		},
 		"MissionDefinition": {
-			"$ref": "#/definitions/__type_118"
+			"$ref": "#/definitions/__type_119"
 		},
 		"MissionDefinitionID": {
 			"anyOf": [
@@ -42472,14 +42552,14 @@
 			"description": "任务对话字典"
 		},
 		"MissionDialog_1": {
-			"$ref": "#/definitions/__type_89"
+			"$ref": "#/definitions/__type_90"
 		},
 		"MissionEffect": {
 			"$ref": "#/definitions/MissionEffect_1",
 			"description": "任务效果"
 		},
 		"MissionEffect_1": {
-			"$ref": "#/definitions/__type_88"
+			"$ref": "#/definitions/__type_89"
 		},
 		"MissionGoal": {
 			"description": "任务目标",
@@ -42513,11 +42593,24 @@
 			],
 			"type": "string"
 		},
+		"ModDefine": {
+			"description": "ModID生成工具",
+			"properties": {
+				"MOD_PREFIX": {
+					"description": "mod物品前缀",
+					"type": "string"
+				}
+			},
+			"required": [
+				"MOD_PREFIX"
+			],
+			"type": "object"
+		},
 		"ModIsLoad": {
 			"$ref": "#/definitions/__type_20"
 		},
 		"ModTileset": {
-			"$ref": "#/definitions/__type_119"
+			"$ref": "#/definitions/__type_120"
 		},
 		"MonAttackEffect": {
 			"description": "怪物的攻击效果",
@@ -42649,14 +42742,14 @@
 			"description": "(对象, 可选) 怪物可能找到路径、打开门、避开陷阱或破坏障碍物的方式"
 		},
 		"MonPathSettings_1": {
-			"$ref": "#/definitions/__type_57"
+			"$ref": "#/definitions/__type_58"
 		},
 		"MonReproduction": {
 			"$ref": "#/definitions/MonReproduction_1",
 			"description": "怪物的繁殖"
 		},
 		"MonReproduction_1": {
-			"$ref": "#/definitions/__type_56"
+			"$ref": "#/definitions/__type_57"
 		},
 		"MonShearing": {
 			"anyOf": [
@@ -42765,7 +42858,7 @@
 			"description": "可以从怪物身上剪下的东西"
 		},
 		"MonUpgrade": {
-			"$ref": "#/definitions/__type_55"
+			"$ref": "#/definitions/__type_56"
 		},
 		"MonWeakpoint": {
 			"description": "(对象数组, 可选) 怪物保护中的弱点",
@@ -42931,7 +43024,7 @@
 			"type": "object"
 		},
 		"MonWeakpointDiff": {
-			"$ref": "#/definitions/__type_50"
+			"$ref": "#/definitions/__type_51"
 		},
 		"MonWeakpointDmg": {
 			"allOf": [
@@ -43085,7 +43178,7 @@
 			"description": "怪物的专长弱点\n字符串时为 proficiency"
 		},
 		"Monster": {
-			"$ref": "#/definitions/__type_107"
+			"$ref": "#/definitions/__type_108"
 		},
 		"MonsterFlag": {
 			"enum": [
@@ -43195,7 +43288,7 @@
 			"type": "object"
 		},
 		"Mutation": {
-			"$ref": "#/definitions/__type_103"
+			"$ref": "#/definitions/__type_104"
 		},
 		"MutationID": {
 			"anyOf": [
@@ -43387,7 +43480,7 @@
 			"type": "number"
 		},
 		"NpcClass": {
-			"$ref": "#/definitions/__type_111"
+			"$ref": "#/definitions/__type_112"
 		},
 		"NpcClassID": {
 			"anyOf": [
@@ -43415,7 +43508,7 @@
 			"type": "string"
 		},
 		"NpcInstance": {
-			"$ref": "#/definitions/__type_116"
+			"$ref": "#/definitions/__type_117"
 		},
 		"NpcInstanceID": {
 			"anyOf": [
@@ -43617,19 +43710,19 @@
 			"description": "数字对象"
 		},
 		"NumOperaDice": {
-			"$ref": "#/definitions/__type_79"
+			"$ref": "#/definitions/__type_80"
 		},
 		"NumOperaMul": {
-			"$ref": "#/definitions/__type_81"
+			"$ref": "#/definitions/__type_82"
 		},
 		"NumOperaOneIn": {
-			"$ref": "#/definitions/__type_78"
+			"$ref": "#/definitions/__type_79"
 		},
 		"NumOperaRng": {
-			"$ref": "#/definitions/__type_77"
+			"$ref": "#/definitions/__type_78"
 		},
 		"NumOperaSum": {
-			"$ref": "#/definitions/__type_80"
+			"$ref": "#/definitions/__type_81"
 		},
 		"NumOperateList": {
 			"description": "Eoc数字对象操作符",
@@ -47049,7 +47142,7 @@
 			"type": "object"
 		},
 		"Omit_1": {
-			"$ref": "#/definitions/__type_83"
+			"$ref": "#/definitions/__type_84"
 		},
 		"OneInChance": {
 			"$ref": "#/definitions/__type_19"
@@ -47072,7 +47165,7 @@
 			"description": "大地图特殊地点"
 		},
 		"OverlayOrdering": {
-			"$ref": "#/definitions/__type_117"
+			"$ref": "#/definitions/__type_118"
 		},
 		"OvermapTerrainID": {
 			"anyOf": [
@@ -48055,31 +48148,31 @@
 			"$ref": "#/definitions/Partial_11"
 		},
 		"Partial_11": {
-			"$ref": "#/definitions/__type_69"
+			"$ref": "#/definitions/__type_70"
 		},
 		"Partial_12": {
 			"$ref": "#/definitions/Partial_13"
 		},
 		"Partial_13": {
-			"$ref": "#/definitions/__type_70"
+			"$ref": "#/definitions/__type_71"
 		},
 		"Partial_14": {
 			"$ref": "#/definitions/Partial_15"
 		},
 		"Partial_15": {
-			"$ref": "#/definitions/__type_72"
+			"$ref": "#/definitions/__type_73"
 		},
 		"Partial_16": {
 			"$ref": "#/definitions/Partial_17"
 		},
 		"Partial_17": {
-			"$ref": "#/definitions/__type_74"
+			"$ref": "#/definitions/__type_75"
 		},
 		"Partial_18": {
 			"$ref": "#/definitions/Partial_19"
 		},
 		"Partial_19": {
-			"$ref": "#/definitions/__type_75"
+			"$ref": "#/definitions/__type_76"
 		},
 		"Partial_2": {
 			"$ref": "#/definitions/Partial_3"
@@ -48088,28 +48181,28 @@
 			"$ref": "#/definitions/Partial_21"
 		},
 		"Partial_21": {
-			"$ref": "#/definitions/__type_76"
+			"$ref": "#/definitions/__type_77"
 		},
 		"Partial_22": {
-			"$ref": "#/definitions/__type_82"
+			"$ref": "#/definitions/__type_83"
 		},
 		"Partial_23": {
 			"$ref": "#/definitions/Partial_24"
 		},
 		"Partial_24": {
-			"$ref": "#/definitions/__type_84"
+			"$ref": "#/definitions/__type_85"
 		},
 		"Partial_25": {
 			"$ref": "#/definitions/Partial_26"
 		},
 		"Partial_26": {
-			"$ref": "#/definitions/__type_85"
+			"$ref": "#/definitions/__type_86"
 		},
 		"Partial_27": {
 			"$ref": "#/definitions/Partial_28"
 		},
 		"Partial_28": {
-			"$ref": "#/definitions/__type_86"
+			"$ref": "#/definitions/__type_87"
 		},
 		"Partial_29": {
 			"$ref": "#/definitions/Partial_30"
@@ -48118,16 +48211,16 @@
 			"$ref": "#/definitions/__type_4"
 		},
 		"Partial_30": {
-			"$ref": "#/definitions/__type_87"
+			"$ref": "#/definitions/__type_88"
 		},
 		"Partial_31": {
-			"$ref": "#/definitions/__type_94"
+			"$ref": "#/definitions/__type_95"
 		},
 		"Partial_32": {
 			"$ref": "#/definitions/Partial_33"
 		},
 		"Partial_33": {
-			"$ref": "#/definitions/__type_95"
+			"$ref": "#/definitions/__type_96"
 		},
 		"Partial_34": {
 			"$ref": "#/definitions/Partial_31"
@@ -48136,31 +48229,31 @@
 			"$ref": "#/definitions/Partial_36"
 		},
 		"Partial_36": {
-			"$ref": "#/definitions/__type_96"
+			"$ref": "#/definitions/__type_97"
 		},
 		"Partial_37": {
 			"$ref": "#/definitions/Partial_38"
 		},
 		"Partial_38": {
-			"$ref": "#/definitions/__type_97"
+			"$ref": "#/definitions/__type_98"
 		},
 		"Partial_4": {
 			"$ref": "#/definitions/__type_24"
 		},
 		"Partial_5": {
-			"$ref": "#/definitions/__type_49"
+			"$ref": "#/definitions/__type_50"
 		},
 		"Partial_6": {
-			"$ref": "#/definitions/__type_54"
+			"$ref": "#/definitions/__type_55"
 		},
 		"Partial_7": {
 			"$ref": "#/definitions/Partial_8"
 		},
 		"Partial_8": {
-			"$ref": "#/definitions/__type_58"
+			"$ref": "#/definitions/__type_59"
 		},
 		"Partial_9": {
-			"$ref": "#/definitions/__type_63"
+			"$ref": "#/definitions/__type_64"
 		},
 		"Phase": {
 			"description": "物理状态",
@@ -48396,7 +48489,7 @@
 				},
 				{
 					"items": {
-						"$ref": "#/definitions/__type_91",
+						"$ref": "#/definitions/__type_92",
 						"description": "未打包的图片对象格式"
 					},
 					"type": "array"
@@ -48408,7 +48501,7 @@
 			"description": "未打包的图片格式"
 		},
 		"PkgImageCfgObj": {
-			"$ref": "#/definitions/__type_91"
+			"$ref": "#/definitions/__type_92"
 		},
 		"PkgImageCfg_1": {
 			"anyOf": [
@@ -48956,7 +49049,7 @@
 			"$ref": "#/definitions/__type_32"
 		},
 		"RangeDamage": {
-			"$ref": "#/definitions/__type_62"
+			"$ref": "#/definitions/__type_63"
 		},
 		"RatMessage": {
 			"$ref": "#/definitions/__type_22"
@@ -48990,20 +49083,20 @@
 			"$ref": "#/definitions/Record_5"
 		},
 		"Record_5": {
-			"$ref": "#/definitions/__type_53"
+			"$ref": "#/definitions/__type_54"
 		},
 		"Record_6": {
 			"$ref": "#/definitions/Record_7"
 		},
 		"Record_7": {
-			"$ref": "#/definitions/__type_73"
+			"$ref": "#/definitions/__type_74"
 		},
 		"RelicData": {
 			"$ref": "#/definitions/RelicData_1",
 			"description": "魔法物品数据"
 		},
 		"RelicData_1": {
-			"$ref": "#/definitions/__type_71"
+			"$ref": "#/definitions/__type_72"
 		},
 		"RemoveActionMission": {
 			"$ref": "#/definitions/__type_42"
@@ -49196,7 +49289,7 @@
 			"$ref": "#/definitions/Array_5"
 		},
 		"Requirement": {
-			"$ref": "#/definitions/__type_120"
+			"$ref": "#/definitions/__type_121"
 		},
 		"RequirementID": {
 			"anyOf": [
@@ -51396,7 +51489,7 @@
 			"type": "object"
 		},
 		"RespEffect": {
-			"$ref": "#/definitions/__type_47"
+			"$ref": "#/definitions/__type_48"
 		},
 		"RespEffect_1": {
 			"$ref": "#/definitions/RespEffect",
@@ -52440,7 +52533,7 @@
 			"description": "音效变体ID"
 		},
 		"SoundEffect_1": {
-			"$ref": "#/definitions/__type_108"
+			"$ref": "#/definitions/__type_109"
 		},
 		"SpawnItem": {
 			"anyOf": [
@@ -52505,10 +52598,10 @@
 			"description": "生成Npc"
 		},
 		"SpeakerEffect": {
-			"$ref": "#/definitions/__type_48"
+			"$ref": "#/definitions/__type_49"
 		},
 		"Spell": {
-			"$ref": "#/definitions/__type_109"
+			"$ref": "#/definitions/__type_110"
 		},
 		"SpellEffect": {
 			"description": "法术效果",
@@ -53028,7 +53121,7 @@
 			"type": "object"
 		},
 		"TalkTopic": {
-			"$ref": "#/definitions/__type_106"
+			"$ref": "#/definitions/__type_107"
 		},
 		"TalkTopicID": {
 			"anyOf": [
@@ -54510,7 +54603,7 @@
 			"description": "TOOL ID格式"
 		},
 		"ToolQuality": {
-			"$ref": "#/definitions/__type_113"
+			"$ref": "#/definitions/__type_114"
 		},
 		"ToolQualityID": {
 			"anyOf": [
@@ -55076,19 +55169,19 @@
 			"description": "将BoolObj转换为适用于TalkTopic的条件"
 		},
 		"UACastSpell": {
-			"$ref": "#/definitions/__type_68"
+			"$ref": "#/definitions/__type_69"
 		},
 		"UAExplosion": {
-			"$ref": "#/definitions/__type_66"
-		},
-		"UALearnSpell": {
 			"$ref": "#/definitions/__type_67"
 		},
+		"UALearnSpell": {
+			"$ref": "#/definitions/__type_68"
+		},
 		"UAPlaceNpc": {
-			"$ref": "#/definitions/__type_64"
+			"$ref": "#/definitions/__type_65"
 		},
 		"UARunEoc": {
-			"$ref": "#/definitions/__type_65"
+			"$ref": "#/definitions/__type_66"
 		},
 		"UnsetFlag": {
 			"anyOf": [
@@ -55370,7 +55463,7 @@
 			"description": "车辆部件的操作需求"
 		},
 		"VPRequirement_1": {
-			"$ref": "#/definitions/__type_92"
+			"$ref": "#/definitions/__type_93"
 		},
 		"ValidMod": {
 			"description": "有效枪械组件",
@@ -56570,6 +56663,54 @@
 			"type": "object"
 		},
 		"__type_100": {
+			"description": "一个自定义的Flag",
+			"properties": {
+				"conflicts": {
+					"description": "如果带有此标志的东西遇到冲突标志的东西，只有一个会被应用",
+					"items": {
+						"$ref": "#/definitions/FlagID"
+					},
+					"type": "array"
+				},
+				"craft_inherit": {
+					"description": "如果为true，如果你用带有此标志的东西制作东西，此标志也会应用到结果",
+					"type": "boolean"
+				},
+				"id": {
+					"$ref": "#/definitions/FlagID"
+				},
+				"info": {
+					"$ref": "#/definitions/DescText",
+					"description": "/** 如果可能，这些信息将被显示，比如在物品描述中"
+				},
+				"inherit": {
+					"description": "如果此标志附加/装备到另一件物品，是否继承此标志，比如如果你将ESAPI板放入板载器，他们的`CANT_WEAR`标志不会应用到板载器，你可以像往常一样穿着它",
+					"type": "boolean"
+				},
+				"name": {
+					"$ref": "#/definitions/DescText",
+					"description": "标志的名称，用于口袋限制，显示为`兼容弹夹: 形状因素`"
+				},
+				"restriction": {
+					"$ref": "#/definitions/DescText",
+					"description": "对于口袋限制，这些信息将显示在口袋信息的`限制`字段中"
+				},
+				"taste_mod": {
+					"description": "对于消耗品，它将在烹饪无法去除的情况下添加-5的味道",
+					"type": "number"
+				},
+				"type": {
+					"const": "json_flag",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"type"
+			],
+			"type": "object"
+		},
+		"__type_101": {
 			"description": "伤害类型",
 			"properties": {
 				"derived_from": {
@@ -56673,7 +56814,7 @@
 			],
 			"type": "object"
 		},
-		"__type_101": {
+		"__type_102": {
 			"description": "伤害信息顺序",
 			"properties": {
 				"ablative_info": {
@@ -56749,7 +56890,7 @@
 			],
 			"type": "object"
 		},
-		"__type_102": {
+		"__type_103": {
 			"description": "附魔",
 			"properties": {
 				"condition": {
@@ -56817,7 +56958,7 @@
 				"hit_me_effect": {
 					"description": "附魔拥有者击中时触发的法术  \n该咒语以您的位置为中心。",
 					"items": {
-						"$ref": "#/definitions/__type_52",
+						"$ref": "#/definitions/__type_53",
 						"description": "伪法术附加信息"
 					},
 					"type": "array"
@@ -56825,7 +56966,7 @@
 				"hit_you_effect": {
 					"description": "抚摸拥有者近战击中敌人时触发的法术  \n该法术以该生物的位置为中心, 除非\"hit_self\": true  \n那么它以你的位置为中心。",
 					"items": {
-						"$ref": "#/definitions/__type_52",
+						"$ref": "#/definitions/__type_53",
 						"description": "伪法术附加信息"
 					},
 					"type": "array"
@@ -56848,7 +56989,7 @@
 									"spell_effects": {
 										"description": "伪法术数据",
 										"items": {
-											"$ref": "#/definitions/__type_52",
+											"$ref": "#/definitions/__type_53",
 											"description": "伪法术附加信息"
 										},
 										"type": "array"
@@ -57107,7 +57248,7 @@
 			],
 			"type": "object"
 		},
-		"__type_103": {
+		"__type_104": {
 			"description": "变异",
 			"properties": {
 				"activated_eocs": {
@@ -57987,7 +58128,7 @@
 			],
 			"type": "object"
 		},
-		"__type_104": {
+		"__type_105": {
 			"description": "效果",
 			"properties": {
 				"apply_memorial_log": {
@@ -58584,7 +58725,7 @@
 			],
 			"type": "object"
 		},
-		"__type_105": {
+		"__type_106": {
 			"description": "ItemGroup",
 			"properties": {
 				"copy-from": {
@@ -58638,7 +58779,7 @@
 			],
 			"type": "object"
 		},
-		"__type_106": {
+		"__type_107": {
 			"description": "对话选项",
 			"properties": {
 				"dynamic_line": {
@@ -58908,7 +59049,7 @@
 			],
 			"type": "object"
 		},
-		"__type_107": {
+		"__type_108": {
 			"description": "怪物",
 			"properties": {
 				"absorb_material": {
@@ -59687,7 +59828,7 @@
 			],
 			"type": "object"
 		},
-		"__type_108": {
+		"__type_109": {
 			"description": "音效",
 			"properties": {
 				"files": {
@@ -59741,7 +59882,26 @@
 			],
 			"type": "object"
 		},
-		"__type_109": {
+		"__type_11": {
+			"description": "游戏设置mutator",
+			"properties": {
+				"mutator": {
+					"const": "game_option",
+					"description": "返回选项的值作为字符串，对于数值选项，你应该使用数学函数",
+					"type": "string"
+				},
+				"option": {
+					"description": "选项",
+					"type": "string"
+				}
+			},
+			"required": [
+				"mutator",
+				"option"
+			],
+			"type": "object"
+		},
+		"__type_110": {
 			"description": "法术",
 			"properties": {
 				"accuracy_increment": {
@@ -60601,7 +60761,7 @@
 				"extra_effects": {
 					"description": "法术子效果",
 					"items": {
-						"$ref": "#/definitions/__type_52",
+						"$ref": "#/definitions/__type_53",
 						"description": "伪法术附加信息"
 					},
 					"type": "array"
@@ -62474,26 +62634,7 @@
 			],
 			"type": "object"
 		},
-		"__type_11": {
-			"description": "游戏设置mutator",
-			"properties": {
-				"mutator": {
-					"const": "game_option",
-					"description": "返回选项的值作为字符串，对于数值选项，你应该使用数学函数",
-					"type": "string"
-				},
-				"option": {
-					"description": "选项",
-					"type": "string"
-				}
-			},
-			"required": [
-				"mutator",
-				"option"
-			],
-			"type": "object"
-		},
-		"__type_110": {
+		"__type_111": {
 			"description": "弹药效果",
 			"properties": {
 				"aoe": {
@@ -62540,7 +62681,7 @@
 			],
 			"type": "object"
 		},
-		"__type_111": {
+		"__type_112": {
 			"description": "Npc职业",
 			"properties": {
 				"bonus_dex": {
@@ -62703,7 +62844,7 @@
 			],
 			"type": "object"
 		},
-		"__type_112": {
+		"__type_113": {
 			"description": "EOC",
 			"properties": {
 				"condition": {
@@ -63381,6 +63522,10 @@
 										"$ref": "#/definitions/{npc_unset_flag?:undefined;}"
 									}
 								]
+							},
+							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
 							},
 							{
 								"enum": [
@@ -64069,6 +64214,10 @@
 								]
 							},
 							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
 								"enum": [
 									"drop_weapon",
 									"follow_only",
@@ -64134,7 +64283,7 @@
 			],
 			"type": "object"
 		},
-		"__type_113": {
+		"__type_114": {
 			"description": "工具品质",
 			"properties": {
 				"id": {
@@ -64178,7 +64327,7 @@
 			],
 			"type": "object"
 		},
-		"__type_114": {
+		"__type_115": {
 			"description": "弹药类型",
 			"properties": {
 				"default": {
@@ -64206,7 +64355,7 @@
 			],
 			"type": "object"
 		},
-		"__type_115": {
+		"__type_116": {
 			"description": "数学函数",
 			"properties": {
 				"id": {
@@ -64233,7 +64382,7 @@
 			],
 			"type": "object"
 		},
-		"__type_116": {
+		"__type_117": {
 			"description": "Npc实例",
 			"properties": {
 				"age": {
@@ -64389,7 +64538,7 @@
 			],
 			"type": "object"
 		},
-		"__type_117": {
+		"__type_118": {
 			"description": "县市层级",
 			"properties": {
 				"overlay_ordering": {
@@ -64427,7 +64576,7 @@
 			],
 			"type": "object"
 		},
-		"__type_118": {
+		"__type_119": {
 			"description": "任务定义",
 			"properties": {
 				"description": {
@@ -64507,7 +64656,26 @@
 			],
 			"type": "object"
 		},
-		"__type_119": {
+		"__type_12": {
+			"description": "武术名称mutator",
+			"properties": {
+				"matec_id": {
+					"description": "武术ID",
+					"type": "string"
+				},
+				"mutator": {
+					"const": "ma_technique_name",
+					"description": "返回具有ID matec_id的武术技术的名称",
+					"type": "string"
+				}
+			},
+			"required": [
+				"matec_id",
+				"mutator"
+			],
+			"type": "object"
+		},
+		"__type_120": {
 			"description": "mod图包",
 			"properties": {
 				"compatibility": {
@@ -64536,26 +64704,7 @@
 			],
 			"type": "object"
 		},
-		"__type_12": {
-			"description": "武术名称mutator",
-			"properties": {
-				"matec_id": {
-					"description": "武术ID",
-					"type": "string"
-				},
-				"mutator": {
-					"const": "ma_technique_name",
-					"description": "返回具有ID matec_id的武术技术的名称",
-					"type": "string"
-				}
-			},
-			"required": [
-				"matec_id",
-				"mutator"
-			],
-			"type": "object"
-		},
-		"__type_120": {
+		"__type_121": {
 			"description": "需求组",
 			"properties": {
 				"components": {
@@ -64729,7 +64878,7 @@
 			],
 			"type": "object"
 		},
-		"__type_121": {
+		"__type_122": {
 			"description": "活动类型",
 			"properties": {
 				"activity_level": {
@@ -68139,6 +68288,10 @@
 								]
 							},
 							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
 								"enum": [
 									"drop_weapon",
 									"follow_only",
@@ -68825,6 +68978,10 @@
 								]
 							},
 							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
 								"enum": [
 									"drop_weapon",
 									"follow_only",
@@ -69292,7 +69449,7 @@
 			"description": "根据权重运行EOC",
 			"properties": {
 				"weighted_list_eocs": {
-					"description": "根据权重运行EOC",
+					"description": "根据权重运行EOC  \n[eoc,权重][]",
 					"items": {
 						"anyOf": [
 							{
@@ -71360,6 +71517,10 @@
 								]
 							},
 							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
 								"enum": [
 									"drop_weapon",
 									"follow_only",
@@ -72046,6 +72207,10 @@
 								]
 							},
 							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
 								"enum": [
 									"drop_weapon",
 									"follow_only",
@@ -72072,7 +72237,7 @@
 				"cases": {
 					"description": "cases合集",
 					"items": {
-						"$ref": "#/definitions/{case:number;effect:MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|(MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag)[];}"
+						"$ref": "#/definitions/{case:number;effect:MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|Foreach|(MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|Foreach)[];}"
 					},
 					"type": "array"
 				},
@@ -72088,6 +72253,803 @@
 			"type": "object"
 		},
 		"__type_47": {
+			"description": "遍历",
+			"properties": {
+				"effect": {
+					"description": "eoceffect",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "#/definitions/MathAssignExp",
+								"description": "math赋值表达式"
+							},
+							{
+								"$ref": "#/definitions/RunEoc",
+								"description": "运行Eoc"
+							},
+							{
+								"$ref": "#/definitions/QueueEoc",
+								"description": "延迟队列eoc"
+							},
+							{
+								"$ref": "#/definitions/EocSelector",
+								"description": "Eoc选项"
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{run_inv_eocs:\"all\"|\"manual\"|\"random\"|\"manual_mult\";search_data?:InvSearchData|undefined;title?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;true_eocs?:ParamsEoc|undefined;false_eocs?:ParamsEoc|undefined;},\"run_inv_eocs\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_run_inv_eocs:\"all\"|\"manual\"|\"random\"|\"manual_mult\";}"
+									},
+									{
+										"$ref": "#/definitions/{u_run_inv_eocs?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{run_inv_eocs:\"all\"|\"manual\"|\"random\"|\"manual_mult\";search_data?:InvSearchData|undefined;title?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;true_eocs?:ParamsEoc|undefined;false_eocs?:ParamsEoc|undefined;},\"run_inv_eocs\">"
+									},
+									{
+										"$ref": "#/definitions/{u_run_inv_eocs:\"all\"|\"manual\"|\"random\"|\"manual_mult\";}"
+									},
+									{
+										"$ref": "#/definitions/{npc_run_inv_eocs?:undefined;}"
+									}
+								]
+							},
+							{
+								"$ref": "#/definitions/RunEocWith",
+								"description": "运行Eoc 并提供参数"
+							},
+							{
+								"$ref": "#/definitions/RunEocUntil",
+								"description": "循环运行Eoc"
+							},
+							{
+								"$ref": "#/definitions/WeightedListEocs",
+								"description": "根据权重运行EOC"
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{lose_trait:IDObj<MutationID>;},\"lose_trait\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_lose_trait:IDObj<MutationID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_lose_trait?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{lose_trait:IDObj<MutationID>;},\"lose_trait\">"
+									},
+									{
+										"$ref": "#/definitions/{u_lose_trait:IDObj<MutationID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_lose_trait?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_trait:IDObj<MutationID>;},\"add_trait\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_trait:IDObj<MutationID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_add_trait?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_trait:IDObj<MutationID>;},\"add_trait\">"
+									},
+									{
+										"$ref": "#/definitions/{u_add_trait:IDObj<MutationID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_trait?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{consume_item:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;charges?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;popup?:boolean|undefined;},\"consume_item\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_consume_item:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_consume_item?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{consume_item:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;charges?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;popup?:boolean|undefined;},\"consume_item\">"
+									},
+									{
+										"$ref": "#/definitions/{u_consume_item:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_consume_item?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{remove_item_with:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;},\"remove_item_with\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_remove_item_with:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_remove_item_with?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{remove_item_with:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;},\"remove_item_with\">"
+									},
+									{
+										"$ref": "#/definitions/{u_remove_item_with:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_remove_item_with?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{spawn_item:`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`|\"bionics\"|\"afs_common_biomaterial_scrapgroup\"|\"afs_advanced_biomaterial_scrapgroup\"|\"afs_common_circuitry_scrapgroup\"|\"afs_advanced_circuitry_scrapgroup\"|\"afs_common_energy_storage_scrapgroup\"|\"afs_advanced_energy_storage_scrapgroup\"|\"afs_common_heat_scrapgroup\"|\"afs_advanced_heat_scrapgroup\"|\"afs_common_magnet_scrapgroup\"|\"afs_advanced_magnet_scrapgroup\"|\"afs_common_material_scrapgroup\"|\"afs_advanced_material_scrapgroup\"|\"afs_common_neural_io_scrapgroup\"|\"afs_advanced_neural_io_scrapgroup\"|\"afs_advanced_optics_scrapgroup\"|`ITEMGP_${string}`|`${string}_ITEMGP_${string}`|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_spawn_item:`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`|\"bionics\"|\"afs_common_biomaterial_scrapgroup\"|\"afs_advanced_biomaterial_scrapgroup\"|\"afs_common_circuitry_scrapgroup\"|\"afs_advanced_circuitry_scrapgroup\"|\"afs_common_energy_storage_scrapgroup\"|\"afs_advanced_energy_storage_scrapgroup\"|\"afs_common_heat_scrapgroup\"|\"afs_advanced_heat_scrapgroup\"|\"afs_common_magnet_scrapgroup\"|\"afs_advanced_magnet_scrapgroup\"|\"afs_common_material_scrapgroup\"|\"afs_advanced_material_scrapgroup\"|\"afs_common_neural_io_scrapgroup\"|\"afs_advanced_neural_io_scrapgroup\"|\"afs_advanced_optics_scrapgroup\"|`ITEMGP_${string}`|`${string}_ITEMGP_${string}`|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									},
+									{
+										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{spawn_item:`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`|\"bionics\"|\"afs_common_biomaterial_scrapgroup\"|\"afs_advanced_biomaterial_scrapgroup\"|\"afs_common_circuitry_scrapgroup\"|\"afs_advanced_circuitry_scrapgroup\"|\"afs_common_energy_storage_scrapgroup\"|\"afs_advanced_energy_storage_scrapgroup\"|\"afs_common_heat_scrapgroup\"|\"afs_advanced_heat_scrapgroup\"|\"afs_common_magnet_scrapgroup\"|\"afs_advanced_magnet_scrapgroup\"|\"afs_common_material_scrapgroup\"|\"afs_advanced_material_scrapgroup\"|\"afs_common_neural_io_scrapgroup\"|\"afs_advanced_neural_io_scrapgroup\"|\"afs_advanced_optics_scrapgroup\"|`ITEMGP_${string}`|`${string}_ITEMGP_${string}`|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									},
+									{
+										"$ref": "#/definitions/{u_spawn_item:`${string}SchemaString`|`ARMOR_${string}`|`${string}_ARMOR_${string}`|`GUN_${string}`|`${string}_GUN_${string}`|`GENERIC_${string}`|`${string}_GENERIC_${string}`|\"afs_biomaterial_1\"|\"afs_biomaterial_2\"|\"afs_biomaterial_3\"|\"afs_biomaterial_4\"|\"afs_biomaterial_5\"|\"afs_circuitry_1\"|\"afs_circuitry_2\"|\"afs_circuitry_3\"|\"afs_circuitry_4\"|\"afs_circuitry_5\"|\"afs_energy_storage_1\"|\"afs_energy_storage_2\"|\"afs_energy_storage_3\"|\"afs_energy_storage_4\"|\"afs_energy_storage_5\"|\"afs_heat_2_salvage\"|\"afs_heat_1\"|\"afs_heat_2\"|\"afs_heat_3\"|\"afs_heat_4\"|\"afs_heat_5\"|\"afs_magnet_1\"|\"afs_magnet_2\"|\"afs_magnet_3\"|\"afs_magnet_4\"|\"afs_material_1\"|\"afs_material_2\"|\"afs_material_3\"|\"afs_material_4\"|\"afs_material_5\"|\"afs_neural_io_1\"|\"afs_neural_io_2\"|\"afs_neural_io_3\"|\"afs_neural_io_4\"|\"afs_neural_io_5\"|\"afs_optics_3\"|\"afs_optics_4\"|`AMMO_${string}`|`${string}_AMMO_${string}`|`TOOL_${string}`|`${string}_TOOL_${string}`|`MAG_${string}`|`${string}_MAG_${string}`|`COME_${string}`|`${string}_COME_${string}`|`GMOD_${string}`|`${string}_GMOD_${string}`|\"bionics\"|\"afs_common_biomaterial_scrapgroup\"|\"afs_advanced_biomaterial_scrapgroup\"|\"afs_common_circuitry_scrapgroup\"|\"afs_advanced_circuitry_scrapgroup\"|\"afs_common_energy_storage_scrapgroup\"|\"afs_advanced_energy_storage_scrapgroup\"|\"afs_common_heat_scrapgroup\"|\"afs_advanced_heat_scrapgroup\"|\"afs_common_magnet_scrapgroup\"|\"afs_advanced_magnet_scrapgroup\"|\"afs_common_material_scrapgroup\"|\"afs_advanced_material_scrapgroup\"|\"afs_common_neural_io_scrapgroup\"|\"afs_advanced_neural_io_scrapgroup\"|\"afs_advanced_optics_scrapgroup\"|`ITEMGP_${string}`|`${string}_ITEMGP_${string}`|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{spawn_npc:NpcInstanceID;real_count?:number|undefined;min_radius?:number|undefined;max_radius?:number|undefined;},\"spawn_npc\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_spawn_npc:NpcInstanceID;}"
+									},
+									{
+										"$ref": "#/definitions/{u_spawn_npc?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{spawn_npc:NpcInstanceID;real_count?:number|undefined;min_radius?:number|undefined;max_radius?:number|undefined;},\"spawn_npc\">"
+									},
+									{
+										"$ref": "#/definitions/{u_spawn_npc:NpcInstanceID;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_spawn_npc?:undefined;}"
+									}
+								]
+							},
+							{
+								"$ref": "#/definitions/SoundEffect",
+								"description": "播放声音"
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{cast_spell:FakeSpell;targeted?:boolean|undefined;true_eocs?:ParamsEoc|undefined;false_eocs?:ParamsEoc|undefined;loc?:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|undefined;},\"cast_spell\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_cast_spell:FakeSpell;}"
+									},
+									{
+										"$ref": "#/definitions/{u_cast_spell?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{cast_spell:FakeSpell;targeted?:boolean|undefined;true_eocs?:ParamsEoc|undefined;false_eocs?:ParamsEoc|undefined;loc?:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|undefined;},\"cast_spell\">"
+									},
+									{
+										"$ref": "#/definitions/{u_cast_spell:FakeSpell;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_cast_spell?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{teleport:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};success_message?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;fail_message?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;force?:boolean|undefined;},\"teleport\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_teleport:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};}"
+									},
+									{
+										"$ref": "#/definitions/{u_teleport?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{teleport:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};success_message?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;fail_message?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;force?:boolean|undefined;},\"teleport\">"
+									},
+									{
+										"$ref": "#/definitions/{u_teleport:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};}"
+									},
+									{
+										"$ref": "#/definitions/{npc_teleport?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{location_variable:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};min_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;max_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;outdoor_only?:boolean|undefined;target_params?:AssignMissionTarget|undefined;x_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;y_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;z_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;z_override?:boolean|undefined;terrain?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;furniture?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;trap?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;monster?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;zone?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;npc?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;target_min_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;target_max_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;},\"location_variable\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_location_variable:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};}"
+									},
+									{
+										"$ref": "#/definitions/{u_location_variable?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{location_variable:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};min_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;max_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;outdoor_only?:boolean|undefined;target_params?:AssignMissionTarget|undefined;x_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;y_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;z_adjust?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;z_override?:boolean|undefined;terrain?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;furniture?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;trap?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;monster?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;zone?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;npc?:string|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem|undefined;target_min_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;target_max_radius?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;},\"location_variable\">"
+									},
+									{
+										"$ref": "#/definitions/{u_location_variable:{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;};}"
+									},
+									{
+										"$ref": "#/definitions/{npc_location_variable?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{message:DescText;type?:\"warning\"|\"info\"|\"debug\"|\"good\"|\"neutral\"|\"bad\"|\"mixed\"|\"headshot\"|\"critical\"|\"grazing\"|undefined;sound?:boolean|undefined;outdoor_only?:boolean|undefined;snippet?:boolean|undefined;same_snippet?:boolean|undefined;popup?:boolean|undefined;popup_w_interrupt_query?:boolean|undefined;interrupt_type?:boolean|undefined;},\"message\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_message:DescText;}"
+									},
+									{
+										"$ref": "#/definitions/{u_message?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{message:DescText;type?:\"warning\"|\"info\"|\"debug\"|\"good\"|\"neutral\"|\"bad\"|\"mixed\"|\"headshot\"|\"critical\"|\"grazing\"|undefined;sound?:boolean|undefined;outdoor_only?:boolean|undefined;snippet?:boolean|undefined;same_snippet?:boolean|undefined;popup?:boolean|undefined;popup_w_interrupt_query?:boolean|undefined;interrupt_type?:boolean|undefined;},\"message\">"
+									},
+									{
+										"$ref": "#/definitions/{u_message:DescText;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_message?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_effect:IDObj<EffectID>;duration:Time|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;target_part?:BodyPartParam|undefined;intensity?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;force?:boolean|undefined;},\"add_effect\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_effect:IDObj<EffectID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_add_effect?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_effect:IDObj<EffectID>;duration:Time|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;target_part?:BodyPartParam|undefined;intensity?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;force?:boolean|undefined;},\"add_effect\">"
+									},
+									{
+										"$ref": "#/definitions/{u_add_effect:IDObj<EffectID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_effect?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{lose_effect:IDObj<EffectID>;},\"lose_effect\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_lose_effect:IDObj<EffectID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_lose_effect?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{lose_effect:IDObj<EffectID>;},\"lose_effect\">"
+									},
+									{
+										"$ref": "#/definitions/{u_lose_effect:IDObj<EffectID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_lose_effect?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{set_hp:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;target_part?:BodyPartParam|undefined;only_increase?:boolean|undefined;main_only?:boolean|undefined;minor_only?:boolean|undefined;max?:boolean|undefined;},\"set_hp\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_set_hp:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;}"
+									},
+									{
+										"$ref": "#/definitions/{u_set_hp?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{set_hp:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;target_part?:BodyPartParam|undefined;only_increase?:boolean|undefined;main_only?:boolean|undefined;minor_only?:boolean|undefined;max?:boolean|undefined;},\"set_hp\">"
+									},
+									{
+										"$ref": "#/definitions/{u_set_hp:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_set_hp?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;value:string;},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var:string;}"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;value:string;},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var:string;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"$ref": "#/definitions/SetString",
+								"description": "赋值文本变量"
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;time:true;},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var:string;}_1"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;time:true;},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var:string;}_1"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;possible_values:string[];},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var:string;}_2"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{add_var:string;possible_values:string[];},\"add_var\">"
+									},
+									{
+										"$ref": "#/definitions/{u_add_var:string;}_2"
+									},
+									{
+										"$ref": "#/definitions/{npc_add_var?:undefined;}"
+									},
+									{
+										"description": "变量操作的注释用字段  \n{ \"u_add_var\": \"gunsmith_ammo_ammount\", \"type\": \"number\", \"context\": \"artisans\", \"value\": \"800\" }  \n等价于  \n{math: [ \"u_number_artisans_gunsmith_ammo_amount\", \"=\", \"800\" ]}  \ntype_context_variable_name",
+										"properties": {
+											"context": {
+												"description": "注释用字段 context",
+												"type": "string"
+											},
+											"type": {
+												"description": "注释用字段 type",
+												"type": "string"
+											}
+										},
+										"type": "object"
+									}
+								]
+							},
+							{
+								"$ref": "#/definitions/AssingMission",
+								"description": "给玩家添加任务"
+							},
+							{
+								"$ref": "#/definitions/RemoveActionMission",
+								"description": "将从玩家的活动任务列表中删除任务而不失败。"
+							},
+							{
+								"$ref": "#/definitions/FinishMission",
+								"description": "使玩家完成任务"
+							},
+							{
+								"$ref": "#/definitions/SetCond",
+								"description": "将条件Obj保存为变量"
+							},
+							{
+								"$ref": "#/definitions/IfElse",
+								"description": "条件控制"
+							},
+							{
+								"$ref": "#/definitions/SwitchCase",
+								"description": "switch控制"
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{assign_activity:ActivityTypeID;duration:Time;},\"assign_activity\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_assign_activity:ActivityTypeID;}"
+									},
+									{
+										"$ref": "#/definitions/{u_assign_activity?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{assign_activity:ActivityTypeID;duration:Time;},\"assign_activity\">"
+									},
+									{
+										"$ref": "#/definitions/{u_assign_activity:ActivityTypeID;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_assign_activity?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{set_flag:IDObj<FlagID>;},\"set_flag\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_set_flag:IDObj<FlagID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_set_flag?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{set_flag:IDObj<FlagID>;},\"set_flag\">"
+									},
+									{
+										"$ref": "#/definitions/{u_set_flag:IDObj<FlagID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_set_flag?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{unset_flag:IDObj<FlagID>;},\"unset_flag\">"
+									},
+									{
+										"$ref": "#/definitions/{npc_unset_flag:IDObj<FlagID>;}"
+									},
+									{
+										"$ref": "#/definitions/{u_unset_flag?:undefined;}"
+									}
+								]
+							},
+							{
+								"allOf": [
+									{
+										"$ref": "#/definitions/Omit<{unset_flag:IDObj<FlagID>;},\"unset_flag\">"
+									},
+									{
+										"$ref": "#/definitions/{u_unset_flag:IDObj<FlagID>;}"
+									},
+									{
+										"$ref": "#/definitions/{npc_unset_flag?:undefined;}"
+									}
+								]
+							},
+							{
+								"$ref": "#/definitions/Foreach",
+								"description": "遍历"
+							},
+							{
+								"enum": [
+									"drop_weapon",
+									"follow_only",
+									"leave",
+									"npc_prevent_death",
+									"u_prevent_death"
+								],
+								"type": "string"
+							}
+						]
+					},
+					"type": "array"
+				},
+				"foreach": {
+					"$ref": "#/definitions/ForeachType",
+					"description": "遍历类型"
+				},
+				"target": {
+					"$ref": "#/definitions/ForeachTarget",
+					"description": "遍历目标"
+				},
+				"var": {
+					"anyOf": [
+						{
+							"properties": {
+								"global_val": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"global_val"
+							],
+							"type": "object"
+						},
+						{
+							"properties": {
+								"u_val": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"u_val"
+							],
+							"type": "object"
+						},
+						{
+							"properties": {
+								"npc_val": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"npc_val"
+							],
+							"type": "object"
+						},
+						{
+							"properties": {
+								"context_val": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"context_val"
+							],
+							"type": "object"
+						},
+						{
+							"properties": {
+								"var_val": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"var_val"
+							],
+							"type": "object"
+						},
+						{
+							"$ref": "#/definitions/MutatorsMonFaction",
+							"description": "怪物阵营mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsGameOption",
+							"description": "游戏设置mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsMaTechName",
+							"description": "武术名称mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsMaTechDesc",
+							"description": "武术简介mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsVaildTech",
+							"description": "随机武术mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsLocRelative",
+							"description": "相对坐标mutator"
+						},
+						{
+							"$ref": "#/definitions/MutatorsTopicItem",
+							"description": "选项物品mutator"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"description": "遍历的名称字符串存储变量"
+				}
+			},
+			"required": [
+				"effect",
+				"foreach",
+				"target",
+				"var"
+			],
+			"type": "object"
+		},
+		"__type_48": {
 			"description": "玩家回复产生的效果",
 			"properties": {
 				"effect": {
@@ -72134,7 +73096,7 @@
 			],
 			"type": "object"
 		},
-		"__type_48": {
+		"__type_49": {
 			"description": "说话者效果",
 			"properties": {
 				"condition": {
@@ -72808,6 +73770,10 @@
 							]
 						},
 						{
+							"$ref": "#/definitions/Foreach",
+							"description": "遍历"
+						},
+						{
 							"items": {
 								"anyOf": [
 									{
@@ -73475,6 +74441,10 @@
 										]
 									},
 									{
+										"$ref": "#/definitions/Foreach",
+										"description": "遍历"
+									},
+									{
 										"enum": [
 											"drop_weapon",
 											"follow_only",
@@ -73509,41 +74479,6 @@
 			"required": [
 				"effect"
 			],
-			"type": "object"
-		},
-		"__type_49": {
-			"properties": {
-				"npc_can_drop_weapon": {
-					"type": "boolean"
-				},
-				"npc_female": {
-					"type": "boolean"
-				},
-				"npc_has_weapon": {
-					"type": "boolean"
-				},
-				"npc_is_alive": {
-					"type": "boolean"
-				},
-				"npc_male": {
-					"type": "boolean"
-				},
-				"u_can_drop_weapon": {
-					"type": "boolean"
-				},
-				"u_female": {
-					"type": "boolean"
-				},
-				"u_has_weapon": {
-					"type": "boolean"
-				},
-				"u_is_alive": {
-					"type": "boolean"
-				},
-				"u_male": {
-					"type": "boolean"
-				}
-			},
 			"type": "object"
 		},
 		"__type_5": {
@@ -74002,6 +74937,41 @@
 			"type": "object"
 		},
 		"__type_50": {
+			"properties": {
+				"npc_can_drop_weapon": {
+					"type": "boolean"
+				},
+				"npc_female": {
+					"type": "boolean"
+				},
+				"npc_has_weapon": {
+					"type": "boolean"
+				},
+				"npc_is_alive": {
+					"type": "boolean"
+				},
+				"npc_male": {
+					"type": "boolean"
+				},
+				"u_can_drop_weapon": {
+					"type": "boolean"
+				},
+				"u_female": {
+					"type": "boolean"
+				},
+				"u_has_weapon": {
+					"type": "boolean"
+				},
+				"u_is_alive": {
+					"type": "boolean"
+				},
+				"u_male": {
+					"type": "boolean"
+				}
+			},
+			"type": "object"
+		},
+		"__type_51": {
 			"description": "怪物弱点针对不同类型武器的难度设置",
 			"properties": {
 				"all": {
@@ -74039,7 +75009,7 @@
 			},
 			"type": "object"
 		},
-		"__type_51": {
+		"__type_52": {
 			"description": "内联物品组",
 			"properties": {
 				"copy-from": {
@@ -74082,7 +75052,7 @@
 			},
 			"type": "object"
 		},
-		"__type_52": {
+		"__type_53": {
 			"description": "伪法术附加信息",
 			"properties": {
 				"hit_self": {
@@ -74370,7 +75340,7 @@
 			],
 			"type": "object"
 		},
-		"__type_53": {
+		"__type_54": {
 			"properties": {
 				"afs_biomaterial_1": {
 					"type": "number"
@@ -74525,7 +75495,7 @@
 			],
 			"type": "object"
 		},
-		"__type_54": {
+		"__type_55": {
 			"properties": {
 				"armor": {
 					"$ref": "#/definitions/AnyItemID_1"
@@ -74542,7 +75512,7 @@
 			},
 			"type": "object"
 		},
-		"__type_55": {
+		"__type_56": {
 			"description": "怪物的升级项",
 			"properties": {
 				"age_grow": {
@@ -74579,7 +75549,7 @@
 			],
 			"type": "object"
 		},
-		"__type_56": {
+		"__type_57": {
 			"description": "怪物的繁殖",
 			"properties": {
 				"baby_count": {
@@ -74605,7 +75575,7 @@
 			],
 			"type": "object"
 		},
-		"__type_57": {
+		"__type_58": {
 			"description": "(对象, 可选) 怪物可能找到路径、打开门、避开陷阱或破坏障碍物的方式",
 			"properties": {
 				"allow_climb_stairs": {
@@ -74648,7 +75618,7 @@
 			],
 			"type": "object"
 		},
-		"__type_58": {
+		"__type_59": {
 			"properties": {
 				"AO_CLOSE_TEAR": {
 					"anyOf": [
@@ -74789,52 +75759,6 @@
 							"type": "number"
 						}
 					]
-				}
-			},
-			"type": "object"
-		},
-		"__type_59": {
-			"description": "弹药AOE效果",
-			"properties": {
-				"chance": {
-					"description": "概率  \n产生1个单位地块附着物的概率, 从0到100；默认100",
-					"type": "number"
-				},
-				"check_passable": {
-					"description": "检查可通过性  \n如果为false, 投射物能够穿透不可穿透的地形,  \n如果定义了穿透 (如墙和窗户)；如果为true,  \n投射物不能穿透甚至一片玻璃；默认 false",
-					"type": "boolean"
-				},
-				"check_sees": {
-					"description": "检查视线  \n如果为false, 地块附着物可以在不透明的墙后产生(例如, 在混凝土墙后面);  \n如果为true, 它不能；默认 false",
-					"type": "boolean"
-				},
-				"check_sees_radius": {
-					"description": "检查视线半径  \n如果 \"check_sees\" 为 true, 并且此值小于 \"radius\", 则此值用作半径。  \n目的和推理未知, 可能是微型核弹的一些遗留物, 所以就不要使用它了；默认 0",
-					"type": "number"
-				},
-				"field_type": {
-					"$ref": "#/definitions/FieldID_1",
-					"description": "地块附着物类型  \n将在投射物中心周围产生的地块附着物；默认 \"fd_null\""
-				},
-				"intensity_max": {
-					"description": "最大强度  \n地块附着物的最大强度；默认 0",
-					"type": "number"
-				},
-				"intensity_min": {
-					"description": "最小强度  \n地块附着物的最小强度；默认 0",
-					"type": "number"
-				},
-				"radius": {
-					"description": "半径\n要产生的地块附着物的半径；默认 1",
-					"type": "number"
-				},
-				"radius_z": {
-					"description": "Z轴半径  \nZ级别的半径；默认 0",
-					"type": "number"
-				},
-				"size": {
-					"description": "大小  \n似乎是阈值, 当自动炮塔停止射击武器以防止友军伤害时；默认 0",
-					"type": "number"
 				}
 			},
 			"type": "object"
@@ -75298,6 +76222,52 @@
 			"type": "object"
 		},
 		"__type_60": {
+			"description": "弹药AOE效果",
+			"properties": {
+				"chance": {
+					"description": "概率  \n产生1个单位地块附着物的概率, 从0到100；默认100",
+					"type": "number"
+				},
+				"check_passable": {
+					"description": "检查可通过性  \n如果为false, 投射物能够穿透不可穿透的地形,  \n如果定义了穿透 (如墙和窗户)；如果为true,  \n投射物不能穿透甚至一片玻璃；默认 false",
+					"type": "boolean"
+				},
+				"check_sees": {
+					"description": "检查视线  \n如果为false, 地块附着物可以在不透明的墙后产生(例如, 在混凝土墙后面);  \n如果为true, 它不能；默认 false",
+					"type": "boolean"
+				},
+				"check_sees_radius": {
+					"description": "检查视线半径  \n如果 \"check_sees\" 为 true, 并且此值小于 \"radius\", 则此值用作半径。  \n目的和推理未知, 可能是微型核弹的一些遗留物, 所以就不要使用它了；默认 0",
+					"type": "number"
+				},
+				"field_type": {
+					"$ref": "#/definitions/FieldID_1",
+					"description": "地块附着物类型  \n将在投射物中心周围产生的地块附着物；默认 \"fd_null\""
+				},
+				"intensity_max": {
+					"description": "最大强度  \n地块附着物的最大强度；默认 0",
+					"type": "number"
+				},
+				"intensity_min": {
+					"description": "最小强度  \n地块附着物的最小强度；默认 0",
+					"type": "number"
+				},
+				"radius": {
+					"description": "半径\n要产生的地块附着物的半径；默认 1",
+					"type": "number"
+				},
+				"radius_z": {
+					"description": "Z轴半径  \nZ级别的半径；默认 0",
+					"type": "number"
+				},
+				"size": {
+					"description": "大小  \n似乎是阈值, 当自动炮塔停止射击武器以防止友军伤害时；默认 0",
+					"type": "number"
+				}
+			},
+			"type": "object"
+		},
+		"__type_61": {
 			"description": "弹药轨迹效果",
 			"properties": {
 				"chance": {
@@ -75319,7 +76289,7 @@
 			},
 			"type": "object"
 		},
-		"__type_61": {
+		"__type_62": {
 			"description": "爆炸",
 			"properties": {
 				"distance_factor": {
@@ -75348,7 +76318,7 @@
 			],
 			"type": "object"
 		},
-		"__type_62": {
+		"__type_63": {
 			"description": "远程武器伤害",
 			"properties": {
 				"amount": {
@@ -75391,7 +76361,7 @@
 			],
 			"type": "object"
 		},
-		"__type_63": {
+		"__type_64": {
 			"properties": {
 				"acid": {
 					"type": "number"
@@ -75450,7 +76420,7 @@
 			},
 			"type": "object"
 		},
-		"__type_64": {
+		"__type_65": {
 			"description": "放置NPC",
 			"properties": {
 				"moves": {
@@ -75510,7 +76480,7 @@
 			],
 			"type": "object"
 		},
-		"__type_65": {
+		"__type_66": {
 			"description": "运行Eoc",
 			"properties": {
 				"description": {
@@ -75642,7 +76612,7 @@
 			],
 			"type": "object"
 		},
-		"__type_66": {
+		"__type_67": {
 			"description": "产生爆炸",
 			"properties": {
 				"do_flashbang": {
@@ -75740,7 +76710,7 @@
 			],
 			"type": "object"
 		},
-		"__type_67": {
+		"__type_68": {
 			"description": "学习法术",
 			"properties": {
 				"spells": {
@@ -75762,7 +76732,7 @@
 			],
 			"type": "object"
 		},
-		"__type_68": {
+		"__type_69": {
 			"description": "施法",
 			"properties": {
 				"level": {
@@ -75792,9 +76762,6 @@
 				"spell_id",
 				"type"
 			],
-			"type": "object"
-		},
-		"__type_69": {
 			"type": "object"
 		},
 		"__type_7": {
@@ -76256,6 +77223,9 @@
 			"type": "object"
 		},
 		"__type_70": {
+			"type": "object"
+		},
+		"__type_71": {
 			"properties": {
 				"ablative": {
 					"description": "默认 false。 如果属实, 该物品包含一个烧蚀板。 确保在可以添加的车牌类型上包含 flag_restriction。",
@@ -76565,7 +77535,7 @@
 			},
 			"type": "object"
 		},
-		"__type_71": {
+		"__type_72": {
 			"description": "魔法物品数据",
 			"properties": {
 				"charge_info": {
@@ -76625,7 +77595,7 @@
 			},
 			"type": "object"
 		},
-		"__type_72": {
+		"__type_73": {
 			"properties": {
 				"ammo_type": {
 					"$ref": "#/definitions/AmmunitionTypeID_1",
@@ -77552,10 +78522,10 @@
 			},
 			"type": "object"
 		},
-		"__type_73": {
+		"__type_74": {
 			"type": "object"
 		},
-		"__type_74": {
+		"__type_75": {
 			"properties": {
 				"ammo_type": {
 					"description": "该弹匣可以装载哪些类型的弹药",
@@ -78410,7 +79380,7 @@
 			},
 			"type": "object"
 		},
-		"__type_75": {
+		"__type_76": {
 			"properties": {
 				"acceptable_ammo": {
 					"description": "(可选) 限制改装件到那些基础（在修饰符之前）弹药类型的枪",
@@ -79830,7 +80800,7 @@
 			},
 			"type": "object"
 		},
-		"__type_76": {
+		"__type_77": {
 			"properties": {
 				"ammo": {
 					"description": "接受重新加载的弹药类型",
@@ -80904,7 +81874,7 @@
 			},
 			"type": "object"
 		},
-		"__type_77": {
+		"__type_78": {
 			"properties": {
 				"rng": {
 					"items": [
@@ -80979,7 +81949,7 @@
 			],
 			"type": "object"
 		},
-		"__type_78": {
+		"__type_79": {
 			"properties": {
 				"one_in": {
 					"$ref": "#/definitions/NpcNumObj_1"
@@ -80987,81 +81957,6 @@
 			},
 			"required": [
 				"one_in"
-			],
-			"type": "object"
-		},
-		"__type_79": {
-			"properties": {
-				"dice": {
-					"items": [
-						{
-							"anyOf": [
-								{
-									"$ref": "#/definitions/NumOperaRng"
-								},
-								{
-									"$ref": "#/definitions/NumOperaOneIn"
-								},
-								{
-									"$ref": "#/definitions/NumOperaDice"
-								},
-								{
-									"$ref": "#/definitions/NumOperaSum"
-								},
-								{
-									"$ref": "#/definitions/NumOperaMul"
-								},
-								{
-									"properties": {
-										"constant": {
-											"type": "number"
-										}
-									},
-									"required": [
-										"constant"
-									],
-									"type": "object"
-								}
-							]
-						},
-						{
-							"anyOf": [
-								{
-									"$ref": "#/definitions/NumOperaRng"
-								},
-								{
-									"$ref": "#/definitions/NumOperaOneIn"
-								},
-								{
-									"$ref": "#/definitions/NumOperaDice"
-								},
-								{
-									"$ref": "#/definitions/NumOperaSum"
-								},
-								{
-									"$ref": "#/definitions/NumOperaMul"
-								},
-								{
-									"properties": {
-										"constant": {
-											"type": "number"
-										}
-									},
-									"required": [
-										"constant"
-									],
-									"type": "object"
-								}
-							]
-						}
-					],
-					"maxItems": 2,
-					"minItems": 2,
-					"type": "array"
-				}
-			},
-			"required": [
-				"dice"
 			],
 			"type": "object"
 		},
@@ -82138,6 +83033,81 @@
 		},
 		"__type_80": {
 			"properties": {
+				"dice": {
+					"items": [
+						{
+							"anyOf": [
+								{
+									"$ref": "#/definitions/NumOperaRng"
+								},
+								{
+									"$ref": "#/definitions/NumOperaOneIn"
+								},
+								{
+									"$ref": "#/definitions/NumOperaDice"
+								},
+								{
+									"$ref": "#/definitions/NumOperaSum"
+								},
+								{
+									"$ref": "#/definitions/NumOperaMul"
+								},
+								{
+									"properties": {
+										"constant": {
+											"type": "number"
+										}
+									},
+									"required": [
+										"constant"
+									],
+									"type": "object"
+								}
+							]
+						},
+						{
+							"anyOf": [
+								{
+									"$ref": "#/definitions/NumOperaRng"
+								},
+								{
+									"$ref": "#/definitions/NumOperaOneIn"
+								},
+								{
+									"$ref": "#/definitions/NumOperaDice"
+								},
+								{
+									"$ref": "#/definitions/NumOperaSum"
+								},
+								{
+									"$ref": "#/definitions/NumOperaMul"
+								},
+								{
+									"properties": {
+										"constant": {
+											"type": "number"
+										}
+									},
+									"required": [
+										"constant"
+									],
+									"type": "object"
+								}
+							]
+						}
+					],
+					"maxItems": 2,
+					"minItems": 2,
+					"type": "array"
+				}
+			},
+			"required": [
+				"dice"
+			],
+			"type": "object"
+		},
+		"__type_81": {
+			"properties": {
 				"sum": {
 					"items": {
 						"anyOf": [
@@ -82177,7 +83147,7 @@
 			],
 			"type": "object"
 		},
-		"__type_81": {
+		"__type_82": {
 			"properties": {
 				"mul": {
 					"items": {
@@ -82218,7 +83188,7 @@
 			],
 			"type": "object"
 		},
-		"__type_82": {
+		"__type_83": {
 			"properties": {
 				"ANY": {
 					"anyOf": [
@@ -82253,7 +83223,7 @@
 			},
 			"type": "object"
 		},
-		"__type_83": {
+		"__type_84": {
 			"properties": {
 				"//": {
 					"enum": [
@@ -83680,7 +84650,7 @@
 			},
 			"type": "object"
 		},
-		"__type_84": {
+		"__type_85": {
 			"properties": {
 				"ammo": {
 					"description": "用于装弹的弹药类型",
@@ -84643,7 +85613,7 @@
 			},
 			"type": "object"
 		},
-		"__type_85": {
+		"__type_86": {
 			"properties": {
 				"addiction_potential": {
 					"description": "此物品引起成瘾的默认强度",
@@ -85890,7 +86860,7 @@
 			},
 			"type": "object"
 		},
-		"__type_86": {
+		"__type_87": {
 			"properties": {
 				"ascii_picture": {
 					"description": "用于该项目的 asci_art 的 ID",
@@ -86718,7 +87688,7 @@
 			},
 			"type": "object"
 		},
-		"__type_87": {
+		"__type_88": {
 			"properties": {
 				"armor": {
 					"description": "护甲数据 必须设置覆盖层",
@@ -87650,7 +88620,7 @@
 			},
 			"type": "object"
 		},
-		"__type_88": {
+		"__type_89": {
 			"description": "任务效果",
 			"properties": {
 				"assign_mission_target": {
@@ -88324,6 +89294,10 @@
 							]
 						},
 						{
+							"$ref": "#/definitions/Foreach",
+							"description": "遍历"
+						},
+						{
 							"items": {
 								"anyOf": [
 									{
@@ -88991,6 +89965,10 @@
 										]
 									},
 									{
+										"$ref": "#/definitions/Foreach",
+										"description": "遍历"
+									},
+									{
 										"enum": [
 											"drop_weapon",
 											"follow_only",
@@ -89020,7 +89998,32 @@
 			},
 			"type": "object"
 		},
-		"__type_89": {
+		"__type_9": {
+			"description": "math比较表达式",
+			"properties": {
+				"math": {
+					"items": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#/definitions/CompareOpera"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"maxItems": 3,
+					"minItems": 3,
+					"type": "array"
+				}
+			},
+			"required": [
+				"math"
+			],
+			"type": "object"
+		},
+		"__type_90": {
 			"description": "任务对话字典",
 			"properties": {
 				"accepted": {
@@ -89073,32 +90076,7 @@
 			],
 			"type": "object"
 		},
-		"__type_9": {
-			"description": "math比较表达式",
-			"properties": {
-				"math": {
-					"items": [
-						{
-							"type": "string"
-						},
-						{
-							"$ref": "#/definitions/CompareOpera"
-						},
-						{
-							"type": "string"
-						}
-					],
-					"maxItems": 3,
-					"minItems": 3,
-					"type": "array"
-				}
-			},
-			"required": [
-				"math"
-			],
-			"type": "object"
-		},
-		"__type_90": {
+		"__type_91": {
 			"description": "已打包的图片对象格式",
 			"properties": {
 				"sprite": {
@@ -89126,7 +90104,7 @@
 			],
 			"type": "object"
 		},
-		"__type_91": {
+		"__type_92": {
 			"description": "未打包的图片对象格式",
 			"properties": {
 				"sprite": {
@@ -89154,7 +90132,7 @@
 			],
 			"type": "object"
 		},
-		"__type_92": {
+		"__type_93": {
 			"description": "车辆部件的操作需求",
 			"properties": {
 				"skills": {
@@ -89190,7 +90168,7 @@
 			],
 			"type": "object"
 		},
-		"__type_93": {
+		"__type_94": {
 			"description": "控制要求",
 			"properties": {
 				"proficiencies": {
@@ -89220,7 +90198,7 @@
 			},
 			"type": "object"
 		},
-		"__type_94": {
+		"__type_95": {
 			"properties": {
 				"acid": {
 					"type": "number"
@@ -89288,7 +90266,7 @@
 			},
 			"type": "object"
 		},
-		"__type_95": {
+		"__type_96": {
 			"properties": {
 				"allowed_tools": {
 					"description": "允许挂载的工具",
@@ -90202,65 +91180,17 @@
 			},
 			"type": "object"
 		},
-		"__type_96": {
-			"type": "object"
-		},
 		"__type_97": {
 			"type": "object"
 		},
 		"__type_98": {
+			"type": "object"
+		},
+		"__type_99": {
 			"additionalProperties": {
 				"$ref": "#/definitions/JToken"
 			},
 			"description": "在stringify输出时 值为 undefine 的键会被忽略",
-			"type": "object"
-		},
-		"__type_99": {
-			"description": "一个自定义的Flag",
-			"properties": {
-				"conflicts": {
-					"description": "如果带有此标志的东西遇到冲突标志的东西，只有一个会被应用",
-					"items": {
-						"$ref": "#/definitions/FlagID"
-					},
-					"type": "array"
-				},
-				"craft_inherit": {
-					"description": "如果为true，如果你用带有此标志的东西制作东西，此标志也会应用到结果",
-					"type": "boolean"
-				},
-				"id": {
-					"$ref": "#/definitions/FlagID"
-				},
-				"info": {
-					"$ref": "#/definitions/DescText",
-					"description": "/** 如果可能，这些信息将被显示，比如在物品描述中"
-				},
-				"inherit": {
-					"description": "如果此标志附加/装备到另一件物品，是否继承此标志，比如如果你将ESAPI板放入板载器，他们的`CANT_WEAR`标志不会应用到板载器，你可以像往常一样穿着它",
-					"type": "boolean"
-				},
-				"name": {
-					"$ref": "#/definitions/DescText",
-					"description": "标志的名称，用于口袋限制，显示为`兼容弹夹: 形状因素`"
-				},
-				"restriction": {
-					"$ref": "#/definitions/DescText",
-					"description": "对于口袋限制，这些信息将显示在口袋信息的`限制`字段中"
-				},
-				"taste_mod": {
-					"description": "对于消耗品，它将在烹饪无法去除的情况下添加-5的味道",
-					"type": "number"
-				},
-				"type": {
-					"const": "json_flag",
-					"type": "string"
-				}
-			},
-			"required": [
-				"id",
-				"type"
-			],
 			"type": "object"
 		},
 		"list": {
@@ -90326,7 +91256,7 @@
 		"{[Pin`u_${K}`]?:undefined;}": {
 			"type": "object"
 		},
-		"{case:number;effect:MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|(MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag)[];}": {
+		"{case:number;effect:MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|Foreach|(MathAssignExp|RunEoc|QueueEoc|EocSelector|RunInvEocs|RunEocWith|RunEocUntil|WeightedListEocs|LoseTrait|AddTrait|ConsumeItem|RemoveItem|SpawnItem|SpawnNpc|SoundEffect|CastSpell|Teleport|LocalVar|Message|AddEffect|LoseEffect|SetHP|AddStrVar|SetString|AddTimeVar|AddRandStrVar|\"follow_only\"|\"leave\"|\"drop_weapon\"|\"u_prevent_death\"|\"npc_prevent_death\"|AssingMission|RemoveActionMission|FinishMission|SetCond|IfElse|SwitchCase|AssignActivity|SetFlag|UnsetFlag|Foreach)[];}": {
 			"properties": {
 				"case": {
 					"description": "case的值",
@@ -90999,6 +91929,10 @@
 							]
 						},
 						{
+							"$ref": "#/definitions/Foreach",
+							"description": "遍历"
+						},
+						{
 							"items": {
 								"anyOf": [
 									{
@@ -91664,6 +92598,10 @@
 												"$ref": "#/definitions/{npc_unset_flag?:undefined;}"
 											}
 										]
+									},
+									{
+										"$ref": "#/definitions/Foreach",
+										"description": "遍历"
 									},
 									{
 										"enum": [

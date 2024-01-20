@@ -63,6 +63,7 @@ export type EocEffectList = [
     AssignActivity      ,//开始活动
     SetFlag             ,//添加flag
     UnsetFlag           ,//移除flag
+    Foreach             ,//遍历
 ];
 
 /**无参效果 */
@@ -468,7 +469,9 @@ type InvSearchData = {
 }[];
 /**根据权重运行EOC */
 type WeightedListEocs = {
-    /**根据权重运行EOC */
+    /**根据权重运行EOC  
+     * [eoc,权重][]
+     */
     weighted_list_eocs: ((InlineEoc|EocID)|[(InlineEoc|EocID),NumObj])[];
 }
 /**添加flag */
@@ -492,6 +495,31 @@ type SwitchCase = {
         effect:EocEffect|EocEffect[];
     }[];
 };
+
+/**遍历 */
+type Foreach = {
+    /**遍历类型  */
+    foreach:ForeachType;
+    /**遍历的名称字符串存储变量 */
+    var:(StrObj);
+    /**eoceffect */
+    effect:EocEffect[];
+    /**遍历目标 */
+    target:ForeachTarget;
+}
+/**遍历类型  
+ * 影响 target 的类型  
+ * == ids 时 target 可为 "bodypart"|"flag"|"trait"|"vitamin"  
+ * == item_group 时 item_group 可为 ItemGroupID  
+ * == monstergroup 时 item_group 可为 MonsterGroupID  
+ * == array 时 item_group 可为 string[]  
+*/
+type ForeachType = "ids"|"item_group"|"monstergroup"|"array";
+/**遍历目标  
+ * 根据遍历类型变化  
+ */
+type ForeachTarget = "bodypart"|"flag"|"trait"|"vitamin"|
+    ItemGroupID|string[];
 
 /**参数Eoc */
 export type ParamsEoc = (IDObj<EocID>|InlineEoc)|(IDObj<EocID>|InlineEoc)[];

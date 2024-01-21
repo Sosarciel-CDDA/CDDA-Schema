@@ -1,6 +1,6 @@
 import { AmmunitionTypeID } from "../AmmiunitionType";
 import { EnchantmentID, InlineEnchantment } from "../Enchantment";
-import { FlagID } from "../Flag";
+import { CustomFlagID } from "../Flag";
 import { CddaID, Color, CopyfromVar, DescText, Explosion, Length, MeleeDamage, Phase, PocketData, Price, Time, Volume, Weight } from "../GenericDefine";
 import { Ammo, AmmoID } from "./Ammo";
 import { Gun } from "./Gun";
@@ -13,7 +13,7 @@ import { Armor } from "./Armor";
 import { GunMod } from "./GunMod";
 import { UseAction } from "../ItemAction";
 /**预定义的通用物品 列表 */
-export declare const DefineGenericIDList: readonly ["afs_biomaterial_1", "afs_biomaterial_2", "afs_biomaterial_3", "afs_biomaterial_4", "afs_biomaterial_5", "afs_circuitry_1", "afs_circuitry_2", "afs_circuitry_3", "afs_circuitry_4", "afs_circuitry_5", "afs_energy_storage_1", "afs_energy_storage_2", "afs_energy_storage_3", "afs_energy_storage_4", "afs_energy_storage_5", "afs_heat_2_salvage", "afs_heat_1", "afs_heat_2", "afs_heat_3", "afs_heat_4", "afs_heat_5", "afs_magnet_1", "afs_magnet_2", "afs_magnet_3", "afs_magnet_4", "afs_material_1", "afs_material_2", "afs_material_3", "afs_material_4", "afs_material_5", "afs_neural_io_1", "afs_neural_io_2", "afs_neural_io_3", "afs_neural_io_4", "afs_neural_io_5", "afs_optics_3", "afs_optics_4"];
+export declare const DefineGenericIDList: readonly ["null", "afs_biomaterial_1", "afs_biomaterial_2", "afs_biomaterial_3", "afs_biomaterial_4", "afs_biomaterial_5", "afs_circuitry_1", "afs_circuitry_2", "afs_circuitry_3", "afs_circuitry_4", "afs_circuitry_5", "afs_energy_storage_1", "afs_energy_storage_2", "afs_energy_storage_3", "afs_energy_storage_4", "afs_energy_storage_5", "afs_heat_2_salvage", "afs_heat_1", "afs_heat_2", "afs_heat_3", "afs_heat_4", "afs_heat_5", "afs_magnet_1", "afs_magnet_2", "afs_magnet_3", "afs_magnet_4", "afs_material_1", "afs_material_2", "afs_material_3", "afs_material_4", "afs_material_5", "afs_neural_io_1", "afs_neural_io_2", "afs_neural_io_3", "afs_neural_io_4", "afs_neural_io_5", "afs_optics_3", "afs_optics_4"];
 /**预定义的通用物品 */
 export type DefineGenericID = typeof DefineGenericIDList[number];
 /**Generic ID格式  */
@@ -163,7 +163,7 @@ export declare const GenericFlagList: readonly ["ALLOWS_BODY_BLOCK", "ALWAYS_TWO
 /**预定义的通用物品的flag */
 export type DefineGenericFlag = typeof GenericFlagList[number];
 /**通用物品的flag */
-export type GenericFlag = DefineGenericFlag | WeaponFlag | FlagID;
+export type GenericFlag = DefineGenericFlag | WeaponFlag | CustomFlagID;
 /**物品的材质 字符串时为材质类型 */
 export type ItemMaterial = MaterialID | {
     /**材质类型 */
@@ -175,6 +175,8 @@ export type ItemMaterial = MaterialID | {
 export type AnyItem = Generic | Ammo | Gun | Tool | Magazine | Comestible | Armor | GunMod;
 /**任何物品ID */
 export type AnyItemID = AnyItem["id"];
+/**任何物品的Flag */
+export type AnyItemFlag = Exclude<AnyItem['flags'], undefined>[number];
 /**预定义的物品类别 列表 */
 export declare const DefineItemCategoryList: readonly ["guns", "magazines", "ammo", "weapons", "tools", "clothing", "food", "drugs", "manuals", "books", "maps", "mods", "mutagen", "bionics", "currency", "veh_parts", "other", "fuel", "seeds", "ma_manuals", "traps", "chems", "spare_parts", "container", "artifacts", "keys", "corpses", "tool_magazine", "armor", "exosuit", "ITEMS_WORN", "INTEGRATED", "BIONIC_FUEL_SOURCE", "WEAPON_HELD"];
 /**预定义的物品类别 */

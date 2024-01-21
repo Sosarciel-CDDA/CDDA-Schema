@@ -1,6 +1,6 @@
 import { AmmunitionTypeID } from "../AmmiunitionType";
 import { EnchantmentID, InlineEnchantment } from "../Enchantment";
-import { FlagID } from "../Flag";
+import { CustomFlagID, FlagID } from "../Flag";
 import { CddaID, Color, CopyfromVar, DescText, Explosion, Length, MeleeDamage, Phase, PocketData, Price, Time, Volume, Weight } from "../GenericDefine";
 import { Ammo, AmmoID } from "./Ammo";
 import { Gun, GunID } from "./Gun";
@@ -16,6 +16,7 @@ import { UseAction } from "../ItemAction";
 
 /**预定义的通用物品 列表 */
 export const DefineGenericIDList = [
+    "null"                      ,//空物品
     "afs_biomaterial_1"         ,//afs材料
     "afs_biomaterial_2"         ,
     "afs_biomaterial_3"         ,
@@ -264,7 +265,7 @@ export const GenericFlagList = [
 /**预定义的通用物品的flag */
 export type DefineGenericFlag = typeof GenericFlagList[number];
 /**通用物品的flag */
-export type GenericFlag = DefineGenericFlag|WeaponFlag|FlagID;
+export type GenericFlag = DefineGenericFlag|WeaponFlag|CustomFlagID;
 
 /**物品的材质 字符串时为材质类型 */
 export type ItemMaterial = MaterialID|{
@@ -278,7 +279,8 @@ export type ItemMaterial = MaterialID|{
 export type AnyItem = Generic|Ammo|Gun|Tool|Magazine|Comestible|Armor|GunMod;
 /**任何物品ID */
 export type AnyItemID = AnyItem["id"];
-
+/**任何物品的Flag */
+export type AnyItemFlag = Exclude<AnyItem['flags'],undefined>[number];
 
 /**预定义的物品类别 列表 */
 export const DefineItemCategoryList = [

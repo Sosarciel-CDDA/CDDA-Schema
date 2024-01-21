@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DefineItemCategoryList = exports.GenericFlagList = exports.MeleeItemFlagList = exports.WeaponFlagList = exports.DefineGenericIDList = void 0;
 /**预定义的通用物品 列表 */
 exports.DefineGenericIDList = [
+    "null", //空物品
     "afs_biomaterial_1", //afs材料
     "afs_biomaterial_2",
     "afs_biomaterial_3",

@@ -1,10 +1,13 @@
 import { CddaID, DescText } from "./GenericDefine";
+import { AnyItemFlag } from "./Item";
 /**预定义的FlagID 列表 */
 export declare const DefineFlagIDList: readonly ["DIAMOND"];
 /**预定义的FlagID */
 export type DefineFlagID = typeof DefineFlagIDList[number];
+/**自定的FlagID */
+export type CustomFlagID = CddaID<"FLAG"> | DefineFlagID;
 /**Flag ID格式 */
-export type FlagID = CddaID<"FLAG"> | DefineFlagID;
+export type FlagID = CustomFlagID | AnyItemFlag;
 /**一个自定义的Flag */
 export type Flag = {
     type: "json_flag";

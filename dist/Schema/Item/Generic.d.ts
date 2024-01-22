@@ -162,8 +162,12 @@ export declare const MeleeItemFlagList: readonly ["ALLOWS_BODY_BLOCK", "ALWAYS_T
 export declare const GenericFlagList: readonly ["ALLOWS_BODY_BLOCK", "ALWAYS_TWOHAND", "BIONIC_WEAPON", "DIAMOND", "MESSY", "NO_CVD", "NO_RELOAD", "NO_UNWIELD", "NONCONDUCTIVE", "POLEARM", "REACH_ATTACK", "REACH3", "SHEATH_AXE", "SHEATH_GOLF", "SHEATH_KNIFE", "SHEATH_SWORD", "SPEAR", "UNARMED_WEAPON", "WHIP", "ACTIVATE_ON_PLACE", "SINGLE_USE", "ZERO_WEIGHT", "TARDIS", "TRADER_KEEP", "NO_RELOAD", "UNBREAKABLE", "DURABLE_MELEE", "NO_SALVAGE"];
 /**预定义的通用物品的flag */
 export type DefineGenericFlag = typeof GenericFlagList[number];
+/**动态产生的Flag 列表 */
+export declare const TechFlagList: readonly ["COLD", "DIRTY", "FIELD_DRESS_FAILED", "FIELD_DRESS", "FIT", "FROZEN", "HIDDEN_ITEM", "HOT", "IRRADIATED", "LITCIG", "MUSHY", "NO_PARASITES", "QUARTERED", "REVIVE_SPECIAL", "WARM", "WET"];
+/**动态产生的Flag */
+export type TechFlag = typeof TechFlagList[number];
 /**通用物品的flag */
-export type GenericFlag = DefineGenericFlag | WeaponFlag | CustomFlagID;
+export type GenericFlag = DefineGenericFlag | WeaponFlag | TechFlag | CustomFlagID;
 /**物品的材质 字符串时为材质类型 */
 export type ItemMaterial = MaterialID | {
     /**材质类型 */

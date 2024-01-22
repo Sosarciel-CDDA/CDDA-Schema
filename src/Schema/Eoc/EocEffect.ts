@@ -7,7 +7,7 @@ import { SoundEffectID, SoundEffectVariantID } from "../SoundEffect";
 import { Eoc, EocID, InlineEoc, TalkerVar } from "./Eoc";
 import { BoolObj, CondObj, GenericObj, GenericObjOperateList, IDObj, LocObj, NumObj, StrObj } from "./VariableObject";
 import { EffectID } from "../Effect";
-import { BodyPartID, BodyPartParam, DescText, Time } from "../GenericDefine";
+import { BodyPartID, BodyPartParam, DescText, MessageRatType, Time } from "../GenericDefine";
 import { AssignMissionTarget, MissionDefinitionID } from "../MissionDefinition";
 import { ItemGroupID } from "../ItemGroup";
 import { ActivityTypeID } from "../ActivityType";
@@ -237,7 +237,7 @@ type Message = TalkerVar<{
      * 混合 (紫色) 、警告 (黄色) 、信息 (蓝色) 、调试 (仅在调试模式打开时出现) 、  
      * 爆头 (紫色) 、临界 (黄色) , 放牧 (蓝色)   
      */
-    type?: 'good' | 'neutral' | 'bad' | 'mixed' | 'warning' | 'info' | 'debug' | 'headshot' | 'critical' | 'grazing';
+    type?: (MessageRatType);
     /**如果为true 那么只会在用户没有聋时显示 */
     sound?: boolean;
     /**如果为true 且 sound为真 玩家在 地下/地下室 时难以听到 */
@@ -441,7 +441,7 @@ type RunInvEocs = TalkerVar<{
      * worn_only    - 如果为true, 只返回穿着的物品;  
      * wielded_only - 如果为true, 只返回手持的物品  
      */
-    search_data?: InvSearchData;
+    search_data?: InvSearchData[];
     /**如果使用了manual或manual_mult, 将显示的菜单的名称 */
     title?: (StrObj);
     /**如果物品被成功选中, 所有true_eocs都会运行, 否则所有false_eocs都会运行;  
@@ -453,7 +453,7 @@ type RunInvEocs = TalkerVar<{
     false_eocs?: (ParamsEoc);
 },"run_inv_eocs">;
 /**背包筛选数据 */
-type InvSearchData = {
+export type InvSearchData = {
     /**特定物品的id */
     id?: IDObj<AnyItemID>;
     /**物品的类别 (区分大小写, 应始终使用小写) */
@@ -466,7 +466,7 @@ type InvSearchData = {
     worn_only?: boolean;
     /** 如果为true, 只返回手持的物品 */
     wielded_only?: boolean;
-}[];
+};
 /**根据权重运行EOC */
 type WeightedListEocs = {
     /**根据权重运行EOC  

@@ -158,7 +158,7 @@ export type PocketData = {
     open_container?: boolean;
     /**默认 false。 如果属实, 口袋可以保护里面的物品在扔进火里时不会爆炸。 */
     fire_protection?: boolean;
-    /**将口袋限制为给定的弹药类型和数量。 这会覆盖强制性的体积、重量、水密和气密, 以使用给定的弹药类型。
+    /**将口袋限制为给定的弹药类型和数量。 这会覆盖强制性的体积, 重量, 水密和气密, 以使用给定的弹药类型。
      * 一个口袋可以容纳任意数量的独特弹药类型, 每种弹药类型的数量不同, 并且容器只能容纳一种类型 (截至目前)。 如果省略它, 它将是空的。
      * Record<(AmmoID)子弹类型 : (number)容纳数量}>
      */
@@ -206,7 +206,7 @@ export type Explosion = {
     /**爆炸可能产生的最大 (听觉)噪音。 */
     max_noise?: number;
     /**爆炸是否会留下火
-     * 爆炸产生火焰, 与其功率、距离和距离因子有关
+     * 爆炸产生火焰, 与其功率, 距离和距离因子有关
      */
     fire?: boolean;
     /**破片数据
@@ -250,9 +250,17 @@ export declare const SocialTypeList: readonly ["intimidate", "lie", "persuade"];
 /**社交技能 */
 export type SocialType = typeof SocialTypeList[number];
 /**效果评价 列表 */
-export declare const RatTypeList: readonly ["good", "neutral", "bad", "mixed"];
+export declare const EffectRatTypeList: readonly ["good", "neutral", "bad", "mixed"];
 /**效果评价 */
-export type RatType = typeof RatTypeList[number];
+export type EffectRatType = typeof EffectRatTypeList[number];
+/**消息评价 列表 */
+export declare const MessageRatTypeList: readonly ["good", "neutral", "bad", "mixed", "warning", "info", "debug", "headshot", "critical", "grazing"];
+/**消息评价
+ * 可以是良好 (绿色) , 中性 (白色) , 不良 (红色)
+ * 混合 (紫色) , 警告 (黄色) , 信息 (蓝色) , 调试 (仅在调试模式打开时出现)
+ * 爆头 (紫色) , 临界 (黄色) , 放牧 (蓝色)
+ */
+export type MessageRatType = typeof MessageRatTypeList[number];
 /**任何Cdda的Json */
 export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic;
 /**任何Cdda的Json 组成的数组*/

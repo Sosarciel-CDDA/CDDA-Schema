@@ -1,6 +1,6 @@
 import { ParamsEnchantment } from "./Enchantment";
 import { FlagID } from "./Flag";
-import { BodyPartID, CddaID, DescText, RatType, Time } from "./GenericDefine";
+import { BodyPartID, CddaID, DescText, EffectRatType, Time } from "./GenericDefine";
 import { LimbScoreID } from "./LimbScore";
 import { MutationID } from "./Mutation";
 import { VitaminsID } from "./Vitamins";
@@ -44,11 +44,11 @@ export type Effect = {
      */
     part_descs?: true;
     /**效果评价 */
-    rating?: RatType;
+    rating?: EffectRatType;
     /**效果被添加时产生的消息 */
-    apply_message?: (DescText) | [DescText, RatType][];
+    apply_message?: (DescText) | [DescText, EffectRatType][];
     /**效果结束或移除时产生的消息 */
-    remove_message?: (DescText) | [DescText, RatType][];
+    remove_message?: (DescText) | [DescText, EffectRatType][];
     /**默认 false；如果为 true, 则当您检查另一个 NPC 或怪物时会显示该效果
      * 如果为true玩家可以从怪物简介中查看到效果
      */
@@ -121,7 +121,7 @@ export type Effect = {
      * [消息,效果评价][]
      * 按效果强度应用不同成员
      */
-    decay_messages?: [DescText, RatType][];
+    decay_messages?: [DescText, EffectRatType][];
     /**这个效果是否只能应用于主肢体
      * 默认false
      */

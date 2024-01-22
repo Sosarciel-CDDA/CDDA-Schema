@@ -1,7 +1,7 @@
 import { EnchantmentID, InlineEnchantment, ParamsEnchantment } from "./Enchantment";
 import { BoolObj, EocID } from "./Eoc";
 import { FlagID } from "./Flag";
-import { BodyPartID, CddaID, DescText, RatType, SocialType } from "./GenericDefine";
+import { BodyPartID, CddaID, DescText, EffectRatType, SocialType } from "./GenericDefine";
 import { AnyItemID, ArmorID, GunID } from "./Item";
 import { MaterialID } from "./Material";
 import { MonsterID } from "./Monster";
@@ -280,5 +280,5 @@ type RatMessage = {
     /**消息文本 */
     text: (DescText);
     /**评价类型 */
-    rating?: RatType;
+    rating?: EffectRatType;
 };

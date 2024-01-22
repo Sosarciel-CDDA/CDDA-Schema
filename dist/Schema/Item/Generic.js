@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DefineItemCategoryList = exports.GenericFlagList = exports.MeleeItemFlagList = exports.WeaponFlagList = exports.DefineGenericIDList = void 0;
+exports.DefineItemCategoryList = exports.TechFlagList = exports.GenericFlagList = exports.MeleeItemFlagList = exports.WeaponFlagList = exports.DefineGenericIDList = void 0;
 /**预定义的通用物品 列表 */
 exports.DefineGenericIDList = [
     "null", //空物品
@@ -98,6 +98,25 @@ exports.GenericFlagList = [
     "UNBREAKABLE", //不会损坏
     "DURABLE_MELEE", //坚固的近战武器
     "NO_SALVAGE", //无法拆分
+];
+/**动态产生的Flag 列表 */
+exports.TechFlagList = [
+    "COLD", //物品是冷的。另请参阅EATEN_COLD。
+    "DIRTY", //物品（液体）被丢在地上，现在已经无法修复的脏了。
+    "FIELD_DRESS_FAILED", //尸体被不熟练的现场处理损坏。影响屠宰结果。
+    "FIELD_DRESS", //尸体被现场处理。影响屠宰结果。
+    "FIT", //减少一点负重。
+    "FROZEN", //物品被冻结（由冰箱使用）。
+    "HIDDEN_ITEM", //这个物品在AIM中看不到。
+    "HOT", //物品是热的。另请参阅EATEN_HOT。
+    "IRRADIATED", //物品已被辐射，将以大大降低的速度变质。
+    "LITCIG", //标记点燃的吸烟物品（香烟，烟斗等）。
+    "MUSHY", //FREEZERBURN物品被冻结，现在是糊状的，没有味道，再次冻结后会变坏。
+    "NO_PARASITES", //使食物 - >类型 - >可食用 - >寄生虫的寄生虫计数无效
+    "QUARTERED", //尸体被切成四份。影响屠宰结果，重量，体积。
+    "REVIVE_SPECIAL", //尸体在玩家附近时复活。
+    "WARM", //用于跟踪物品从/到热的旅程的隐藏标志，在HOT和COLD之间缓冲。
+    "WET", //物品是湿的，会慢慢干掉（例如毛巾）。
 ];
 /**预定义的物品类别 列表 */
 exports.DefineItemCategoryList = [

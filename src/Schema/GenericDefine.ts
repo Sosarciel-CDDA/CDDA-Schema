@@ -100,8 +100,7 @@ export const SubBPList = [
 /**子肢体 */
 export type SubBP = typeof SubBPList[number];
 
-/**自定义的肢体  
- */
+/**自定义的肢体 */
 export type CustBP = CddaID<"BP">;
 
 /**自定义的ID  

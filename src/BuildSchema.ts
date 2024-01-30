@@ -66,9 +66,9 @@ export async function expandSchema(schemasPath:string,withOutTypes:string[]=[]){
 }
 
 export async function buildCddaSchema(outPath?:string){
-    outPath = outPath??path.join(process.cwd(),"CddaSchema");
+    outPath = outPath??path.join(process.cwd(),"schema");
     const configPath = path.join(__dirname,"..","tsconfig.json");
-    const schemasPath = path.join(outPath,"CddaSchemas.json");
+    const schemasPath = path.join(outPath,"schemas.json");
     //编译schema
     //await UtilFunc.exec("npm run generate-schema");
     await UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${schemasPath} --required --strictNullChecks --aliasRefs`);

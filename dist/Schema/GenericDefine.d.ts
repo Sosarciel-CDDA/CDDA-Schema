@@ -64,8 +64,7 @@ export type LimbBP = typeof LimbBPList[number];
 export declare const SubBPList: readonly ["foot_l", "foot_r", "hand_l", "hand_r"];
 /**子肢体 */
 export type SubBP = typeof SubBPList[number];
-/**自定义的肢体
- */
+/**自定义的肢体 */
 export type CustBP = CddaID<"BP">;
 /**自定义的ID
  * @TJS-type string

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "compile": "node generate-exports.js & npx tsc & npx tsc-alias",
-    "build-cdda-schema": "node ./command/build-cdda-schema.js"
+    "build-schema": "node ./command/build-cdda-schema.js"
   },
   "author": "zwa73",
   "license": "ISC",

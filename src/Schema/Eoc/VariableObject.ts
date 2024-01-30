@@ -90,7 +90,14 @@ export const NoParamTalkerCondList = [
     "can_drop_weapon"     ,//可以丢弃手中的物品
     "is_alive"            ,//还活着
     "has_weapon"          ,//挥舞着任意物品
+    "is_avatar"           ,//是主角
+    "is_npc"              ,//是npc
+    "is_character"        ,//是角色
+    "is_monster"          ,//是怪物
+    "is_item"             ,//是物品
+    "is_furnitur"         ,//是家具
 ] as const;
+
 /**双Talker无参条件 */
 export type NoParamTalkerCond = `${`u_`|`npc_`}${typeof NoParamTalkerCondList[number]}`
 

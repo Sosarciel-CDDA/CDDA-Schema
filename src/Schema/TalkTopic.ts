@@ -17,6 +17,8 @@ export type TalkTopic = {
     type: "talk_topic";
     /**此对话的id 或是在哪些对话上扩展选项 */
     id: TalkTopicID|TalkTopicID[];
+    /**在TALK_DONE和TALK_NONE行上方插入对话 默认为false */
+    insert_before_standard_exits?:boolean;
     /**NPC说的话 独立对话必须有 */
     dynamic_line?: DynamicLine;
     /**生成多个回复 */
@@ -103,7 +105,7 @@ type RespShot={
 /**玩家的回复 技能鉴定完整写法 */
 type RespLong ={
     /**对社交技能进行技能鉴定 */
-    trait: {
+    trial: {
         /**基于哪种社交技能 */
         type: RespTraitType;
         /**如果 type 为 CONDITION 则使用条件代替鉴定难度 */
@@ -115,7 +117,7 @@ type RespLong ={
         /**根据npc的性格或态度进行成功率调整  
          * 结果越高成功率越高  
          */
-        mod:[TraitMod,number][]
+        mod?:[TraitMod,number][]
     };
     /**技能鉴定 成功的效果 */
     success: RespEffect;
@@ -173,6 +175,9 @@ export const DefineTopicList = [
     "TALK_STRANGER_WARY"       , // 参见“成功与失败”部分    NPC含有字段 talk_stranger_wary 时显示
     "TALK_STRANGER_FRIENDLY"   , // 参见“成功与失败”部分    NPC含有字段 talk_stranger_friendly 时显示
     "TALK_STRANGER_NEUTRAL"    , // 参见“成功与失败”部分    NPC含有字段 talk_stranger_neutral 时显示
+    "TALK_COMBAT_COMMANDS"     , // 战斗设置
+    "TALK_LUO_ORDERS"          , // 做事
+    "TALK_MISC_RULES"          , // 其他规则设置
 ] as const;
 /**预定义的对话 */
 export type DefineTopic = typeof DefineTopicList[number];

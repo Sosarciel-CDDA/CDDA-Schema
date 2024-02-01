@@ -83,14 +83,16 @@ export type BoolOperateList = [
     HasMission,
     IsInField,
     GetCond,
-    QueryTile
+    QueryTile,
+    SurvivalNeed
 ];
 /**无参条件 */
 export type NoParamCond = [
-    NoParamTalkerCond
+    NoParamTalkerCond,
+    "is_by_radio"
 ][number];
 /**双Talker无参条件列表 */
-export declare const NoParamTalkerCondList: readonly ["female", "male", "can_drop_weapon", "is_alive", "has_weapon", "is_avatar", "is_npc", "is_character", "is_monster", "is_item", "is_furnitur"];
+export declare const NoParamTalkerCondList: readonly ["female", "male", "can_drop_weapon", "is_alive", "has_weapon", "is_avatar", "is_npc", "is_character", "is_monster", "is_item", "is_furnitur", "driving"];
 /**双Talker无参条件 */
 export type NoParamTalkerCond = `${`u_` | `npc_`}${typeof NoParamTalkerCondList[number]}`;
 /**math比较表达式 */
@@ -211,6 +213,12 @@ type QueryTile = TalkerVar<{
     /**选择时显示的消息 */
     message?: (DescText);
 }, "query_tile">;
+/**生存需求 */
+export type SurvivalNeed = TalkerVar<{
+    need: "thirst" | "hunger" | "fatigue";
+    amount?: number;
+    level?: "TIRED";
+}, "need">;
 /**非操作 */
 export type BoolOperaNot = {
     /**非操作 */

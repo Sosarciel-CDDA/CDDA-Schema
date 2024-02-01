@@ -14,6 +14,7 @@ exports.NoParamTalkerCondList = [
     "is_monster", //是怪物
     "is_item", //是物品
     "is_furnitur", //是家具
+    "driving", //正在驾驶
 ];
 /**选择地块的模式 列表 */
 const QueryTileTypeList = [

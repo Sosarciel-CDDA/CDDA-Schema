@@ -26,6 +26,9 @@ exports.DefineTopicList = [
     "TALK_STRANGER_WARY", // 参见“成功与失败”部分    NPC含有字段 talk_stranger_wary 时显示
     "TALK_STRANGER_FRIENDLY", // 参见“成功与失败”部分    NPC含有字段 talk_stranger_friendly 时显示
     "TALK_STRANGER_NEUTRAL", // 参见“成功与失败”部分    NPC含有字段 talk_stranger_neutral 时显示
+    "TALK_COMBAT_COMMANDS", // 战斗设置
+    "TALK_LUO_ORDERS", // 做事
+    "TALK_MISC_RULES", // 其他规则设置
 ];
 /**技能鉴定时可用的调整类型 列表 */
 exports.TraitModList = [

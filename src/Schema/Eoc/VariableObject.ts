@@ -78,10 +78,12 @@ export type BoolOperateList = [
     IsInField               ,//在某个地块附着物上
     GetCond                 ,//获取条件
     QueryTile               ,//选择地块
+    SurvivalNeed            ,//生存需求
 ];
 /**无参条件 */
 export type NoParamCond = [
     NoParamTalkerCond,
+    "is_by_radio"    ,//此对话是在无线通话
 ][number];
 /**双Talker无参条件列表 */
 export const NoParamTalkerCondList = [
@@ -96,6 +98,7 @@ export const NoParamTalkerCondList = [
     "is_monster"          ,//是怪物
     "is_item"             ,//是物品
     "is_furnitur"         ,//是家具
+    "driving"             ,//正在驾驶
 ] as const;
 
 /**双Talker无参条件 */
@@ -239,6 +242,12 @@ type QueryTile = TalkerVar<{
     message?: (DescText);
 },"query_tile">
 
+/**生存需求 */
+export type SurvivalNeed = TalkerVar<{
+    need: "thirst"|"hunger"|"fatigue";
+    amount?: number;
+    level?: "TIRED";
+},"need">
 
 /**非操作 */
 export type BoolOperaNot = {

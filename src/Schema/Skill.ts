@@ -30,6 +30,7 @@ export const DefineSkillList = [
     "stabbing"      ,//
     "unarmed"       ,//徒手
     "chemistry"     ,//应用科学
+    "spellcraft"    ,//魔法
 ] as const;
 /**技能 */
 export type SkillID = CddaID<"SKILL"> | typeof DefineSkillList[number];

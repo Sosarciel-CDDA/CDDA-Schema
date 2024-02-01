@@ -9,6 +9,8 @@ export type TalkTopic = {
     type: "talk_topic";
     /**此对话的id 或是在哪些对话上扩展选项 */
     id: TalkTopicID | TalkTopicID[];
+    /**在TALK_DONE和TALK_NONE行上方插入对话 默认为false */
+    insert_before_standard_exits?: boolean;
     /**NPC说的话 独立对话必须有 */
     dynamic_line?: DynamicLine;
     /**生成多个回复 */
@@ -90,7 +92,7 @@ type RespShot = {
 /**玩家的回复 技能鉴定完整写法 */
 type RespLong = {
     /**对社交技能进行技能鉴定 */
-    trait: {
+    trial: {
         /**基于哪种社交技能 */
         type: RespTraitType;
         /**如果 type 为 CONDITION 则使用条件代替鉴定难度 */
@@ -102,7 +104,7 @@ type RespLong = {
         /**根据npc的性格或态度进行成功率调整
          * 结果越高成功率越高
          */
-        mod: [TraitMod, number][];
+        mod?: [TraitMod, number][];
     };
     /**技能鉴定 成功的效果 */
     success: RespEffect;
@@ -136,7 +138,7 @@ export declare const RespTraitTypeList: readonly ["NONE", "LIE", "PERSUADE", "IN
 /**可用的社交技能 */
 export type RespTraitType = typeof RespTraitTypeList[number];
 /**预定义的对话 列表 */
-export declare const DefineTopicList: readonly ["TALK_DONE", "TALK_NONE", "TALK_FRIEND", "TALK_RADIO", "TALK_LEADER", "TALK_STOLE_ITEM", "TALK_WAKE_UP", "TALK_FRIEND_GUARD", "TALK_MUG", "TALK_STRANGER_AGGRESSIVE", "TALK_STRANGER_SCARED", "TALK_STRANGER_WARY", "TALK_STRANGER_FRIENDLY", "TALK_STRANGER_NEUTRAL"];
+export declare const DefineTopicList: readonly ["TALK_DONE", "TALK_NONE", "TALK_FRIEND", "TALK_RADIO", "TALK_LEADER", "TALK_STOLE_ITEM", "TALK_WAKE_UP", "TALK_FRIEND_GUARD", "TALK_MUG", "TALK_STRANGER_AGGRESSIVE", "TALK_STRANGER_SCARED", "TALK_STRANGER_WARY", "TALK_STRANGER_FRIENDLY", "TALK_STRANGER_NEUTRAL", "TALK_COMBAT_COMMANDS", "TALK_LUO_ORDERS", "TALK_MISC_RULES"];
 /**预定义的对话 */
 export type DefineTopic = typeof DefineTopicList[number];
 /**动态回复构造器

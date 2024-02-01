@@ -1,2 +1,2 @@
-call npm run build-cdda-schema
+call npm run build-schema
 pause

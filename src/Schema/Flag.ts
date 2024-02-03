@@ -1,5 +1,6 @@
 import { CddaID, DescText } from "./GenericDefine";
 import { AnyItemFlag } from "./Item";
+import { MutFlag } from "./Mutation";
 
 
 /**预定义的FlagID 列表 */
@@ -13,7 +14,7 @@ export type DefineFlagID = typeof DefineFlagIDList[number];
 export type CustomFlagID = CddaID<"FLAG">|DefineFlagID;
 
 /**Flag ID格式 */
-export type FlagID = CustomFlagID|AnyItemFlag;
+export type FlagID = CustomFlagID|AnyItemFlag|MutFlag;
 
 /**一个自定义的Flag */
 export type Flag={

@@ -30,4 +30,5 @@ exports.DefineSkillList = [
     "stabbing", //
     "unarmed", //徒手
     "chemistry", //应用科学
+    "spellcraft", //魔法
 ];

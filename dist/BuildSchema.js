@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildCddaSchema = exports.expandSchema = void 0;
+exports.buildCddaSchema = exports.SchemaBuilder = void 0;
 const path = require("path");
 const utils_1 = require("@zwa73/utils");
 /**
@@ -31,52 +31,76 @@ const schema = TJS.generateSchema(program, "*", settings);
 
 UtilFT.writeJSONFile(path.join(process.cwd(),"schemas"),schema as any);
 */
-function isPathValid(filePath) {
-    if (filePath.length > 255)
-        return false;
-    const invalidCharacters = ['<', '>', '"', '|', '?', '*'];
-    for (let i = 0; i < invalidCharacters.length; i++) {
-        if (filePath.includes(invalidCharacters[i]))
+/**Schema构造器 */
+class SchemaBuilder {
+    /**将会覆盖 definitions 对应内容的表 */
+    covetDefinitionsTable = {};
+    /**构造Schema
+     * @param configPath    tsconfig路径
+     * @param outDir        schema文件夹路径 如 ./schema/
+     */
+    async builSchema(configPath, outDir) {
+        outDir = path.join(outDir, "schemas.json");
+        const log = await utils_1.UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${outDir} --required --strictNullChecks --aliasRefs`);
+        console.log(log);
+        //进行预处理并展开
+        await this.expandSchema(outDir);
+    }
+    /**展开schema以供使用 */
+    async expandSchema(schemasPath) {
+        let schema = utils_1.UtilFT.loadJSONFileSync(schemasPath);
+        //覆盖
+        this.coverObj(schema["definitions"], this.covetDefinitionsTable);
+        //替换SchemaString标识符
+        schema = JSON.parse(JSON.stringify(schema).replace(/\^\.\*SchemaString\$/g, '^.*$'));
+        utils_1.UtilFT.writeJSONFile(schemasPath, schema);
+        const definitions = schema["definitions"];
+        //展开定义
+        for (const typeName in definitions) {
+            const schema = definitions[typeName];
+            //展开所有object与忽略检测的类型
+            if (!(schema.type == "object" || schema.type == "array" || schema.type == undefined))
+                continue;
+            if ((/^.+_[0-9]/).test(typeName) || (/^{./).test(typeName))
+                continue;
+            const basename = path.basename(schemasPath);
+            const tpath = path.join(path.dirname(schemasPath), `${typeName}.schema.json`);
+            if (!this.isPathValid(tpath))
+                continue;
+            utils_1.UtilFT.writeJSONFile(tpath, {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "$ref": `${basename}#/definitions/${typeName}`
+            });
+        }
+    }
+    /**路径有效 */
+    isPathValid(filePath) {
+        if (filePath.length > 255)
             return false;
+        const invalidCharacters = ['<', '>', '"', '|', '?', '*'];
+        for (let i = 0; i < invalidCharacters.length; i++) {
+            if (filePath.includes(invalidCharacters[i]))
+                return false;
+        }
+        return true;
     }
-    return true;
-}
-/**展开schema以供使用 */
-async function expandSchema(schemasPath, withOutTypes = []) {
-    let schema = utils_1.UtilFT.loadJSONFileSync(schemasPath);
-    //替换SchemaString标识符
-    schema = JSON.parse(JSON.stringify(schema).replace(/\^\.\*SchemaString\$/g, '^.*$'));
-    utils_1.UtilFT.writeJSONFile(schemasPath, schema);
-    const definitions = schema["definitions"];
-    //展开定义
-    for (const typeName in definitions) {
-        const schema = definitions[typeName];
-        //展开所有object与忽略检测的类型
-        if (schema.type != "object" && schema.type != undefined && !withOutTypes.includes(typeName))
-            continue;
-        if ((/^.+_[0-9]/).test(typeName) || (/^{./).test(typeName))
-            continue;
-        const basename = path.basename(schemasPath);
-        const tpath = path.join(path.dirname(schemasPath), `${typeName}.schema.json`);
-        if (!isPathValid(tpath))
-            continue;
-        utils_1.UtilFT.writeJSONFile(tpath, {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "$ref": `${basename}#/definitions/${typeName}`
-        });
+    /**覆盖object */
+    coverObj(base, cover) {
+        for (const k in cover) {
+            const v = cover[k];
+            if (typeof v === "object" && !Array.isArray(v) &&
+                typeof base[k] === "object" && !Array.isArray(base[k]))
+                this.coverObj(base[k], v);
+            else
+                base[k] = v;
+        }
     }
 }
-exports.expandSchema = expandSchema;
+exports.SchemaBuilder = SchemaBuilder;
 async function buildCddaSchema(outPath) {
+    const builder = new SchemaBuilder();
     outPath = outPath ?? path.join(process.cwd(), "schema");
     const configPath = path.join(__dirname, "..", "tsconfig.json");
-    const schemasPath = path.join(outPath, "schemas.json");
-    //编译schema
-    //await UtilFunc.exec("npm run generate-schema");
-    await utils_1.UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${schemasPath} --required --strictNullChecks --aliasRefs`);
-    //await UtilFunc.exec("typescript-json-schema tsconfig.json * --out schema/schemas.json --required --strictNullChecks");
-    //展开
-    console.log(schemasPath);
-    await expandSchema(schemasPath, ["AnyCddaJsonList"]);
+    await builder.builSchema(configPath, outPath);
 }
 exports.buildCddaSchema = buildCddaSchema;

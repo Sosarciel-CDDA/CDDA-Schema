@@ -50,9 +50,9 @@ export type NpcClass = {
     /**默认值为 6 天 */
     restock_interval?: `${number} days`;
     /**基础变异 */
-    traits?: Traits;
+    traits?: NpcBaseTraits;
     /**基础法术 */
-    spells?: Spells;
+    spells?: NpcBaseSpells;
     /**变异方向
      * Mutation rounds can be specified as follows:
      * "mutation_rounds": {
@@ -96,12 +96,12 @@ type ShopPriceRules = [
         "price": 10000;
     }
 ];
-type Traits = ({
+export type NpcBaseTraits = ({
     group: string;
 } | {
     trait: MutationID;
 } | [MutationID, number])[];
-type Spells = {
+export type NpcBaseSpells = {
     id: SpellID;
     level: number;
 }[];

@@ -64,6 +64,7 @@ export type EocEffectList = [
     SetFlag             ,//添加flag
     UnsetFlag           ,//移除flag
     Foreach             ,//遍历
+    TurnCost            ,//消耗一定时间
 ];
 
 /**无参效果 */
@@ -520,6 +521,12 @@ type ForeachType = "ids"|"item_group"|"monstergroup"|"array";
  */
 type ForeachTarget = "bodypart"|"flag"|"trait"|"vitamin"|
     ItemGroupID|string[];
+
+/**使 alpha 消耗一定时间 */
+type TurnCost = {
+    /**使 alpha 消耗一定时间 */
+    turn_cost: (Time);
+}
 
 /**参数Eoc */
 export type ParamsEoc = (IDObj<EocID>|InlineEoc)|(IDObj<EocID>|InlineEoc)[];

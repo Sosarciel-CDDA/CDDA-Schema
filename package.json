@@ -16,6 +16,7 @@
     "@zwa73/utils": "^1.0.60",
     "cdda-event": "file:CDDA-Event",
     "cdda-schema": "file:CDDA-Schema",
+    "cdda-custommedia": "file:CDDA-CustomMedia",
     "commander": "^11.1.0",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.3.3",

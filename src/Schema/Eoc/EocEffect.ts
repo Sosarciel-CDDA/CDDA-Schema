@@ -65,6 +65,7 @@ export type EocEffectList = [
     UnsetFlag           ,//移除flag
     Foreach             ,//遍历
     TurnCost            ,//消耗一定时间
+    SetTalker           ,//获取talker的character_id
 ];
 
 /**无参效果 */
@@ -527,6 +528,11 @@ type TurnCost = {
     /**使 alpha 消耗一定时间 */
     turn_cost: (Time);
 }
+
+/**将 talker 的 character_id 传入对象字符串中 */
+type SetTalker = TalkerVar<{
+    set_talker:(StrObj);
+},"set_talker">
 
 /**参数Eoc */
 export type ParamsEoc = (IDObj<EocID>|InlineEoc)|(IDObj<EocID>|InlineEoc)[];

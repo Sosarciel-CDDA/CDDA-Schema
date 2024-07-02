@@ -1,4 +1,4 @@
-import * as path from 'path';
+import path from 'pathe';
 import { JObject, UtilFT, UtilFunc } from "@zwa73/utils";
 /**
 // optionally pass argument to schema generator
@@ -104,9 +104,9 @@ export class SchemaBuilder{
 export async function buildCddaSchema(outPath?:string){
     const builder = new SchemaBuilder();
 
-    outPath = outPath??path.join(process.cwd(),"schema");
+    const fixedPath = outPath ?? path.join(process.cwd(),"schema");
     const configPath = path.join(__dirname,"..","tsconfig.json");
 
-    await builder.builSchema(configPath,outPath)
+    await builder.builSchema(configPath,fixedPath)
 }
 

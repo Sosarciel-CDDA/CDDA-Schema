@@ -8,19 +8,15 @@
   },
   "scripts": {
     "compile": "node generate-exports.js & npx tsc & npx tsc-alias",
-    "build-schema": "node ./command/build-cdda-schema.js"
+    "build-schema": "powershell scripts/build-schema"
   },
   "author": "zwa73",
   "license": "ISC",
   "dependencies": {
-    "@zwa73/utils": "^1.0.60",
-    "cdda-event": "file:CDDA-Event",
-    "cdda-schema": "file:CDDA-Schema",
-    "cdda-custommedia": "file:CDDA-CustomMedia",
-    "cdda-smartnpc": "file:CDDA-SmartNPC",
-    "commander": "^11.1.0",
-    "tsc-alias": "^1.8.8",
-    "typescript": "^5.3.3",
-    "typescript-json-schema": "^0.62.0"
+    "@zwa73/utils": "*"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@zwa73/dev-utils": "*"
   }
 }

@@ -365,4 +365,4 @@ export type LocObj = GenericObj;
 
 
 /**条件Obj */
-export type CondObj = GenericObj;
+export type CondObj = GenericObj|string;

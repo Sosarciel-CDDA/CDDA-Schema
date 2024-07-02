@@ -25,6 +25,10 @@ export type Flag = {
     inherit?: boolean;
     /** 如果为true，如果你用带有此标志的东西制作东西，此标志也会应用到结果 */
     craft_inherit?: boolean;
-    /** /** 如果可能，这些信息将被显示，比如在物品描述中 */
+    /** 如果可能，这些信息将被显示，比如在物品描述中 */
     info?: DescText;
+    /**物品的前缀 */
+    item_prefix?: DescText;
+    /**物品的后缀 */
+    item_suffix?: DescText;
 };

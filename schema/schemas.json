@@ -89589,6 +89589,14 @@
 				"info": {
 					"$ref": "#/definitions/DescText",
 					"description": "如果可能，这些信息将被显示，比如在物品描述中"
+				},
+				"item_prefix": {
+					"$ref": "#/definitions/DescText",
+					"description": "物品的前缀"
+				},
+				"item_suffix": {
+					"$ref": "#/definitions/DescText",
+					"description": "物品的后缀"
 				}
 			},
 			"required": [

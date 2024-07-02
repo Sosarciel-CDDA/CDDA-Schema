@@ -53,7 +53,8 @@ export type EocEffectList = [
     SetFlag,
     UnsetFlag,
     Foreach,
-    TurnCost
+    TurnCost,
+    SetTalker
 ];
 /**无参效果 */
 export type NoParamEffect = [
@@ -80,7 +81,7 @@ type RunEocUntil = {
     /**循环运行Eoc */
     run_eoc_until: (ParamsEoc);
     /**循环条件, 为真时循环 */
-    condition: (CondObj);
+    condition: (BoolObj);
     /**最大循环限制, 超过时停止并报错 默认100*/
     iteration?: (NumObj);
 };
@@ -490,6 +491,10 @@ type TurnCost = {
     /**使 alpha 消耗一定时间 */
     turn_cost: (Time);
 };
+/**将 talker 的 character_id 传入对象字符串中 */
+type SetTalker = TalkerVar<{
+    set_talker: (StrObj);
+}, "set_talker">;
 /**参数Eoc */
 export type ParamsEoc = (IDObj<EocID> | InlineEoc) | (IDObj<EocID> | InlineEoc)[];
 export {};

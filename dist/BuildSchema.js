@@ -1,7 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildCddaSchema = exports.SchemaBuilder = void 0;
-const path = require("path");
+exports.SchemaBuilder = void 0;
+exports.buildCddaSchema = buildCddaSchema;
+const pathe_1 = __importDefault(require("pathe"));
 const utils_1 = require("@zwa73/utils");
 /**
 // optionally pass argument to schema generator
@@ -40,7 +44,7 @@ class SchemaBuilder {
      * @param outDir        schema文件夹路径 如 ./schema/
      */
     async builSchema(configPath, outDir) {
-        outDir = path.join(outDir, "schemas.json");
+        outDir = pathe_1.default.join(outDir, "schemas.json");
         const log = await utils_1.UtilFunc.exec(`typescript-json-schema ${configPath} * --out ${outDir} --required --strictNullChecks --aliasRefs`);
         console.log(log);
         //进行预处理并展开
@@ -63,8 +67,8 @@ class SchemaBuilder {
                 continue;
             if ((/^.+_[0-9]/).test(typeName) || (/^{./).test(typeName))
                 continue;
-            const basename = path.basename(schemasPath);
-            const tpath = path.join(path.dirname(schemasPath), `${typeName}.schema.json`);
+            const basename = pathe_1.default.basename(schemasPath);
+            const tpath = pathe_1.default.join(pathe_1.default.dirname(schemasPath), `${typeName}.schema.json`);
             if (!this.isPathValid(tpath))
                 continue;
             utils_1.UtilFT.writeJSONFile(tpath, {
@@ -99,8 +103,7 @@ class SchemaBuilder {
 exports.SchemaBuilder = SchemaBuilder;
 async function buildCddaSchema(outPath) {
     const builder = new SchemaBuilder();
-    outPath = outPath ?? path.join(process.cwd(), "schema");
-    const configPath = path.join(__dirname, "..", "tsconfig.json");
-    await builder.builSchema(configPath, outPath);
+    const fixedPath = outPath ?? pathe_1.default.join(process.cwd(), "schema");
+    const configPath = pathe_1.default.join(__dirname, "..", "tsconfig.json");
+    await builder.builSchema(configPath, fixedPath);
 }
-exports.buildCddaSchema = buildCddaSchema;

@@ -34,4 +34,8 @@ export type Flag={
     craft_inherit?: boolean,
     /** 如果可能，这些信息将被显示，比如在物品描述中 */
     info?: DescText;
+    /**物品的前缀 */
+    item_prefix?: DescText;
+    /**物品的后缀 */
+    item_suffix?: DescText;
 }

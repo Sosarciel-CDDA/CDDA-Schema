@@ -99,7 +99,7 @@ type RunEocUntil = {
     /**循环运行Eoc */
     run_eoc_until: (ParamsEoc);
     /**循环条件, 为真时循环 */
-    condition: (CondObj);
+    condition: (BoolObj);
     /**最大循环限制, 超过时停止并报错 默认100*/
     iteration?: (NumObj);
 }

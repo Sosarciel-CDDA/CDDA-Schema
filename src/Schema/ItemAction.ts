@@ -302,7 +302,7 @@ type UAPlaceNpc = {
 }
 /**运行Eoc */
 type UARunEoc = {
-    /**执行某个ECO */
+    /**执行某个EOC */
     type: "effect_on_conditions";
     /**说明 */
     description: (DescText);

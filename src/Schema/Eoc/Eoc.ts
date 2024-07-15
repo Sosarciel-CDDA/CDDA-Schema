@@ -24,7 +24,7 @@ export type Eoc = {
     condition?: BoolObj;
     /**循环间隔 */
     recurrence?: (Time);
-    /**是否可在NPC上运行 */
+    /**deactivate_condition 是否仅在玩家上运行 */
     global?:boolean,
     /**是否可在NPC上运行 global生效时才可用 */
     run_for_npcs?:boolean,

@@ -24,6 +24,7 @@ import { VehiclePart } from "./VehiclePart";
 import { ToolQuality } from "./ToolQuality";
 import { TalkTopic } from "./TalkTopic";
 import { Requirement } from "./Requirement";
+import { Terrain } from "./Terrain";
 
 /**描述性文本 */
 export type DescText = string|{
@@ -106,7 +107,8 @@ export type CustBP = CddaID<"BP">;
 /**自定义的ID  
  * @TJS-type string  
  */
-export type CddaID<T extends string> = `${`${string}_`|''}${T}_${string}`|SchemaString;
+export type CddaID<T extends string> = string&{}|`${T}_${string}`;
+//export type CddaID<T extends string> = `${`${string}_`|''}${T}_${string}`|SchemaString;
 
 
 /**Copyfrom的保留字段 */
@@ -363,6 +365,6 @@ export type AnyCddaJson = AnyItem|Eoc|Mutation|DamageType|DamageInfoOrder|
     AmmunitionType|Enchantment|Flag|ItemGroup|Monster|
     NpcClass|NpcInstance|OverlayOrdering|SoundEffect|Requirement|
     Effect|Spell|MathFunction|AmmoEffect|MissionDefinition|
-    ModTileset|ActivityType|VehiclePart|ToolQuality|TalkTopic;
+    ModTileset|ActivityType|VehiclePart|ToolQuality|TalkTopic|Terrain;
 /**任何Cdda的Json 组成的数组*/
 export type AnyCddaJsonList = (AnyCddaJson)[];

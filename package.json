@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "cdda的schema验证",
   "main": "index.js",
-  "bin": {
-    "build-cdda-schema": "./command/build-cdda-schema.js"
-  },
   "scripts": {
     "expand-macro": "powershell scripts/expand-macro",
     "compile": "powershell scripts/compile",

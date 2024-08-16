@@ -2,12 +2,14 @@ import { CddaID } from "./GenericDefine";
 import { AnyItemID } from "./Item";
 import { ItemGroupID } from "./ItemGroup";
 import { MonsterID } from "./Monster";
-import { PaletteID } from "./Palette";
+import { Palette, PaletteID } from "./Palette";
 import { TerrainID } from "./Terrain";
 import { VehicleID } from "./Vehicle";
 
-export type OmTerrainID = CddaID<"OMT">;
-
+/**大地图地块 */
+export type OvermapTerrainID = CddaID<"OMTERR">;
+/**嵌套地块 */
+export type NestedMapgenID = CddaID<"NESTMPG">;
 
 export type GroupPlace = {
     /**重复n次 */
@@ -41,20 +43,29 @@ export type VehiclePlace = {
     rotation: number;
 }
 
+/**嵌套生成子地图生成定义 */
+export type NestMapgen = {
+    nested_mapgen_id:NestedMapgenID;
+    object:{
+        mapgensize: [ number, number ],
+        rotation: [ number, number ],
+    }
+}&Omit<Mapgen,'om_terrain'>;
+/**地图生成定义 */
 export type Mapgen = {
     type: "mapgen";
     method: "json";
-    om_terrain: OmTerrainID[][];
+    om_terrain: OvermapTerrainID|OvermapTerrainID[]|OvermapTerrainID[][];
     weight: number;
     object: {
-        fill_ter: TerrainID;
+        fill_ter?: TerrainID;
         rows: string[];
-        palettes: PaletteID[];
-        items: {
-            [key: string]: ItemPlace[];
-        };
-        place_loot: GroupPlace[];
-        place_monsters: MonsterPlace[];
-        place_vehicles: VehiclePlace[];
-    };
+        palettes?: PaletteID[];
+        items?: { [key: string]: ItemPlace[]; };
+        place_loot?: GroupPlace[];
+        place_monsters?: MonsterPlace[];
+        place_vehicles?: VehiclePlace[];
+    }&Omit<Palette,'id'|'type'>;
 };
+/**任意地图生成定义 */
+export type AnyMapgen = Mapgen|NestMapgen;

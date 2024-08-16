@@ -24,6 +24,9 @@ import { ToolQuality } from "./ToolQuality";
 import { TalkTopic } from "./TalkTopic";
 import { Requirement } from "./Requirement";
 import { Terrain } from "./Terrain";
+import { OverMapSpecial } from "./OvermapSpecial";
+import { Mapgen } from "./Mapgen";
+import { Palette } from "./Palette";
 /**描述性文本 */
 export type DescText = string | {
     /**单数名 */
@@ -262,6 +265,6 @@ export declare const MessageRatTypeList: readonly ["good", "neutral", "bad", "mi
  */
 export type MessageRatType = typeof MessageRatTypeList[number];
 /**任何Cdda的Json */
-export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic | Terrain;
+export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic | Terrain | OverMapSpecial | Mapgen | Palette;
 /**任何Cdda的Json 组成的数组*/
 export type AnyCddaJsonList = (AnyCddaJson)[];

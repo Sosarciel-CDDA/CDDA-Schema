@@ -12,7 +12,6 @@ export * from './SoundEffect';
 export * from './Skill';
 export * from './Requirement';
 export * from './Palette';
-export * from './OvermapTerrain';
 export * from './OvermapSpecial';
 export * from './OverlayOrdering';
 export * from './NpcInstance';

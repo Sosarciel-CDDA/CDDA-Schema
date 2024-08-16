@@ -1,4 +1,5 @@
 import { CddaID } from "./GenericDefine";
+import { MonsterID } from "./Monster";
 import { TerrainID } from "./Terrain";
 
 
@@ -14,11 +15,15 @@ type PaletteFurnitureMap = {
 type PaletteLiquidsMap = {
     [key:string]:{ liquid: string; amount: [number, number]};
 };
+type PaletteMonstersMap = {
+    [key:string]:{ monster: MonsterID};
+};
 /**地图符号定义 */
 export type Palette = {
     type: "palette";
     id: PaletteID;
-    terrain: PaletteTerrainMap;
-    furniture: PaletteFurnitureMap;
-    liquids: PaletteLiquidsMap;
+    terrain?: PaletteTerrainMap;
+    furniture?: PaletteFurnitureMap;
+    liquids?: PaletteLiquidsMap;
+    monster?:PaletteMonstersMap;
 };

@@ -1,4 +1,4 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$ref": "schemas.json#/definitions/OmTerrainID"
+	"$ref": "schemas.json#/definitions/PaletteMonstersMap"
 }

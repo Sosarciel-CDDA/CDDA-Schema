@@ -1,11 +1,11 @@
 import { CddaID } from "./GenericDefine";
-import { OmTerrainID } from "./Mapgen";
+import { OvermapTerrainID } from "./Mapgen";
 
 /**大地图特殊地点 */
 export type OverMapSpecialID = CddaID<"OMSPEC">;
 
 type Direction = 'north' | 'south' | 'east' | 'west';
-type OmTerrainIDWithDirection = `${OmTerrainID}_${Direction}`;
+type OmTerrainIDWithDirection = `${OvermapTerrainID}_${Direction}`;
 
 type GenPos = {point: [number, number, number];}
 type OverMapGen = GenPos&{

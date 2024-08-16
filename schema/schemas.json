@@ -99,7 +99,7 @@
 			]
 		},
 		"Flag": {
-			"$ref": "#/definitions/__type_104"
+			"$ref": "#/definitions/__type_105"
 		},
 		"DefineLimbScoreID": {
 			"enum": [
@@ -335,7 +335,7 @@
 			]
 		},
 		"Effect": {
-			"$ref": "#/definitions/__type_105"
+			"$ref": "#/definitions/__type_106"
 		},
 		"EffectVitaminsMod": {
 			"description": "效果维生素修正",
@@ -683,7 +683,7 @@
 			]
 		},
 		"AmmoEffect": {
-			"$ref": "#/definitions/__type_106"
+			"$ref": "#/definitions/__type_107"
 		},
 		"AmmoAoe": {
 			"description": "弹药AOE效果",
@@ -4940,7 +4940,7 @@
 			]
 		},
 		"NpcClass": {
-			"$ref": "#/definitions/__type_107"
+			"$ref": "#/definitions/__type_108"
 		},
 		"ShopItemGroup": {
 			"$ref": "#/definitions/ShopItemGroup_1"
@@ -5808,7 +5808,7 @@
 			]
 		},
 		"ToolQuality": {
-			"$ref": "#/definitions/__type_108"
+			"$ref": "#/definitions/__type_109"
 		},
 		"ToolID": {
 			"description": "TOOL ID格式",
@@ -16830,7 +16830,7 @@
 			]
 		},
 		"ItemGroup": {
-			"$ref": "#/definitions/__type_109"
+			"$ref": "#/definitions/__type_110"
 		},
 		"ItemGroupEntrie": {
 			"description": "一项Entry",
@@ -17283,7 +17283,7 @@
 			]
 		},
 		"TalkTopic": {
-			"$ref": "#/definitions/__type_110"
+			"$ref": "#/definitions/__type_111"
 		},
 		"Resp": {
 			"description": "玩家的回复  \n等同于无条件技能鉴定成功  \n转到 success topic",
@@ -24220,7 +24220,7 @@
 			]
 		},
 		"Monster": {
-			"$ref": "#/definitions/__type_111"
+			"$ref": "#/definitions/__type_112"
 		},
 		"MonBP": {
 			"description": "怪物的身体类型",
@@ -24905,7 +24905,7 @@
 			]
 		},
 		"Spell": {
-			"$ref": "#/definitions/__type_113"
+			"$ref": "#/definitions/__type_114"
 		},
 		"SpellTarget": {
 			"enum": [
@@ -25059,7 +25059,7 @@
 			]
 		},
 		"Enchantment": {
-			"$ref": "#/definitions/__type_114"
+			"$ref": "#/definitions/__type_115"
 		},
 		"InlineEnchantment": {
 			"$ref": "#/definitions/__type_1"
@@ -25984,7 +25984,7 @@
 			]
 		},
 		"Mutation": {
-			"$ref": "#/definitions/__type_115"
+			"$ref": "#/definitions/__type_116"
 		},
 		"BPWetProte": {
 			"description": "肢体的潮湿保护",
@@ -26055,7 +26055,7 @@
 			]
 		},
 		"NpcInstance": {
-			"$ref": "#/definitions/__type_116"
+			"$ref": "#/definitions/__type_117"
 		},
 		"NpcAttitude": {
 			"description": "NPC态度",
@@ -26107,7 +26107,7 @@
 			]
 		},
 		"Terrain": {
-			"$ref": "#/definitions/__type_117"
+			"$ref": "#/definitions/__type_118"
 		},
 		"PaletteID": {
 			"anyOf": [
@@ -26137,6 +26137,9 @@
 		"PaletteLiquidsMap": {
 			"$ref": "#/definitions/__type_90"
 		},
+		"PaletteMonstersMap": {
+			"$ref": "#/definitions/__type_91"
+		},
 		"Palette": {
 			"description": "地图符号定义",
 			"type": "object",
@@ -26149,20 +26152,20 @@
 					"$ref": "#/definitions/PaletteID"
 				},
 				"terrain": {
-					"$ref": "#/definitions/PaletteTerrainMap"
+					"$ref": "#/definitions/PaletteTerrainMap_1"
 				},
 				"furniture": {
-					"$ref": "#/definitions/PaletteFurnitureMap"
+					"$ref": "#/definitions/PaletteFurnitureMap_1"
 				},
 				"liquids": {
-					"$ref": "#/definitions/PaletteLiquidsMap"
+					"$ref": "#/definitions/PaletteLiquidsMap_1"
+				},
+				"monster": {
+					"$ref": "#/definitions/PaletteMonstersMap_1"
 				}
 			},
 			"required": [
-				"furniture",
 				"id",
-				"liquids",
-				"terrain",
 				"type"
 			]
 		},
@@ -26185,7 +26188,8 @@
 				}
 			]
 		},
-		"OmTerrainID": {
+		"OvermapTerrainID": {
+			"description": "大地图地块",
 			"anyOf": [
 				{
 					"allOf": [
@@ -26200,7 +26204,27 @@
 				},
 				{
 					"type": "string",
-					"pattern": "^OMT_.*$"
+					"pattern": "^OMTERR_.*$"
+				}
+			]
+		},
+		"NestedMapgenID": {
+			"description": "嵌套地块",
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^NESTMPG_.*$"
 				}
 			]
 		},
@@ -26386,6 +26410,61 @@
 				"y"
 			]
 		},
+		"NestMapgen": {
+			"description": "嵌套生成子地图",
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"nested_mapgen_id": {
+							"$ref": "#/definitions/NestedMapgenID"
+						},
+						"object": {
+							"type": "object",
+							"properties": {
+								"mapgensize": {
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								"rotation": {
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								}
+							},
+							"required": [
+								"mapgensize",
+								"rotation"
+							]
+						}
+					},
+					"required": [
+						"nested_mapgen_id",
+						"object"
+					]
+				},
+				{
+					"$ref": "#/definitions/Omit<Mapgen,\"om_terrain\">"
+				}
+			]
+		},
 		"Mapgen": {
 			"type": "object",
 			"properties": {
@@ -26398,241 +26477,261 @@
 					"const": "json"
 				},
 				"om_terrain": {
-					"type": "array",
-					"items": {
-						"type": "array",
-						"items": {
-							"$ref": "#/definitions/OmTerrainID"
+					"anyOf": [
+						{
+							"allOf": [
+								{
+									"type": "object",
+									"properties": {}
+								},
+								{
+									"type": "string"
+								}
+							]
+						},
+						{
+							"type": "string",
+							"pattern": "^OMTERR_.*$"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "array",
+								"items": {
+									"$ref": "#/definitions/OvermapTerrainID"
+								}
+							}
 						}
-					}
+					]
 				},
 				"weight": {
 					"type": "number"
 				},
 				"object": {
-					"type": "object",
-					"properties": {
-						"fill_ter": {
-							"$ref": "#/definitions/TerrainID"
-						},
-						"rows": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						"palettes": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PaletteID"
-							}
-						},
-						"items": {
+					"allOf": [
+						{
 							"type": "object",
-							"additionalProperties": {
-								"type": "array",
+							"properties": {
+								"fill_ter": {
+									"$ref": "#/definitions/TerrainID_1"
+								},
+								"rows": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"palettes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PaletteID"
+									}
+								},
 								"items": {
 									"type": "object",
-									"properties": {
-										"repeat": {
-											"description": "重复n次",
-											"anyOf": [
-												{
-													"type": "array",
-													"items": [
+									"additionalProperties": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"repeat": {
+													"description": "重复n次",
+													"anyOf": [
 														{
-															"type": "number"
+															"type": "array",
+															"items": [
+																{
+																	"type": "number"
+																},
+																{
+																	"type": "number"
+																}
+															],
+															"minItems": 2,
+															"maxItems": 2
 														},
 														{
 															"type": "number"
 														}
-													],
-													"minItems": 2,
-													"maxItems": 2
+													]
 												},
-												{
+												"item": {
+													"$ref": "#/definitions/AnyItemID_1"
+												},
+												"chance": {
 													"type": "number"
 												}
+											},
+											"required": [
+												"chance",
+												"item",
+												"repeat"
 											]
-										},
-										"item": {
-											"$ref": "#/definitions/AnyItemID_1"
-										},
-										"chance": {
-											"type": "number"
 										}
-									},
-									"required": [
-										"chance",
-										"item",
-										"repeat"
-									]
+									}
+								},
+								"place_loot": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"repeat": {
+												"description": "重复n次",
+												"anyOf": [
+													{
+														"type": "array",
+														"items": [
+															{
+																"type": "number"
+															},
+															{
+																"type": "number"
+															}
+														],
+														"minItems": 2,
+														"maxItems": 2
+													},
+													{
+														"type": "number"
+													}
+												]
+											},
+											"group": {
+												"$ref": "#/definitions/ItemGroupID_1"
+											},
+											"chance": {
+												"type": "number"
+											},
+											"x": {
+												"type": "number"
+											},
+											"y": {
+												"type": "number"
+											},
+											"magazine": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"chance",
+											"group",
+											"magazine",
+											"repeat",
+											"x",
+											"y"
+										]
+									}
+								},
+								"place_monsters": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"monster": {
+												"$ref": "#/definitions/MonsterID"
+											},
+											"x": {
+												"type": "array",
+												"items": [
+													{
+														"type": "number"
+													},
+													{
+														"type": "number"
+													}
+												],
+												"minItems": 2,
+												"maxItems": 2
+											},
+											"y": {
+												"type": "array",
+												"items": [
+													{
+														"type": "number"
+													},
+													{
+														"type": "number"
+													}
+												],
+												"minItems": 2,
+												"maxItems": 2
+											},
+											"repeat": {
+												"anyOf": [
+													{
+														"type": "array",
+														"items": [
+															{
+																"type": "number"
+															},
+															{
+																"type": "number"
+															}
+														],
+														"minItems": 2,
+														"maxItems": 2
+													},
+													{
+														"type": "number"
+													}
+												]
+											},
+											"density": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"density",
+											"monster",
+											"repeat",
+											"x",
+											"y"
+										]
+									}
+								},
+								"place_vehicles": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"vehicle": {
+												"$ref": "#/definitions/VehicleID"
+											},
+											"x": {
+												"type": "number"
+											},
+											"y": {
+												"type": "number"
+											},
+											"chance": {
+												"type": "number"
+											},
+											"status": {
+												"type": "number",
+												"const": 1
+											},
+											"rotation": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"chance",
+											"rotation",
+											"status",
+											"vehicle",
+											"x",
+											"y"
+										]
+									}
 								}
-							}
+							},
+							"required": [
+								"rows"
+							]
 						},
-						"place_loot": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"repeat": {
-										"description": "重复n次",
-										"anyOf": [
-											{
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											{
-												"type": "number"
-											}
-										]
-									},
-									"group": {
-										"$ref": "#/definitions/ItemGroupID_1"
-									},
-									"chance": {
-										"type": "number"
-									},
-									"x": {
-										"type": "number"
-									},
-									"y": {
-										"type": "number"
-									},
-									"magazine": {
-										"type": "number"
-									}
-								},
-								"required": [
-									"chance",
-									"group",
-									"magazine",
-									"repeat",
-									"x",
-									"y"
-								]
-							}
-						},
-						"place_monsters": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"monster": {
-										"$ref": "#/definitions/MonsterID"
-									},
-									"x": {
-										"type": "array",
-										"items": [
-											{
-												"type": "number"
-											},
-											{
-												"type": "number"
-											}
-										],
-										"minItems": 2,
-										"maxItems": 2
-									},
-									"y": {
-										"type": "array",
-										"items": [
-											{
-												"type": "number"
-											},
-											{
-												"type": "number"
-											}
-										],
-										"minItems": 2,
-										"maxItems": 2
-									},
-									"repeat": {
-										"anyOf": [
-											{
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											{
-												"type": "number"
-											}
-										]
-									},
-									"density": {
-										"type": "number"
-									}
-								},
-								"required": [
-									"density",
-									"monster",
-									"repeat",
-									"x",
-									"y"
-								]
-							}
-						},
-						"place_vehicles": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"vehicle": {
-										"$ref": "#/definitions/VehicleID"
-									},
-									"x": {
-										"type": "number"
-									},
-									"y": {
-										"type": "number"
-									},
-									"chance": {
-										"type": "number"
-									},
-									"status": {
-										"type": "number",
-										"const": 1
-									},
-									"rotation": {
-										"type": "number"
-									}
-								},
-								"required": [
-									"chance",
-									"rotation",
-									"status",
-									"vehicle",
-									"x",
-									"y"
-								]
-							}
+						{
+							"$ref": "#/definitions/Omit<Palette,\"type\"|\"id\">"
 						}
-					},
-					"required": [
-						"fill_ter",
-						"items",
-						"palettes",
-						"place_loot",
-						"place_monsters",
-						"place_vehicles",
-						"rows"
 					]
 				}
 			},
@@ -26684,19 +26783,19 @@
 				},
 				{
 					"type": "string",
-					"pattern": "^OMT_.*_north$"
+					"pattern": "^OMTERR_.*_north$"
 				},
 				{
 					"type": "string",
-					"pattern": "^OMT_.*_south$"
+					"pattern": "^OMTERR_.*_south$"
 				},
 				{
 					"type": "string",
-					"pattern": "^OMT_.*_east$"
+					"pattern": "^OMTERR_.*_east$"
 				},
 				{
 					"type": "string",
-					"pattern": "^OMT_.*_west$"
+					"pattern": "^OMTERR_.*_west$"
 				}
 			]
 		},
@@ -26888,26 +26987,6 @@
 				"type"
 			]
 		},
-		"OvermapTerrainID": {
-			"description": "大地图地块",
-			"anyOf": [
-				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
-				},
-				{
-					"type": "string",
-					"pattern": "^OMTERR_.*$"
-				}
-			]
-		},
 		"MissionDefinitionID": {
 			"description": "任务定义ID",
 			"anyOf": [
@@ -26929,7 +27008,7 @@
 			]
 		},
 		"MissionDefinition": {
-			"$ref": "#/definitions/__type_118"
+			"$ref": "#/definitions/__type_119"
 		},
 		"MissionGoal": {
 			"description": "任务目标",
@@ -27005,7 +27084,7 @@
 			]
 		},
 		"ActivityType": {
-			"$ref": "#/definitions/__type_119"
+			"$ref": "#/definitions/__type_120"
 		},
 		"EocEffect": {
 			"description": "Eoc效果",
@@ -32310,7 +32389,7 @@
 			"type": "string"
 		},
 		"Eoc": {
-			"$ref": "#/definitions/__type_120"
+			"$ref": "#/definitions/__type_121"
 		},
 		"EocType": {
 			"description": "EOC类型",
@@ -32427,10 +32506,10 @@
 			]
 		},
 		"DamageType": {
-			"$ref": "#/definitions/__type_121"
+			"$ref": "#/definitions/__type_122"
 		},
 		"DamageInfoOrder": {
-			"$ref": "#/definitions/__type_122"
+			"$ref": "#/definitions/__type_123"
 		},
 		"DmgInfo": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
@@ -33624,7 +33703,7 @@
 			]
 		},
 		"AmmunitionType": {
-			"$ref": "#/definitions/__type_123"
+			"$ref": "#/definitions/__type_124"
 		},
 		"MathFunctionID": {
 			"description": "数学函数的ID",
@@ -33647,10 +33726,10 @@
 			]
 		},
 		"MathFunction": {
-			"$ref": "#/definitions/__type_124"
+			"$ref": "#/definitions/__type_125"
 		},
 		"OverlayOrdering": {
-			"$ref": "#/definitions/__type_125"
+			"$ref": "#/definitions/__type_126"
 		},
 		"TilesetCfgBase": {
 			"description": "通用tileset配置",
@@ -34045,7 +34124,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_96",
+						"$ref": "#/definitions/__type_97",
 						"description": "未打包的图片对象格式"
 					}
 				},
@@ -34055,7 +34134,7 @@
 			]
 		},
 		"PkgImageCfgObj": {
-			"$ref": "#/definitions/__type_96"
+			"$ref": "#/definitions/__type_97"
 		},
 		"ImageCfg": {
 			"description": "已打包的图片格式",
@@ -34073,7 +34152,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_95",
+						"$ref": "#/definitions/__type_96",
 						"description": "已打包的图片对象格式"
 					}
 				},
@@ -34083,10 +34162,10 @@
 			]
 		},
 		"ImageCfgObj": {
-			"$ref": "#/definitions/__type_95"
+			"$ref": "#/definitions/__type_96"
 		},
 		"ModTileset": {
-			"$ref": "#/definitions/__type_126"
+			"$ref": "#/definitions/__type_127"
 		},
 		"RequirementID": {
 			"description": "需求组ID",
@@ -34109,7 +34188,7 @@
 			]
 		},
 		"Requirement": {
-			"$ref": "#/definitions/__type_127"
+			"$ref": "#/definitions/__type_128"
 		},
 		"ReqFormat": {
 			"description": "需求格式  \n[ID , 消耗的数量]  \nNO_RECOVER为不可恢复  \nLIST为标记其是一个需求组",
@@ -80418,6 +80497,9 @@
 				"text"
 			]
 		},
+		"PaletteTerrainMap_1": {
+			"$ref": "#/definitions/PaletteTerrainMap"
+		},
 		"__type_88": {
 			"type": "object",
 			"additionalProperties": {
@@ -80475,6 +80557,9 @@
 				]
 			}
 		},
+		"PaletteFurnitureMap_1": {
+			"$ref": "#/definitions/PaletteFurnitureMap"
+		},
 		"__type_89": {
 			"type": "object",
 			"additionalProperties": {
@@ -80508,6 +80593,9 @@
 				]
 			}
 		},
+		"PaletteLiquidsMap_1": {
+			"$ref": "#/definitions/PaletteLiquidsMap"
+		},
 		"__type_90": {
 			"type": "object",
 			"additionalProperties": {
@@ -80536,7 +80624,310 @@
 				]
 			}
 		},
+		"PaletteMonstersMap_1": {
+			"$ref": "#/definitions/PaletteMonstersMap"
+		},
 		"__type_91": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"properties": {
+					"monster": {
+						"$ref": "#/definitions/MonsterID"
+					}
+				},
+				"required": [
+					"monster"
+				]
+			}
+		},
+		"Omit<Mapgen,\"om_terrain\">": {
+			"type": "object",
+			"properties": {
+				"object": {
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {
+								"fill_ter": {
+									"$ref": "#/definitions/TerrainID_1"
+								},
+								"rows": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"palettes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PaletteID"
+									}
+								},
+								"items": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"repeat": {
+													"description": "重复n次",
+													"anyOf": [
+														{
+															"type": "array",
+															"items": [
+																{
+																	"type": "number"
+																},
+																{
+																	"type": "number"
+																}
+															],
+															"minItems": 2,
+															"maxItems": 2
+														},
+														{
+															"type": "number"
+														}
+													]
+												},
+												"item": {
+													"$ref": "#/definitions/AnyItemID_1"
+												},
+												"chance": {
+													"type": "number"
+												}
+											},
+											"required": [
+												"chance",
+												"item",
+												"repeat"
+											]
+										}
+									}
+								},
+								"place_loot": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"repeat": {
+												"description": "重复n次",
+												"anyOf": [
+													{
+														"type": "array",
+														"items": [
+															{
+																"type": "number"
+															},
+															{
+																"type": "number"
+															}
+														],
+														"minItems": 2,
+														"maxItems": 2
+													},
+													{
+														"type": "number"
+													}
+												]
+											},
+											"group": {
+												"$ref": "#/definitions/ItemGroupID_1"
+											},
+											"chance": {
+												"type": "number"
+											},
+											"x": {
+												"type": "number"
+											},
+											"y": {
+												"type": "number"
+											},
+											"magazine": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"chance",
+											"group",
+											"magazine",
+											"repeat",
+											"x",
+											"y"
+										]
+									}
+								},
+								"place_monsters": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"monster": {
+												"$ref": "#/definitions/MonsterID"
+											},
+											"x": {
+												"type": "array",
+												"items": [
+													{
+														"type": "number"
+													},
+													{
+														"type": "number"
+													}
+												],
+												"minItems": 2,
+												"maxItems": 2
+											},
+											"y": {
+												"type": "array",
+												"items": [
+													{
+														"type": "number"
+													},
+													{
+														"type": "number"
+													}
+												],
+												"minItems": 2,
+												"maxItems": 2
+											},
+											"repeat": {
+												"anyOf": [
+													{
+														"type": "array",
+														"items": [
+															{
+																"type": "number"
+															},
+															{
+																"type": "number"
+															}
+														],
+														"minItems": 2,
+														"maxItems": 2
+													},
+													{
+														"type": "number"
+													}
+												]
+											},
+											"density": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"density",
+											"monster",
+											"repeat",
+											"x",
+											"y"
+										]
+									}
+								},
+								"place_vehicles": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"vehicle": {
+												"$ref": "#/definitions/VehicleID"
+											},
+											"x": {
+												"type": "number"
+											},
+											"y": {
+												"type": "number"
+											},
+											"chance": {
+												"type": "number"
+											},
+											"status": {
+												"type": "number",
+												"const": 1
+											},
+											"rotation": {
+												"type": "number"
+											}
+										},
+										"required": [
+											"chance",
+											"rotation",
+											"status",
+											"vehicle",
+											"x",
+											"y"
+										]
+									}
+								}
+							},
+							"required": [
+								"rows"
+							]
+						},
+						{
+							"$ref": "#/definitions/Omit<Palette,\"type\"|\"id\">"
+						}
+					]
+				},
+				"type": {
+					"type": "string",
+					"const": "mapgen"
+				},
+				"weight": {
+					"type": "number"
+				},
+				"method": {
+					"type": "string",
+					"const": "json"
+				}
+			},
+			"required": [
+				"method",
+				"object",
+				"type",
+				"weight"
+			]
+		},
+		"TerrainID_1": {
+			"description": "TalkTopic ID格式",
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^TERRAIN_.*$"
+				}
+			]
+		},
+		"Omit<Palette,\"type\"|\"id\">": {
+			"type": "object",
+			"properties": {
+				"terrain": {
+					"$ref": "#/definitions/PaletteTerrainMap_1"
+				},
+				"furniture": {
+					"$ref": "#/definitions/PaletteFurnitureMap_1"
+				},
+				"monster": {
+					"$ref": "#/definitions/PaletteMonstersMap_1"
+				},
+				"liquids": {
+					"$ref": "#/definitions/PaletteLiquidsMap_1"
+				}
+			}
+		},
+		"__type_92": {
 			"description": "任务效果",
 			"type": "object",
 			"properties": {
@@ -81975,7 +82366,7 @@
 			}
 		},
 		"MissionEffect_1": {
-			"$ref": "#/definitions/__type_91"
+			"$ref": "#/definitions/__type_92"
 		},
 		"MissionDefinitionID_1": {
 			"description": "任务定义ID",
@@ -81997,7 +82388,7 @@
 				}
 			]
 		},
-		"__type_92": {
+		"__type_93": {
 			"description": "任务对话字典",
 			"type": "object",
 			"properties": {
@@ -82051,7 +82442,7 @@
 			]
 		},
 		"MissionDialog_1": {
-			"$ref": "#/definitions/__type_92"
+			"$ref": "#/definitions/__type_93"
 		},
 		"EocID_1": {
 			"description": "EOC ID格式",
@@ -82072,7 +82463,7 @@
 		"{[Pin`npc_${K}`]?:undefined;}": {
 			"type": "object"
 		},
-		"__type_93": {
+		"__type_94": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
 			"type": "object",
 			"properties": {
@@ -82087,7 +82478,7 @@
 			}
 		},
 		"DmgInfo_1": {
-			"$ref": "#/definitions/__type_93"
+			"$ref": "#/definitions/__type_94"
 		},
 		"Array_2": {
 			"description": "燃烧数据",
@@ -82138,7 +82529,7 @@
 		"MateBurnData_1": {
 			"$ref": "#/definitions/Array_2"
 		},
-		"__type_94": {
+		"__type_95": {
 			"description": "燃料数据",
 			"type": "object",
 			"properties": {
@@ -82205,12 +82596,12 @@
 			]
 		},
 		"FuelData_1": {
-			"$ref": "#/definitions/__type_94"
+			"$ref": "#/definitions/__type_95"
 		},
 		"Record<`${string}.png`,PkgTilesetCfg>": {
 			"type": "object"
 		},
-		"__type_95": {
+		"__type_96": {
 			"description": "已打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -82263,7 +82654,7 @@
 				}
 			]
 		},
-		"__type_96": {
+		"__type_97": {
 			"description": "未打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -82428,7 +82819,7 @@
 				}
 			]
 		},
-		"__type_97": {
+		"__type_98": {
 			"description": "车辆部件的操作需求",
 			"type": "object",
 			"properties": {
@@ -82465,9 +82856,9 @@
 			]
 		},
 		"VPRequirement_1": {
-			"$ref": "#/definitions/__type_97"
+			"$ref": "#/definitions/__type_98"
 		},
-		"__type_98": {
+		"__type_99": {
 			"description": "控制要求",
 			"type": "object",
 			"properties": {
@@ -82498,9 +82889,9 @@
 			}
 		},
 		"ControlReq_1": {
-			"$ref": "#/definitions/__type_98"
+			"$ref": "#/definitions/__type_99"
 		},
-		"__type_99": {
+		"__type_100": {
 			"type": "object",
 			"properties": {
 				"all": {
@@ -82569,7 +82960,7 @@
 			}
 		},
 		"Partial_31": {
-			"$ref": "#/definitions/__type_99"
+			"$ref": "#/definitions/__type_100"
 		},
 		"Copyfrom_8": {
 			"description": "copyfrom变体",
@@ -82613,7 +83004,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_100"
+					"$ref": "#/definitions/__type_101"
 				}
 			]
 		},
@@ -82637,7 +83028,7 @@
 		"Partial_32": {
 			"$ref": "#/definitions/Partial_33"
 		},
-		"__type_100": {
+		"__type_101": {
 			"type": "object",
 			"properties": {
 				"color": {
@@ -83225,7 +83616,7 @@
 			"$ref": "#/definitions/Partial_31"
 		},
 		"Partial_33": {
-			"$ref": "#/definitions/__type_100"
+			"$ref": "#/definitions/__type_101"
 		},
 		"T_1": {
 			"type": "object",
@@ -83287,7 +83678,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_101"
+					"$ref": "#/definitions/__type_102"
 				}
 			]
 		},
@@ -83315,11 +83706,11 @@
 		"Partial_35": {
 			"$ref": "#/definitions/Partial_36"
 		},
-		"__type_101": {
+		"__type_102": {
 			"type": "object"
 		},
 		"Partial_36": {
-			"$ref": "#/definitions/__type_101"
+			"$ref": "#/definitions/__type_102"
 		},
 		"Pick<T,CopyfromResFD>_1": {
 			"type": "object",
@@ -83345,11 +83736,11 @@
 		"Partial_37": {
 			"$ref": "#/definitions/Partial_38"
 		},
-		"__type_102": {
+		"__type_103": {
 			"type": "object"
 		},
 		"Partial_38": {
-			"$ref": "#/definitions/__type_102"
+			"$ref": "#/definitions/__type_103"
 		},
 		"JToken": {
 			"description": "可以序列化为JSON文件的对象",
@@ -83375,7 +83766,7 @@
 				}
 			]
 		},
-		"__type_103": {
+		"__type_104": {
 			"description": "在stringify输出时 值为 undefine 的键会被忽略",
 			"type": "object",
 			"additionalProperties": {
@@ -83383,7 +83774,7 @@
 			}
 		},
 		"JObject": {
-			"$ref": "#/definitions/__type_103"
+			"$ref": "#/definitions/__type_104"
 		},
 		"Array_5": {
 			"description": "在stringify输出时 值为 undefine 的成员会被转为 null",
@@ -83399,7 +83790,7 @@
 			"description": "可以保存为JToken的类",
 			"type": "object"
 		},
-		"__type_104": {
+		"__type_105": {
 			"description": "一个自定义的Flag",
 			"type": "object",
 			"properties": {
@@ -83455,7 +83846,7 @@
 				"type"
 			]
 		},
-		"__type_105": {
+		"__type_106": {
 			"description": "效果",
 			"type": "object",
 			"properties": {
@@ -84052,7 +84443,7 @@
 				"type"
 			]
 		},
-		"__type_106": {
+		"__type_107": {
 			"description": "弹药效果",
 			"type": "object",
 			"properties": {
@@ -84099,7 +84490,7 @@
 				"type"
 			]
 		},
-		"__type_107": {
+		"__type_108": {
 			"description": "Npc职业",
 			"type": "object",
 			"properties": {
@@ -84266,7 +84657,7 @@
 				"type"
 			]
 		},
-		"__type_108": {
+		"__type_109": {
 			"description": "工具品质",
 			"type": "object",
 			"properties": {
@@ -84310,7 +84701,7 @@
 				"type"
 			]
 		},
-		"__type_109": {
+		"__type_110": {
 			"description": "ItemGroup",
 			"type": "object",
 			"properties": {
@@ -84364,7 +84755,7 @@
 				"type"
 			]
 		},
-		"__type_110": {
+		"__type_111": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -84533,7 +84924,7 @@
 				"type"
 			]
 		},
-		"__type_111": {
+		"__type_112": {
 			"description": "怪物",
 			"type": "object",
 			"properties": {
@@ -85315,7 +85706,7 @@
 				"weight"
 			]
 		},
-		"__type_112": {
+		"__type_113": {
 			"description": "音效",
 			"type": "object",
 			"properties": {
@@ -85370,9 +85761,9 @@
 			]
 		},
 		"SoundEffect_1": {
-			"$ref": "#/definitions/__type_112"
+			"$ref": "#/definitions/__type_113"
 		},
-		"__type_113": {
+		"__type_114": {
 			"description": "法术",
 			"type": "object",
 			"properties": {
@@ -87994,7 +88385,7 @@
 				"valid_targets"
 			]
 		},
-		"__type_114": {
+		"__type_115": {
 			"description": "附魔",
 			"type": "object",
 			"properties": {
@@ -88352,7 +88743,7 @@
 				"type"
 			]
 		},
-		"__type_115": {
+		"__type_116": {
 			"description": "变异",
 			"type": "object",
 			"properties": {
@@ -89010,7 +89401,7 @@
 				"type"
 			]
 		},
-		"__type_116": {
+		"__type_117": {
 			"description": "Npc实例",
 			"type": "object",
 			"properties": {
@@ -89166,7 +89557,7 @@
 				"type"
 			]
 		},
-		"__type_117": {
+		"__type_118": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -89701,7 +90092,7 @@
 				"type"
 			]
 		},
-		"__type_118": {
+		"__type_119": {
 			"description": "任务定义",
 			"type": "object",
 			"properties": {
@@ -89781,7 +90172,7 @@
 				"value"
 			]
 		},
-		"__type_119": {
+		"__type_120": {
 			"description": "活动类型",
 			"type": "object",
 			"properties": {
@@ -89866,7 +90257,7 @@
 				"verb"
 			]
 		},
-		"__type_120": {
+		"__type_121": {
 			"description": "EOC",
 			"type": "object",
 			"properties": {
@@ -91365,7 +91756,7 @@
 				"type"
 			]
 		},
-		"__type_121": {
+		"__type_122": {
 			"description": "伤害类型",
 			"type": "object",
 			"properties": {
@@ -91469,7 +91860,7 @@
 				"type"
 			]
 		},
-		"__type_122": {
+		"__type_123": {
 			"description": "伤害信息顺序",
 			"type": "object",
 			"properties": {
@@ -91545,7 +91936,7 @@
 				"type"
 			]
 		},
-		"__type_123": {
+		"__type_124": {
 			"description": "弹药类型",
 			"type": "object",
 			"properties": {
@@ -91573,7 +91964,7 @@
 				"type"
 			]
 		},
-		"__type_124": {
+		"__type_125": {
 			"description": "数学函数",
 			"type": "object",
 			"properties": {
@@ -91600,7 +91991,7 @@
 				"type"
 			]
 		},
-		"__type_125": {
+		"__type_126": {
 			"description": "县市层级",
 			"type": "object",
 			"properties": {
@@ -91638,7 +92029,7 @@
 				"type"
 			]
 		},
-		"__type_126": {
+		"__type_127": {
 			"description": "mod图包",
 			"type": "object",
 			"properties": {
@@ -91667,7 +92058,7 @@
 				"type"
 			]
 		},
-		"__type_127": {
+		"__type_128": {
 			"description": "需求组",
 			"type": "object",
 			"properties": {

@@ -29,7 +29,6 @@ __exportStar(require("./SoundEffect"), exports);
 __exportStar(require("./Skill"), exports);
 __exportStar(require("./Requirement"), exports);
 __exportStar(require("./Palette"), exports);
-__exportStar(require("./OvermapTerrain"), exports);
 __exportStar(require("./OvermapSpecial"), exports);
 __exportStar(require("./OverlayOrdering"), exports);
 __exportStar(require("./NpcInstance"), exports);

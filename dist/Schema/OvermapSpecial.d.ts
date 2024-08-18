@@ -1,5 +1,5 @@
 import { CddaID } from "./GenericDefine";
-import { OvermapTerrainID } from "./Mapgen";
+import { OvermapTerrainID } from "./OvermapTerrain";
 /**大地图特殊地点 */
 export type OverMapSpecialID = CddaID<"OMSPEC">;
 type Direction = 'north' | 'south' | 'east' | 'west';

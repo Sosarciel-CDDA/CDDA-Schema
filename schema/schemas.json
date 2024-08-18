@@ -99,7 +99,7 @@
 			]
 		},
 		"Flag": {
-			"$ref": "#/definitions/__type_105"
+			"$ref": "#/definitions/__type_109"
 		},
 		"DefineLimbScoreID": {
 			"enum": [
@@ -335,7 +335,7 @@
 			]
 		},
 		"Effect": {
-			"$ref": "#/definitions/__type_106"
+			"$ref": "#/definitions/__type_110"
 		},
 		"EffectVitaminsMod": {
 			"description": "效果维生素修正",
@@ -683,7 +683,7 @@
 			]
 		},
 		"AmmoEffect": {
-			"$ref": "#/definitions/__type_107"
+			"$ref": "#/definitions/__type_111"
 		},
 		"AmmoAoe": {
 			"description": "弹药AOE效果",
@@ -4940,7 +4940,7 @@
 			]
 		},
 		"NpcClass": {
-			"$ref": "#/definitions/__type_108"
+			"$ref": "#/definitions/__type_112"
 		},
 		"ShopItemGroup": {
 			"$ref": "#/definitions/ShopItemGroup_1"
@@ -5808,7 +5808,7 @@
 			]
 		},
 		"ToolQuality": {
-			"$ref": "#/definitions/__type_109"
+			"$ref": "#/definitions/__type_113"
 		},
 		"ToolID": {
 			"description": "TOOL ID格式",
@@ -16830,7 +16830,7 @@
 			]
 		},
 		"ItemGroup": {
-			"$ref": "#/definitions/__type_110"
+			"$ref": "#/definitions/__type_114"
 		},
 		"ItemGroupEntrie": {
 			"description": "一项Entry",
@@ -17283,7 +17283,7 @@
 			]
 		},
 		"TalkTopic": {
-			"$ref": "#/definitions/__type_111"
+			"$ref": "#/definitions/__type_115"
 		},
 		"Resp": {
 			"description": "玩家的回复  \n等同于无条件技能鉴定成功  \n转到 success topic",
@@ -24220,7 +24220,7 @@
 			]
 		},
 		"Monster": {
-			"$ref": "#/definitions/__type_112"
+			"$ref": "#/definitions/__type_116"
 		},
 		"MonBP": {
 			"description": "怪物的身体类型",
@@ -24905,7 +24905,7 @@
 			]
 		},
 		"Spell": {
-			"$ref": "#/definitions/__type_114"
+			"$ref": "#/definitions/__type_118"
 		},
 		"SpellTarget": {
 			"enum": [
@@ -25059,7 +25059,7 @@
 			]
 		},
 		"Enchantment": {
-			"$ref": "#/definitions/__type_115"
+			"$ref": "#/definitions/__type_119"
 		},
 		"InlineEnchantment": {
 			"$ref": "#/definitions/__type_1"
@@ -25984,7 +25984,7 @@
 			]
 		},
 		"Mutation": {
-			"$ref": "#/definitions/__type_116"
+			"$ref": "#/definitions/__type_120"
 		},
 		"BPWetProte": {
 			"description": "肢体的潮湿保护",
@@ -26055,7 +26055,7 @@
 			]
 		},
 		"NpcInstance": {
-			"$ref": "#/definitions/__type_117"
+			"$ref": "#/definitions/__type_121"
 		},
 		"NpcAttitude": {
 			"description": "NPC态度",
@@ -26086,6 +26086,472 @@
 			],
 			"type": "string"
 		},
+		"FurnitureID": {
+			"description": "家具ID",
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^FURN_.*$"
+				}
+			]
+		},
+		"Furniture": {
+			"description": "家具",
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"const": "furniture"
+				},
+				"id": {
+					"$ref": "#/definitions/FurnitureID"
+				},
+				"name": {
+					"$ref": "#/definitions/DescText_1"
+				},
+				"symbol": {
+					"type": "string"
+				},
+				"looks_like": {
+					"type": "string",
+					"const": "chair"
+				},
+				"color": {
+					"$ref": "#/definitions/Color_1"
+				},
+				"crafting_pseudo_item": {
+					"description": "当这个家具在范围内时  \n可用于制作的物品 (工具）的 ID（家具充当该类型的物品)",
+					"const": "anvil",
+					"type": "string"
+				},
+				"workbench": {
+					"description": "可以在这里制作。\n超过这些限制的质量/体积会导致速度惩罚。\n必须与 \"workbench\" examine_action 配对才能工作。",
+					"type": "object",
+					"properties": {
+						"multiplier": {
+							"description": "制作加速倍率",
+							"type": "number",
+							"const": 1.1
+						},
+						"mass": {
+							"$ref": "#/definitions/Weight",
+							"description": "允许的质量"
+						},
+						"volume": {
+							"$ref": "#/definitions/Volume",
+							"description": "允许的体积"
+						}
+					},
+					"required": [
+						"mass",
+						"multiplier",
+						"volume"
+					]
+				}
+			},
+			"required": [
+				"color",
+				"id",
+				"looks_like",
+				"name",
+				"symbol",
+				"type"
+			]
+		},
+		"U": {
+			"type": "object",
+			"properties": {
+				"move_cost_mod": {
+					"type": "number",
+					"const": 2
+				},
+				"keg_capacity": {
+					"type": "number",
+					"const": 240
+				},
+				"deployed_item": {
+					"type": "string",
+					"const": "plastic_sheet"
+				},
+				"light_emitted": {
+					"type": "number",
+					"const": 5
+				},
+				"required_str": {
+					"type": "number",
+					"const": 18
+				},
+				"flags": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "TRANSPARENT"
+						},
+						{
+							"type": "string",
+							"const": "BASHABLE"
+						},
+						{
+							"type": "string",
+							"const": "FLAMMABLE_HARD"
+						}
+					],
+					"minItems": 3,
+					"maxItems": 3
+				},
+				"connect_groups": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "WALL"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"connects_to": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "WALL"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"rotates_to": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "INDOORFLOOR"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"examine_action": {
+					"type": "string",
+					"const": "workbench"
+				},
+				"close": {
+					"type": "string",
+					"const": "f_foo_closed"
+				},
+				"open": {
+					"type": "string",
+					"const": "f_foo_open"
+				},
+				"lockpick_result": {
+					"type": "string",
+					"const": "f_safe_open"
+				},
+				"lockpick_message": {
+					"type": "string",
+					"const": "With a click, you unlock the safe."
+				},
+				"bash": {
+					"type": "string",
+					"const": "TODO"
+				},
+				"deconstruct": {
+					"type": "string",
+					"const": "TODO"
+				},
+				"max_volume": {
+					"type": "string",
+					"const": "1000 L"
+				},
+				"boltcut": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "f_safe_open"
+						},
+						"duration": {
+							"type": "string",
+							"const": "1 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The safe opens."
+						},
+						"sound": {
+							"type": "string",
+							"const": "Gachunk!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"count": {
+											"type": "number",
+											"const": 3
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result",
+						"sound"
+					]
+				},
+				"hacksaw": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "f_safe_open"
+						},
+						"duration": {
+							"type": "string",
+							"const": "12 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The safe is hacksawed open!"
+						},
+						"sound": {
+							"type": "string",
+							"const": "Gachunk!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"count": {
+											"type": "number",
+											"const": 13
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result",
+						"sound"
+					]
+				},
+				"oxytorch": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "f_safe_open"
+						},
+						"duration": {
+							"type": "string",
+							"const": "30 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The safe opens!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"count": {
+											"type": "number",
+											"const": 13
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result"
+					]
+				},
+				"prying": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "f_crate_o"
+						},
+						"message": {
+							"type": "string",
+							"const": "You pop open the crate."
+						},
+						"prying_data": {
+							"type": "object",
+							"properties": {
+								"difficulty": {
+									"type": "number",
+									"const": 6
+								},
+								"prying_level": {
+									"type": "number",
+									"const": 1
+								},
+								"noisy": {
+									"type": "boolean",
+									"const": true
+								},
+								"failure": {
+									"type": "string",
+									"const": "You pry, but can't pop open the crate."
+								}
+							},
+							"required": [
+								"difficulty",
+								"failure",
+								"noisy",
+								"prying_level"
+							]
+						}
+					},
+					"required": [
+						"message",
+						"prying_data",
+						"result"
+					]
+				}
+			},
+			"required": [
+				"bash",
+				"boltcut",
+				"close",
+				"connect_groups",
+				"connects_to",
+				"deconstruct",
+				"deployed_item",
+				"examine_action",
+				"flags",
+				"hacksaw",
+				"keg_capacity",
+				"light_emitted",
+				"lockpick_message",
+				"lockpick_result",
+				"max_volume",
+				"move_cost_mod",
+				"open",
+				"oxytorch",
+				"prying",
+				"required_str",
+				"rotates_to"
+			]
+		},
+		"OvermapTerrainID": {
+			"description": "大地图地块ID",
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^OMTERR_.*$"
+				}
+			]
+		},
+		"OvermapTerrain": {
+			"description": "大地图地块显示设置  \n生成设置位于mapgen",
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"const": "overmap_terrain"
+				},
+				"id": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/OvermapTerrainID"
+					}
+				},
+				"copy-from": {
+					"$ref": "#/definitions/OvermapTerrainID_1"
+				},
+				"name": {
+					"$ref": "#/definitions/DescText_1"
+				},
+				"sym": {
+					"type": "string"
+				},
+				"color": {
+					"$ref": "#/definitions/Color_1"
+				}
+			},
+			"required": [
+				"color",
+				"id",
+				"name",
+				"sym",
+				"type"
+			]
+		},
 		"TerrainID": {
 			"description": "TalkTopic ID格式",
 			"anyOf": [
@@ -26107,7 +26573,542 @@
 			]
 		},
 		"Terrain": {
-			"$ref": "#/definitions/__type_118"
+			"$ref": "#/definitions/__type_122"
+		},
+		"TU": {
+			"type": "object",
+			"properties": {
+				"looks_like": {
+					"type": "string",
+					"const": "pit"
+				},
+				"color": {
+					"type": "string",
+					"const": "ltred"
+				},
+				"move_cost": {
+					"type": "number",
+					"const": 10
+				},
+				"light_emitted": {
+					"type": "number",
+					"const": 10
+				},
+				"trap": {
+					"type": "string",
+					"const": "spike_pit"
+				},
+				"max_volume": {
+					"$ref": "#/definitions/Volume"
+				},
+				"flags": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "TRANSPARENT"
+						},
+						{
+							"type": "string",
+							"const": "DIGGABLE"
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
+				},
+				"connect_groups": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "WALL"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"connects_to": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "WALL"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"rotates_to": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "INDOORFLOOR"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
+				},
+				"close": {
+					"type": "string",
+					"const": "t_foo_closed"
+				},
+				"open": {
+					"type": "string",
+					"const": "t_foo_open"
+				},
+				"lockpick_result": {
+					"type": "string",
+					"const": "t_door_unlocked"
+				},
+				"lockpick_message": {
+					"type": "string",
+					"const": "With a click, you unlock the door."
+				},
+				"bash": {
+					"type": "string",
+					"const": "TODO"
+				},
+				"deconstruct": {
+					"type": "string",
+					"const": "TODO"
+				},
+				"alias": {
+					"type": "string",
+					"const": "TODO"
+				},
+				"harvestable": {
+					"type": "string",
+					"const": "blueberries"
+				},
+				"transforms_into": {
+					"type": "string",
+					"const": "t_tree_harvested"
+				},
+				"allowed_template_ids": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "standard_template_construct"
+						},
+						{
+							"type": "string",
+							"const": "debug_template"
+						},
+						{
+							"type": "string",
+							"const": "afs_10mm_smart_template"
+						}
+					],
+					"minItems": 3,
+					"maxItems": 3
+				},
+				"shoot": {
+					"type": "object",
+					"properties": {
+						"reduce_damage": {
+							"type": "array",
+							"items": [
+								{
+									"type": "number",
+									"const": 2
+								},
+								{
+									"type": "number",
+									"const": 12
+								}
+							],
+							"minItems": 2,
+							"maxItems": 2
+						},
+						"reduce_damage_laser": {
+							"type": "array",
+							"items": [
+								{
+									"type": "number",
+									"const": 0
+								},
+								{
+									"type": "number",
+									"const": 7
+								}
+							],
+							"minItems": 2,
+							"maxItems": 2
+						},
+						"destroy_damage": {
+							"type": "array",
+							"items": [
+								{
+									"type": "number",
+									"const": 40
+								},
+								{
+									"type": "number",
+									"const": 120
+								}
+							],
+							"minItems": 2,
+							"maxItems": 2
+						},
+						"no_laser_destroy": {
+							"type": "boolean",
+							"const": true
+						}
+					},
+					"required": [
+						"destroy_damage",
+						"no_laser_destroy",
+						"reduce_damage",
+						"reduce_damage_laser"
+					]
+				},
+				"harvest_by_season": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"seasons": {
+									"type": "array",
+									"items": [
+										{
+											"type": "string",
+											"const": "spring"
+										},
+										{
+											"type": "string",
+											"const": "autumn"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								"id": {
+									"type": "string",
+									"const": "burdock_harv"
+								}
+							},
+							"required": [
+								"id",
+								"seasons"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"seasons": {
+									"type": "array",
+									"items": [
+										{
+											"type": "string",
+											"const": "summer"
+										}
+									],
+									"minItems": 1,
+									"maxItems": 1
+								},
+								"id": {
+									"type": "string",
+									"const": "burdock_summer_harv"
+								}
+							},
+							"required": [
+								"id",
+								"seasons"
+							]
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
+				},
+				"roof": {
+					"type": "string",
+					"const": "t_roof"
+				},
+				"examine_action": {
+					"type": "string",
+					"const": "pit"
+				},
+				"boltcut": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "t_door_unlocked"
+						},
+						"duration": {
+							"type": "string",
+							"const": "1 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The door opens."
+						},
+						"sound": {
+							"type": "string",
+							"const": "Gachunk!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"2x4": {
+											"type": "number",
+											"const": 3
+										}
+									},
+									"required": [
+										"2x4",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result",
+						"sound"
+					]
+				},
+				"hacksaw": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "t_door_unlocked"
+						},
+						"duration": {
+							"type": "string",
+							"const": "12 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The door is hacksawed open!"
+						},
+						"sound": {
+							"type": "string",
+							"const": "Gachunk!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"2x4": {
+											"type": "number",
+											"const": 13
+										}
+									},
+									"required": [
+										"2x4",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result",
+						"sound"
+					]
+				},
+				"oxytorch": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "t_door_unlocked"
+						},
+						"duration": {
+							"type": "string",
+							"const": "60 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "The door opens!"
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "scrap"
+										},
+										"count": {
+											"type": "number",
+											"const": 10
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								}
+							],
+							"minItems": 1,
+							"maxItems": 1
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"result"
+					]
+				},
+				"prying": {
+					"type": "object",
+					"properties": {
+						"result": {
+							"type": "string",
+							"const": "t_fence_post"
+						},
+						"duration": {
+							"type": "string",
+							"const": "30 seconds"
+						},
+						"message": {
+							"type": "string",
+							"const": "You pry out the fence post."
+						},
+						"byproducts": {
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "nail"
+										},
+										"count": {
+											"type": "number",
+											"const": 6
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								},
+								{
+									"type": "object",
+									"properties": {
+										"item": {
+											"type": "string",
+											"const": "2x4"
+										},
+										"count": {
+											"type": "number",
+											"const": 3
+										}
+									},
+									"required": [
+										"count",
+										"item"
+									]
+								}
+							],
+							"minItems": 2,
+							"maxItems": 2
+						},
+						"prying_data": {
+							"type": "object",
+							"properties": {
+								"prying_nails": {
+									"type": "boolean",
+									"const": true
+								}
+							},
+							"required": [
+								"prying_nails"
+							]
+						}
+					},
+					"required": [
+						"byproducts",
+						"duration",
+						"message",
+						"prying_data",
+						"result"
+					]
+				}
+			},
+			"required": [
+				"alias",
+				"allowed_template_ids",
+				"bash",
+				"boltcut",
+				"close",
+				"color",
+				"connect_groups",
+				"connects_to",
+				"deconstruct",
+				"examine_action",
+				"flags",
+				"hacksaw",
+				"harvest_by_season",
+				"harvestable",
+				"light_emitted",
+				"lockpick_message",
+				"lockpick_result",
+				"looks_like",
+				"max_volume",
+				"move_cost",
+				"open",
+				"oxytorch",
+				"prying",
+				"roof",
+				"rotates_to",
+				"shoot",
+				"transforms_into",
+				"trap"
+			]
+		},
+		"VehicleID": {
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^VEH_.*$"
+				}
+			]
 		},
 		"PaletteID": {
 			"anyOf": [
@@ -26138,75 +27139,19 @@
 			"$ref": "#/definitions/__type_90"
 		},
 		"PaletteMonstersMap": {
+			"$ref": "#/definitions/__type_92"
+		},
+		"PaletteNestMap": {
 			"$ref": "#/definitions/__type_91"
 		},
+		"PaletteVehiclesMap": {
+			"$ref": "#/definitions/__type_93"
+		},
+		"PaletteItemMap": {
+			"$ref": "#/definitions/__type_94"
+		},
 		"Palette": {
-			"description": "地图符号定义",
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"const": "palette"
-				},
-				"id": {
-					"$ref": "#/definitions/PaletteID"
-				},
-				"terrain": {
-					"$ref": "#/definitions/PaletteTerrainMap_1"
-				},
-				"furniture": {
-					"$ref": "#/definitions/PaletteFurnitureMap_1"
-				},
-				"liquids": {
-					"$ref": "#/definitions/PaletteLiquidsMap_1"
-				},
-				"monster": {
-					"$ref": "#/definitions/PaletteMonstersMap_1"
-				}
-			},
-			"required": [
-				"id",
-				"type"
-			]
-		},
-		"VehicleID": {
-			"anyOf": [
-				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
-				},
-				{
-					"type": "string",
-					"pattern": "^VEH_.*$"
-				}
-			]
-		},
-		"OvermapTerrainID": {
-			"description": "大地图地块",
-			"anyOf": [
-				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
-				},
-				{
-					"type": "string",
-					"pattern": "^OMTERR_.*$"
-				}
-			]
+			"$ref": "#/definitions/__type_123"
 		},
 		"NestedMapgenID": {
 			"description": "嵌套地块",
@@ -26228,190 +27173,589 @@
 				}
 			]
 		},
-		"GroupPlace": {
-			"type": "object",
-			"properties": {
-				"repeat": {
-					"description": "重复n次",
-					"anyOf": [
-						{
-							"type": "array",
-							"items": [
+		"Place": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/T"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
 								{
-									"type": "number"
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
 								},
 								{
 									"type": "number"
 								}
-							],
-							"minItems": 2,
-							"maxItems": 2
+							]
 						},
-						{
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
 							"type": "number"
 						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
+					]
+				}
+			]
+		},
+		"FurnPlace": {
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"furn": {
+							"$ref": "#/definitions/FurnitureID"
+						}
+					},
+					"required": [
+						"furn"
 					]
 				},
-				"group": {
-					"$ref": "#/definitions/ItemGroupID_1"
-				},
-				"chance": {
-					"type": "number"
-				},
-				"x": {
-					"type": "number"
-				},
-				"y": {
-					"type": "number"
-				},
-				"magazine": {
-					"type": "number"
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
+							"type": "number"
+						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
+					]
 				}
-			},
-			"required": [
-				"chance",
-				"group",
-				"magazine",
-				"repeat",
-				"x",
-				"y"
 			]
 		},
 		"ItemPlace": {
-			"type": "object",
-			"properties": {
-				"repeat": {
-					"description": "重复n次",
-					"anyOf": [
-						{
-							"type": "array",
-							"items": [
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"item": {
+							"$ref": "#/definitions/AnyItemID_1"
+						}
+					},
+					"required": [
+						"item"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
 								{
-									"type": "number"
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
 								},
 								{
 									"type": "number"
 								}
-							],
-							"minItems": 2,
-							"maxItems": 2
+							]
 						},
-						{
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
 							"type": "number"
 						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
+					]
+				}
+			]
+		},
+		"GroupPlace": {
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"group": {
+							"$ref": "#/definitions/ItemGroupID_1"
+						},
+						"magazine": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"group",
+						"magazine"
 					]
 				},
-				"item": {
-					"$ref": "#/definitions/AnyItemID_1"
-				},
-				"chance": {
-					"type": "number"
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
+							"type": "number"
+						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
+					]
 				}
-			},
-			"required": [
-				"chance",
-				"item",
-				"repeat"
 			]
 		},
 		"MonsterPlace": {
-			"type": "object",
-			"properties": {
-				"monster": {
-					"$ref": "#/definitions/MonsterID"
-				},
-				"x": {
-					"type": "array",
-					"items": [
-						{
-							"type": "number"
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"monster": {
+							"$ref": "#/definitions/MonsterID"
 						},
-						{
+						"density": {
 							"type": "number"
 						}
-					],
-					"minItems": 2,
-					"maxItems": 2
+					},
+					"required": [
+						"density",
+						"monster"
+					]
 				},
-				"y": {
-					"type": "array",
-					"items": [
-						{
-							"type": "number"
-						},
-						{
-							"type": "number"
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"repeat": {
-					"anyOf": [
-						{
-							"type": "array",
-							"items": [
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
 								{
-									"type": "number"
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
 								},
 								{
 									"type": "number"
 								}
-							],
-							"minItems": 2,
-							"maxItems": 2
+							]
 						},
-						{
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
 							"type": "number"
 						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
 					]
-				},
-				"density": {
-					"type": "number"
 				}
-			},
-			"required": [
-				"density",
-				"monster",
-				"repeat",
-				"x",
-				"y"
 			]
 		},
 		"VehiclePlace": {
-			"type": "object",
-			"properties": {
-				"vehicle": {
-					"$ref": "#/definitions/VehicleID"
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {
+						"vehicle": {
+							"$ref": "#/definitions/VehicleID"
+						},
+						"chance": {
+							"type": "number"
+						},
+						"status": {
+							"description": "车辆状态",
+							"enum": [
+								-1,
+								1
+							],
+							"type": "number"
+						},
+						"rotation": {
+							"description": "角度 0~360",
+							"type": "number"
+						},
+						"fuel": {
+							"description": "燃料 0~100",
+							"type": "number"
+						}
+					},
+					"required": [
+						"chance",
+						"fuel",
+						"rotation",
+						"status",
+						"vehicle"
+					]
 				},
-				"x": {
-					"type": "number"
-				},
-				"y": {
-					"type": "number"
-				},
-				"chance": {
-					"type": "number"
-				},
-				"status": {
-					"type": "number",
-					"const": 1
-				},
-				"rotation": {
-					"type": "number"
+				{
+					"type": "object",
+					"properties": {
+						"x": {
+							"description": "放置的x坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"y": {
+							"description": "放置的y坐标 固定值或范围随机",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"repeat": {
+							"description": "重复放置n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"chance": {
+							"description": "放置概率",
+							"type": "number"
+						}
+					},
+					"required": [
+						"chance",
+						"repeat",
+						"x",
+						"y"
+					]
 				}
-			},
-			"required": [
-				"chance",
-				"rotation",
-				"status",
-				"vehicle",
-				"x",
-				"y"
 			]
 		},
 		"NestMapgen": {
-			"description": "嵌套生成子地图",
+			"description": "嵌套生成子地图生成定义",
 			"allOf": [
 				{
 					"type": "object",
@@ -26466,281 +27810,19 @@
 			]
 		},
 		"Mapgen": {
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"const": "mapgen"
+			"$ref": "#/definitions/__type_95"
+		},
+		"AnyMapgen": {
+			"description": "任意地图生成定义",
+			"anyOf": [
+				{
+					"$ref": "#/definitions/Mapgen",
+					"description": "地图生成定义"
 				},
-				"method": {
-					"type": "string",
-					"const": "json"
-				},
-				"om_terrain": {
-					"anyOf": [
-						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
-						},
-						{
-							"type": "string",
-							"pattern": "^OMTERR_.*$"
-						},
-						{
-							"type": "array",
-							"items": {
-								"type": "array",
-								"items": {
-									"$ref": "#/definitions/OvermapTerrainID"
-								}
-							}
-						}
-					]
-				},
-				"weight": {
-					"type": "number"
-				},
-				"object": {
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {
-								"fill_ter": {
-									"$ref": "#/definitions/TerrainID_1"
-								},
-								"rows": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								},
-								"palettes": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/PaletteID"
-									}
-								},
-								"items": {
-									"type": "object",
-									"additionalProperties": {
-										"type": "array",
-										"items": {
-											"type": "object",
-											"properties": {
-												"repeat": {
-													"description": "重复n次",
-													"anyOf": [
-														{
-															"type": "array",
-															"items": [
-																{
-																	"type": "number"
-																},
-																{
-																	"type": "number"
-																}
-															],
-															"minItems": 2,
-															"maxItems": 2
-														},
-														{
-															"type": "number"
-														}
-													]
-												},
-												"item": {
-													"$ref": "#/definitions/AnyItemID_1"
-												},
-												"chance": {
-													"type": "number"
-												}
-											},
-											"required": [
-												"chance",
-												"item",
-												"repeat"
-											]
-										}
-									}
-								},
-								"place_loot": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"repeat": {
-												"description": "重复n次",
-												"anyOf": [
-													{
-														"type": "array",
-														"items": [
-															{
-																"type": "number"
-															},
-															{
-																"type": "number"
-															}
-														],
-														"minItems": 2,
-														"maxItems": 2
-													},
-													{
-														"type": "number"
-													}
-												]
-											},
-											"group": {
-												"$ref": "#/definitions/ItemGroupID_1"
-											},
-											"chance": {
-												"type": "number"
-											},
-											"x": {
-												"type": "number"
-											},
-											"y": {
-												"type": "number"
-											},
-											"magazine": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"chance",
-											"group",
-											"magazine",
-											"repeat",
-											"x",
-											"y"
-										]
-									}
-								},
-								"place_monsters": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"monster": {
-												"$ref": "#/definitions/MonsterID"
-											},
-											"x": {
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											"y": {
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											"repeat": {
-												"anyOf": [
-													{
-														"type": "array",
-														"items": [
-															{
-																"type": "number"
-															},
-															{
-																"type": "number"
-															}
-														],
-														"minItems": 2,
-														"maxItems": 2
-													},
-													{
-														"type": "number"
-													}
-												]
-											},
-											"density": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"density",
-											"monster",
-											"repeat",
-											"x",
-											"y"
-										]
-									}
-								},
-								"place_vehicles": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"vehicle": {
-												"$ref": "#/definitions/VehicleID"
-											},
-											"x": {
-												"type": "number"
-											},
-											"y": {
-												"type": "number"
-											},
-											"chance": {
-												"type": "number"
-											},
-											"status": {
-												"type": "number",
-												"const": 1
-											},
-											"rotation": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"chance",
-											"rotation",
-											"status",
-											"vehicle",
-											"x",
-											"y"
-										]
-									}
-								}
-							},
-							"required": [
-								"rows"
-							]
-						},
-						{
-							"$ref": "#/definitions/Omit<Palette,\"type\"|\"id\">"
-						}
-					]
+				{
+					"$ref": "#/definitions/NestMapgen",
+					"description": "嵌套生成子地图生成定义"
 				}
-			},
-			"required": [
-				"method",
-				"object",
-				"om_terrain",
-				"type",
-				"weight"
 			]
 		},
 		"OverMapSpecialID": {
@@ -26863,129 +27945,7 @@
 			]
 		},
 		"OverMapSpecial": {
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"const": "overmap_special"
-				},
-				"id": {
-					"$ref": "#/definitions/OverMapSpecialID"
-				},
-				"overmaps": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/OverMapGen"
-					}
-				},
-				"locations": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "field"
-						}
-					],
-					"minItems": 1,
-					"maxItems": 1
-				},
-				"connections": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"point": {
-								"type": "array",
-								"items": [
-									{
-										"type": "number"
-									},
-									{
-										"type": "number"
-									},
-									{
-										"type": "number"
-									}
-								],
-								"minItems": 3,
-								"maxItems": 3
-							}
-						},
-						"required": [
-							"point"
-						]
-					}
-				},
-				"city_distance": {
-					"type": "array",
-					"items": [
-						{
-							"type": "number"
-						},
-						{
-							"type": "number"
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"city_sizes": {
-					"type": "array",
-					"items": [
-						{
-							"type": "number"
-						},
-						{
-							"type": "number"
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"occurrences": {
-					"type": "array",
-					"items": [
-						{
-							"type": "number"
-						},
-						{
-							"type": "number"
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"flags": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "MILITARY"
-						},
-						{
-							"type": "string",
-							"const": "UNIQUE"
-						},
-						{
-							"type": "string",
-							"const": "MAN_MADE"
-						}
-					],
-					"minItems": 3,
-					"maxItems": 3
-				}
-			},
-			"required": [
-				"city_distance",
-				"city_sizes",
-				"connections",
-				"flags",
-				"id",
-				"locations",
-				"occurrences",
-				"overmaps",
-				"type"
-			]
+			"$ref": "#/definitions/__type_124"
 		},
 		"MissionDefinitionID": {
 			"description": "任务定义ID",
@@ -27008,7 +27968,7 @@
 			]
 		},
 		"MissionDefinition": {
-			"$ref": "#/definitions/__type_119"
+			"$ref": "#/definitions/__type_125"
 		},
 		"MissionGoal": {
 			"description": "任务目标",
@@ -27084,7 +28044,7 @@
 			]
 		},
 		"ActivityType": {
-			"$ref": "#/definitions/__type_120"
+			"$ref": "#/definitions/__type_126"
 		},
 		"EocEffect": {
 			"description": "Eoc效果",
@@ -32389,7 +33349,7 @@
 			"type": "string"
 		},
 		"Eoc": {
-			"$ref": "#/definitions/__type_121"
+			"$ref": "#/definitions/__type_127"
 		},
 		"EocType": {
 			"description": "EOC类型",
@@ -32506,10 +33466,10 @@
 			]
 		},
 		"DamageType": {
-			"$ref": "#/definitions/__type_122"
+			"$ref": "#/definitions/__type_128"
 		},
 		"DamageInfoOrder": {
-			"$ref": "#/definitions/__type_123"
+			"$ref": "#/definitions/__type_129"
 		},
 		"DmgInfo": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
@@ -33703,7 +34663,7 @@
 			]
 		},
 		"AmmunitionType": {
-			"$ref": "#/definitions/__type_124"
+			"$ref": "#/definitions/__type_130"
 		},
 		"MathFunctionID": {
 			"description": "数学函数的ID",
@@ -33726,10 +34686,10 @@
 			]
 		},
 		"MathFunction": {
-			"$ref": "#/definitions/__type_125"
+			"$ref": "#/definitions/__type_131"
 		},
 		"OverlayOrdering": {
-			"$ref": "#/definitions/__type_126"
+			"$ref": "#/definitions/__type_132"
 		},
 		"TilesetCfgBase": {
 			"description": "通用tileset配置",
@@ -34124,7 +35084,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_97",
+						"$ref": "#/definitions/__type_101",
 						"description": "未打包的图片对象格式"
 					}
 				},
@@ -34134,7 +35094,7 @@
 			]
 		},
 		"PkgImageCfgObj": {
-			"$ref": "#/definitions/__type_97"
+			"$ref": "#/definitions/__type_101"
 		},
 		"ImageCfg": {
 			"description": "已打包的图片格式",
@@ -34152,7 +35112,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_96",
+						"$ref": "#/definitions/__type_100",
 						"description": "已打包的图片对象格式"
 					}
 				},
@@ -34162,10 +35122,10 @@
 			]
 		},
 		"ImageCfgObj": {
-			"$ref": "#/definitions/__type_96"
+			"$ref": "#/definitions/__type_100"
 		},
 		"ModTileset": {
-			"$ref": "#/definitions/__type_127"
+			"$ref": "#/definitions/__type_133"
 		},
 		"RequirementID": {
 			"description": "需求组ID",
@@ -34188,7 +35148,7 @@
 			]
 		},
 		"Requirement": {
-			"$ref": "#/definitions/__type_128"
+			"$ref": "#/definitions/__type_134"
 		},
 		"ReqFormat": {
 			"description": "需求格式  \n[ID , 消耗的数量]  \nNO_RECOVER为不可恢复  \nLIST为标记其是一个需求组",
@@ -35261,7 +36221,7 @@
 				{
 					"allOf": [
 						{
-							"$ref": "#/definitions/T_1"
+							"$ref": "#/definitions/T_2"
 						},
 						{
 							"type": "object",
@@ -42806,6 +43766,17 @@
 				{
 					"$ref": "#/definitions/Terrain",
 					"description": "对话选项"
+				},
+				{
+					"$ref": "#/definitions/Palette",
+					"description": "地图符号定义"
+				},
+				{
+					"$ref": "#/definitions/Mapgen",
+					"description": "地图生成定义"
+				},
+				{
+					"$ref": "#/definitions/OverMapSpecial"
 				},
 				{
 					"$ref": "#/definitions/MissionDefinition",
@@ -80497,10 +81468,54 @@
 				"text"
 			]
 		},
+		"Color_1": {
+			"description": "可用的颜色",
+			"enum": [
+				"black",
+				"blue",
+				"brown",
+				"cyan",
+				"dark_gray",
+				"green",
+				"light_blue",
+				"light_cyan",
+				"light_gray",
+				"light_green",
+				"light_red",
+				"magenta",
+				"pink",
+				"red",
+				"white",
+				"yellow"
+			],
+			"type": "string"
+		},
+		"OvermapTerrainID_1": {
+			"description": "大地图地块ID",
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^OMTERR_.*$"
+				}
+			]
+		},
 		"PaletteTerrainMap_1": {
+			"description": "地形映射",
 			"$ref": "#/definitions/PaletteTerrainMap"
 		},
 		"__type_88": {
+			"description": "地形映射",
 			"type": "object",
 			"additionalProperties": {
 				"anyOf": [
@@ -80558,21 +81573,53 @@
 			}
 		},
 		"PaletteFurnitureMap_1": {
+			"description": "家具映射",
 			"$ref": "#/definitions/PaletteFurnitureMap"
 		},
 		"__type_89": {
+			"description": "家具映射",
 			"type": "object",
 			"additionalProperties": {
 				"anyOf": [
+					{
+						"allOf": [
+							{
+								"type": "object",
+								"properties": {}
+							},
+							{
+								"type": "string"
+							}
+						]
+					},
+					{
+						"type": "string",
+						"pattern": "^FURN_.*$"
+					},
 					{
 						"type": "array",
 						"items": {
 							"anyOf": [
 								{
+									"allOf": [
+										{
+											"type": "object",
+											"properties": {}
+										},
+										{
+											"type": "string"
+										}
+									]
+								},
+								{
+									"type": "string",
+									"pattern": "^FURN_.*$"
+								},
+								{
 									"type": "array",
 									"items": [
 										{
-											"type": "string"
+											"$ref": "#/definitions/FurnitureID"
 										},
 										{
 											"type": "number"
@@ -80580,23 +81627,19 @@
 									],
 									"minItems": 2,
 									"maxItems": 2
-								},
-								{
-									"type": "string"
 								}
 							]
 						}
-					},
-					{
-						"type": "string"
 					}
 				]
 			}
 		},
 		"PaletteLiquidsMap_1": {
+			"description": "液体映射",
 			"$ref": "#/definitions/PaletteLiquidsMap"
 		},
 		"__type_90": {
+			"description": "液体映射",
 			"type": "object",
 			"additionalProperties": {
 				"type": "object",
@@ -80624,10 +81667,64 @@
 				]
 			}
 		},
-		"PaletteMonstersMap_1": {
-			"$ref": "#/definitions/PaletteMonstersMap"
+		"PaletteNestMap_1": {
+			"description": "嵌套地图映射",
+			"$ref": "#/definitions/PaletteNestMap"
 		},
 		"__type_91": {
+			"description": "嵌套地图映射",
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"properties": {
+					"chunks": {
+						"type": "array",
+						"items": {
+							"type": "array",
+							"items": [
+								{
+									"anyOf": [
+										{
+											"allOf": [
+												{
+													"type": "object",
+													"properties": {}
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										{
+											"type": "string",
+											"pattern": "^NESTMPG_.*$"
+										},
+										{
+											"const": "null",
+											"type": "string"
+										}
+									]
+								},
+								{
+									"type": "number"
+								}
+							],
+							"minItems": 2,
+							"maxItems": 2
+						}
+					}
+				},
+				"required": [
+					"chunks"
+				]
+			}
+		},
+		"PaletteMonstersMap_1": {
+			"description": "怪物映射",
+			"$ref": "#/definitions/PaletteMonstersMap"
+		},
+		"__type_92": {
+			"description": "怪物映射",
 			"type": "object",
 			"additionalProperties": {
 				"type": "object",
@@ -80640,6 +81737,80 @@
 					"monster"
 				]
 			}
+		},
+		"PaletteVehiclesMap_1": {
+			"description": "载具映射",
+			"$ref": "#/definitions/PaletteVehiclesMap"
+		},
+		"__type_93": {
+			"description": "载具映射",
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"properties": {
+					"vehicle": {
+						"$ref": "#/definitions/VehicleID"
+					},
+					"chance": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"chance",
+					"vehicle"
+				]
+			}
+		},
+		"PaletteItemMap_1": {
+			"description": "物品映射",
+			"$ref": "#/definitions/PaletteItemMap"
+		},
+		"__type_94": {
+			"description": "物品映射",
+			"type": "object",
+			"additionalProperties": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"repeat": {
+							"description": "重复n次",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": [
+										{
+											"type": "number"
+										},
+										{
+											"type": "number"
+										}
+									],
+									"minItems": 2,
+									"maxItems": 2
+								},
+								{
+									"type": "number"
+								}
+							]
+						},
+						"item": {
+							"$ref": "#/definitions/AnyItemID_1"
+						},
+						"chance": {
+							"type": "number"
+						}
+					},
+					"required": [
+						"chance",
+						"item",
+						"repeat"
+					]
+				}
+			}
+		},
+		"T": {
+			"type": "object"
 		},
 		"Omit<Mapgen,\"om_terrain\">": {
 			"type": "object",
@@ -80664,201 +81835,34 @@
 										"$ref": "#/definitions/PaletteID"
 									}
 								},
-								"items": {
-									"type": "object",
-									"additionalProperties": {
-										"type": "array",
-										"items": {
-											"type": "object",
-											"properties": {
-												"repeat": {
-													"description": "重复n次",
-													"anyOf": [
-														{
-															"type": "array",
-															"items": [
-																{
-																	"type": "number"
-																},
-																{
-																	"type": "number"
-																}
-															],
-															"minItems": 2,
-															"maxItems": 2
-														},
-														{
-															"type": "number"
-														}
-													]
-												},
-												"item": {
-													"$ref": "#/definitions/AnyItemID_1"
-												},
-												"chance": {
-													"type": "number"
-												}
-											},
-											"required": [
-												"chance",
-												"item",
-												"repeat"
-											]
-										}
+								"place_furniture": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/FurnPlace"
+									}
+								},
+								"place_item": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/ItemPlace"
 									}
 								},
 								"place_loot": {
 									"type": "array",
 									"items": {
-										"type": "object",
-										"properties": {
-											"repeat": {
-												"description": "重复n次",
-												"anyOf": [
-													{
-														"type": "array",
-														"items": [
-															{
-																"type": "number"
-															},
-															{
-																"type": "number"
-															}
-														],
-														"minItems": 2,
-														"maxItems": 2
-													},
-													{
-														"type": "number"
-													}
-												]
-											},
-											"group": {
-												"$ref": "#/definitions/ItemGroupID_1"
-											},
-											"chance": {
-												"type": "number"
-											},
-											"x": {
-												"type": "number"
-											},
-											"y": {
-												"type": "number"
-											},
-											"magazine": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"chance",
-											"group",
-											"magazine",
-											"repeat",
-											"x",
-											"y"
-										]
+										"$ref": "#/definitions/GroupPlace"
 									}
 								},
 								"place_monsters": {
 									"type": "array",
 									"items": {
-										"type": "object",
-										"properties": {
-											"monster": {
-												"$ref": "#/definitions/MonsterID"
-											},
-											"x": {
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											"y": {
-												"type": "array",
-												"items": [
-													{
-														"type": "number"
-													},
-													{
-														"type": "number"
-													}
-												],
-												"minItems": 2,
-												"maxItems": 2
-											},
-											"repeat": {
-												"anyOf": [
-													{
-														"type": "array",
-														"items": [
-															{
-																"type": "number"
-															},
-															{
-																"type": "number"
-															}
-														],
-														"minItems": 2,
-														"maxItems": 2
-													},
-													{
-														"type": "number"
-													}
-												]
-											},
-											"density": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"density",
-											"monster",
-											"repeat",
-											"x",
-											"y"
-										]
+										"$ref": "#/definitions/MonsterPlace"
 									}
 								},
 								"place_vehicles": {
 									"type": "array",
 									"items": {
-										"type": "object",
-										"properties": {
-											"vehicle": {
-												"$ref": "#/definitions/VehicleID"
-											},
-											"x": {
-												"type": "number"
-											},
-											"y": {
-												"type": "number"
-											},
-											"chance": {
-												"type": "number"
-											},
-											"status": {
-												"type": "number",
-												"const": 1
-											},
-											"rotation": {
-												"type": "number"
-											}
-										},
-										"required": [
-											"chance",
-											"rotation",
-											"status",
-											"vehicle",
-											"x",
-											"y"
-										]
+										"$ref": "#/definitions/VehiclePlace"
 									}
 								}
 							},
@@ -80913,21 +81917,155 @@
 		"Omit<Palette,\"type\"|\"id\">": {
 			"type": "object",
 			"properties": {
+				"items": {
+					"$ref": "#/definitions/PaletteItemMap_1",
+					"description": "物品映射"
+				},
 				"terrain": {
-					"$ref": "#/definitions/PaletteTerrainMap_1"
+					"$ref": "#/definitions/PaletteTerrainMap_1",
+					"description": "地形映射"
 				},
 				"furniture": {
-					"$ref": "#/definitions/PaletteFurnitureMap_1"
+					"$ref": "#/definitions/PaletteFurnitureMap_1",
+					"description": "家具映射"
 				},
 				"monster": {
-					"$ref": "#/definitions/PaletteMonstersMap_1"
+					"$ref": "#/definitions/PaletteMonstersMap_1",
+					"description": "怪物映射"
 				},
 				"liquids": {
-					"$ref": "#/definitions/PaletteLiquidsMap_1"
+					"$ref": "#/definitions/PaletteLiquidsMap_1",
+					"description": "液体映射"
+				},
+				"nested": {
+					"$ref": "#/definitions/PaletteNestMap_1",
+					"description": "嵌套地图映射"
+				},
+				"vehicles": {
+					"$ref": "#/definitions/PaletteVehiclesMap_1",
+					"description": "载具映射"
 				}
 			}
 		},
-		"__type_92": {
+		"__type_95": {
+			"description": "地图生成定义",
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"const": "mapgen"
+				},
+				"method": {
+					"type": "string",
+					"const": "json"
+				},
+				"om_terrain": {
+					"anyOf": [
+						{
+							"allOf": [
+								{
+									"type": "object",
+									"properties": {}
+								},
+								{
+									"type": "string"
+								}
+							]
+						},
+						{
+							"type": "string",
+							"pattern": "^OMTERR_.*$"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/OvermapTerrainID"
+							}
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "array",
+								"items": {
+									"$ref": "#/definitions/OvermapTerrainID"
+								}
+							}
+						}
+					]
+				},
+				"weight": {
+					"type": "number"
+				},
+				"object": {
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {
+								"fill_ter": {
+									"$ref": "#/definitions/TerrainID_1"
+								},
+								"rows": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"palettes": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PaletteID"
+									}
+								},
+								"place_furniture": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/FurnPlace"
+									}
+								},
+								"place_item": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/ItemPlace"
+									}
+								},
+								"place_loot": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/GroupPlace"
+									}
+								},
+								"place_monsters": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/MonsterPlace"
+									}
+								},
+								"place_vehicles": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/VehiclePlace"
+									}
+								}
+							},
+							"required": [
+								"rows"
+							]
+						},
+						{
+							"$ref": "#/definitions/Omit<Palette,\"type\"|\"id\">"
+						}
+					]
+				}
+			},
+			"required": [
+				"method",
+				"object",
+				"om_terrain",
+				"type",
+				"weight"
+			]
+		},
+		"__type_96": {
 			"description": "任务效果",
 			"type": "object",
 			"properties": {
@@ -82366,7 +83504,7 @@
 			}
 		},
 		"MissionEffect_1": {
-			"$ref": "#/definitions/__type_92"
+			"$ref": "#/definitions/__type_96"
 		},
 		"MissionDefinitionID_1": {
 			"description": "任务定义ID",
@@ -82388,7 +83526,7 @@
 				}
 			]
 		},
-		"__type_93": {
+		"__type_97": {
 			"description": "任务对话字典",
 			"type": "object",
 			"properties": {
@@ -82442,7 +83580,7 @@
 			]
 		},
 		"MissionDialog_1": {
-			"$ref": "#/definitions/__type_93"
+			"$ref": "#/definitions/__type_97"
 		},
 		"EocID_1": {
 			"description": "EOC ID格式",
@@ -82463,7 +83601,7 @@
 		"{[Pin`npc_${K}`]?:undefined;}": {
 			"type": "object"
 		},
-		"__type_94": {
+		"__type_98": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
 			"type": "object",
 			"properties": {
@@ -82478,7 +83616,7 @@
 			}
 		},
 		"DmgInfo_1": {
-			"$ref": "#/definitions/__type_94"
+			"$ref": "#/definitions/__type_98"
 		},
 		"Array_2": {
 			"description": "燃烧数据",
@@ -82529,7 +83667,7 @@
 		"MateBurnData_1": {
 			"$ref": "#/definitions/Array_2"
 		},
-		"__type_95": {
+		"__type_99": {
 			"description": "燃料数据",
 			"type": "object",
 			"properties": {
@@ -82596,12 +83734,12 @@
 			]
 		},
 		"FuelData_1": {
-			"$ref": "#/definitions/__type_95"
+			"$ref": "#/definitions/__type_99"
 		},
 		"Record<`${string}.png`,PkgTilesetCfg>": {
 			"type": "object"
 		},
-		"__type_96": {
+		"__type_100": {
 			"description": "已打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -82654,7 +83792,7 @@
 				}
 			]
 		},
-		"__type_97": {
+		"__type_101": {
 			"description": "未打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -82734,28 +83872,6 @@
 				"maxItems": 2
 			}
 		},
-		"Color_1": {
-			"description": "可用的颜色",
-			"enum": [
-				"black",
-				"blue",
-				"brown",
-				"cyan",
-				"dark_gray",
-				"green",
-				"light_blue",
-				"light_cyan",
-				"light_gray",
-				"light_green",
-				"light_red",
-				"magenta",
-				"pink",
-				"red",
-				"white",
-				"yellow"
-			],
-			"type": "string"
-		},
 		"GenericID_2": {
 			"description": "Generic ID格式",
 			"anyOf": [
@@ -82819,7 +83935,7 @@
 				}
 			]
 		},
-		"__type_98": {
+		"__type_102": {
 			"description": "车辆部件的操作需求",
 			"type": "object",
 			"properties": {
@@ -82856,9 +83972,9 @@
 			]
 		},
 		"VPRequirement_1": {
-			"$ref": "#/definitions/__type_98"
+			"$ref": "#/definitions/__type_102"
 		},
-		"__type_99": {
+		"__type_103": {
 			"description": "控制要求",
 			"type": "object",
 			"properties": {
@@ -82889,9 +84005,9 @@
 			}
 		},
 		"ControlReq_1": {
-			"$ref": "#/definitions/__type_99"
+			"$ref": "#/definitions/__type_103"
 		},
-		"__type_100": {
+		"__type_104": {
 			"type": "object",
 			"properties": {
 				"all": {
@@ -82960,7 +84076,7 @@
 			}
 		},
 		"Partial_31": {
-			"$ref": "#/definitions/__type_100"
+			"$ref": "#/definitions/__type_104"
 		},
 		"Copyfrom_8": {
 			"description": "copyfrom变体",
@@ -83004,7 +84120,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_101"
+					"$ref": "#/definitions/__type_105"
 				}
 			]
 		},
@@ -83028,7 +84144,7 @@
 		"Partial_32": {
 			"$ref": "#/definitions/Partial_33"
 		},
-		"__type_101": {
+		"__type_105": {
 			"type": "object",
 			"properties": {
 				"color": {
@@ -83616,9 +84732,9 @@
 			"$ref": "#/definitions/Partial_31"
 		},
 		"Partial_33": {
-			"$ref": "#/definitions/__type_101"
+			"$ref": "#/definitions/__type_105"
 		},
-		"T_1": {
+		"T_2": {
 			"type": "object",
 			"properties": {
 				"id": {
@@ -83678,7 +84794,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_102"
+					"$ref": "#/definitions/__type_106"
 				}
 			]
 		},
@@ -83706,11 +84822,11 @@
 		"Partial_35": {
 			"$ref": "#/definitions/Partial_36"
 		},
-		"__type_102": {
+		"__type_106": {
 			"type": "object"
 		},
 		"Partial_36": {
-			"$ref": "#/definitions/__type_102"
+			"$ref": "#/definitions/__type_106"
 		},
 		"Pick<T,CopyfromResFD>_1": {
 			"type": "object",
@@ -83736,11 +84852,11 @@
 		"Partial_37": {
 			"$ref": "#/definitions/Partial_38"
 		},
-		"__type_103": {
+		"__type_107": {
 			"type": "object"
 		},
 		"Partial_38": {
-			"$ref": "#/definitions/__type_103"
+			"$ref": "#/definitions/__type_107"
 		},
 		"JToken": {
 			"description": "可以序列化为JSON文件的对象",
@@ -83766,7 +84882,7 @@
 				}
 			]
 		},
-		"__type_104": {
+		"__type_108": {
 			"description": "在stringify输出时 值为 undefine 的键会被忽略",
 			"type": "object",
 			"additionalProperties": {
@@ -83774,7 +84890,7 @@
 			}
 		},
 		"JObject": {
-			"$ref": "#/definitions/__type_104"
+			"$ref": "#/definitions/__type_108"
 		},
 		"Array_5": {
 			"description": "在stringify输出时 值为 undefine 的成员会被转为 null",
@@ -83790,7 +84906,7 @@
 			"description": "可以保存为JToken的类",
 			"type": "object"
 		},
-		"__type_105": {
+		"__type_109": {
 			"description": "一个自定义的Flag",
 			"type": "object",
 			"properties": {
@@ -83846,7 +84962,7 @@
 				"type"
 			]
 		},
-		"__type_106": {
+		"__type_110": {
 			"description": "效果",
 			"type": "object",
 			"properties": {
@@ -84443,7 +85559,7 @@
 				"type"
 			]
 		},
-		"__type_107": {
+		"__type_111": {
 			"description": "弹药效果",
 			"type": "object",
 			"properties": {
@@ -84490,7 +85606,7 @@
 				"type"
 			]
 		},
-		"__type_108": {
+		"__type_112": {
 			"description": "Npc职业",
 			"type": "object",
 			"properties": {
@@ -84657,7 +85773,7 @@
 				"type"
 			]
 		},
-		"__type_109": {
+		"__type_113": {
 			"description": "工具品质",
 			"type": "object",
 			"properties": {
@@ -84701,7 +85817,7 @@
 				"type"
 			]
 		},
-		"__type_110": {
+		"__type_114": {
 			"description": "ItemGroup",
 			"type": "object",
 			"properties": {
@@ -84755,7 +85871,7 @@
 				"type"
 			]
 		},
-		"__type_111": {
+		"__type_115": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -84924,7 +86040,7 @@
 				"type"
 			]
 		},
-		"__type_112": {
+		"__type_116": {
 			"description": "怪物",
 			"type": "object",
 			"properties": {
@@ -85706,7 +86822,7 @@
 				"weight"
 			]
 		},
-		"__type_113": {
+		"__type_117": {
 			"description": "音效",
 			"type": "object",
 			"properties": {
@@ -85761,9 +86877,9 @@
 			]
 		},
 		"SoundEffect_1": {
-			"$ref": "#/definitions/__type_113"
+			"$ref": "#/definitions/__type_117"
 		},
-		"__type_114": {
+		"__type_118": {
 			"description": "法术",
 			"type": "object",
 			"properties": {
@@ -88385,7 +89501,7 @@
 				"valid_targets"
 			]
 		},
-		"__type_115": {
+		"__type_119": {
 			"description": "附魔",
 			"type": "object",
 			"properties": {
@@ -88743,7 +89859,7 @@
 				"type"
 			]
 		},
-		"__type_116": {
+		"__type_120": {
 			"description": "变异",
 			"type": "object",
 			"properties": {
@@ -89401,7 +90517,7 @@
 				"type"
 			]
 		},
-		"__type_117": {
+		"__type_121": {
 			"description": "Npc实例",
 			"type": "object",
 			"properties": {
@@ -89557,7 +90673,7 @@
 				"type"
 			]
 		},
-		"__type_118": {
+		"__type_122": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -89574,525 +90690,186 @@
 				"symbol": {
 					"description": "ascii显示符号",
 					"type": "string"
-				},
-				"looks_like": {
+				}
+			},
+			"required": [
+				"id",
+				"name",
+				"symbol",
+				"type"
+			]
+		},
+		"__type_123": {
+			"description": "地图符号定义",
+			"type": "object",
+			"properties": {
+				"type": {
 					"type": "string",
-					"const": "pit"
+					"const": "palette"
 				},
-				"color": {
+				"id": {
+					"$ref": "#/definitions/PaletteID"
+				},
+				"terrain": {
+					"$ref": "#/definitions/PaletteTerrainMap_1",
+					"description": "地形映射"
+				},
+				"furniture": {
+					"$ref": "#/definitions/PaletteFurnitureMap_1",
+					"description": "家具映射"
+				},
+				"liquids": {
+					"$ref": "#/definitions/PaletteLiquidsMap_1",
+					"description": "液体映射"
+				},
+				"nested": {
+					"$ref": "#/definitions/PaletteNestMap_1",
+					"description": "嵌套地图映射"
+				},
+				"monster": {
+					"$ref": "#/definitions/PaletteMonstersMap_1",
+					"description": "怪物映射"
+				},
+				"vehicles": {
+					"$ref": "#/definitions/PaletteVehiclesMap_1",
+					"description": "载具映射"
+				},
+				"items": {
+					"$ref": "#/definitions/PaletteItemMap_1",
+					"description": "物品映射"
+				}
+			},
+			"required": [
+				"id",
+				"type"
+			]
+		},
+		"__type_124": {
+			"type": "object",
+			"properties": {
+				"type": {
 					"type": "string",
-					"const": "ltred"
+					"const": "overmap_special"
 				},
-				"move_cost": {
-					"type": "number",
-					"const": 10
+				"id": {
+					"$ref": "#/definitions/OverMapSpecialID"
 				},
-				"light_emitted": {
-					"type": "number",
-					"const": 10
+				"overmaps": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/OverMapGen"
+					}
 				},
-				"trap": {
-					"type": "string",
-					"const": "spike_pit"
+				"locations": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string",
+							"const": "field"
+						}
+					],
+					"minItems": 1,
+					"maxItems": 1
 				},
-				"max_volume": {
-					"$ref": "#/definitions/Volume"
+				"connections": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"point": {
+								"type": "array",
+								"items": [
+									{
+										"type": "number"
+									},
+									{
+										"type": "number"
+									},
+									{
+										"type": "number"
+									}
+								],
+								"minItems": 3,
+								"maxItems": 3
+							}
+						},
+						"required": [
+							"point"
+						]
+					}
+				},
+				"city_distance": {
+					"type": "array",
+					"items": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
+				},
+				"city_sizes": {
+					"type": "array",
+					"items": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
+				},
+				"occurrences": {
+					"type": "array",
+					"items": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
 				},
 				"flags": {
 					"type": "array",
 					"items": [
 						{
 							"type": "string",
-							"const": "TRANSPARENT"
+							"const": "MILITARY"
 						},
 						{
 							"type": "string",
-							"const": "DIGGABLE"
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"connect_groups": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "WALL"
-						}
-					],
-					"minItems": 1,
-					"maxItems": 1
-				},
-				"connects_to": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "WALL"
-						}
-					],
-					"minItems": 1,
-					"maxItems": 1
-				},
-				"rotates_to": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "INDOORFLOOR"
-						}
-					],
-					"minItems": 1,
-					"maxItems": 1
-				},
-				"close": {
-					"type": "string",
-					"const": "t_foo_closed"
-				},
-				"open": {
-					"type": "string",
-					"const": "t_foo_open"
-				},
-				"lockpick_result": {
-					"type": "string",
-					"const": "t_door_unlocked"
-				},
-				"lockpick_message": {
-					"type": "string",
-					"const": "With a click, you unlock the door."
-				},
-				"bash": {
-					"type": "string",
-					"const": "TODO"
-				},
-				"deconstruct": {
-					"type": "string",
-					"const": "TODO"
-				},
-				"alias": {
-					"type": "string",
-					"const": "TODO"
-				},
-				"harvestable": {
-					"type": "string",
-					"const": "blueberries"
-				},
-				"transforms_into": {
-					"type": "string",
-					"const": "t_tree_harvested"
-				},
-				"allowed_template_ids": {
-					"type": "array",
-					"items": [
-						{
-							"type": "string",
-							"const": "standard_template_construct"
+							"const": "UNIQUE"
 						},
 						{
 							"type": "string",
-							"const": "debug_template"
-						},
-						{
-							"type": "string",
-							"const": "afs_10mm_smart_template"
+							"const": "MAN_MADE"
 						}
 					],
 					"minItems": 3,
 					"maxItems": 3
-				},
-				"shoot": {
-					"type": "object",
-					"properties": {
-						"reduce_damage": {
-							"type": "array",
-							"items": [
-								{
-									"type": "number",
-									"const": 2
-								},
-								{
-									"type": "number",
-									"const": 12
-								}
-							],
-							"minItems": 2,
-							"maxItems": 2
-						},
-						"reduce_damage_laser": {
-							"type": "array",
-							"items": [
-								{
-									"type": "number",
-									"const": 0
-								},
-								{
-									"type": "number",
-									"const": 7
-								}
-							],
-							"minItems": 2,
-							"maxItems": 2
-						},
-						"destroy_damage": {
-							"type": "array",
-							"items": [
-								{
-									"type": "number",
-									"const": 40
-								},
-								{
-									"type": "number",
-									"const": 120
-								}
-							],
-							"minItems": 2,
-							"maxItems": 2
-						},
-						"no_laser_destroy": {
-							"type": "boolean",
-							"const": true
-						}
-					},
-					"required": [
-						"destroy_damage",
-						"no_laser_destroy",
-						"reduce_damage",
-						"reduce_damage_laser"
-					]
-				},
-				"harvest_by_season": {
-					"type": "array",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"seasons": {
-									"type": "array",
-									"items": [
-										{
-											"type": "string",
-											"const": "spring"
-										},
-										{
-											"type": "string",
-											"const": "autumn"
-										}
-									],
-									"minItems": 2,
-									"maxItems": 2
-								},
-								"id": {
-									"type": "string",
-									"const": "burdock_harv"
-								}
-							},
-							"required": [
-								"id",
-								"seasons"
-							]
-						},
-						{
-							"type": "object",
-							"properties": {
-								"seasons": {
-									"type": "array",
-									"items": [
-										{
-											"type": "string",
-											"const": "summer"
-										}
-									],
-									"minItems": 1,
-									"maxItems": 1
-								},
-								"id": {
-									"type": "string",
-									"const": "burdock_summer_harv"
-								}
-							},
-							"required": [
-								"id",
-								"seasons"
-							]
-						}
-					],
-					"minItems": 2,
-					"maxItems": 2
-				},
-				"roof": {
-					"type": "string",
-					"const": "t_roof"
-				},
-				"examine_action": {
-					"type": "string",
-					"const": "pit"
-				},
-				"boltcut": {
-					"type": "object",
-					"properties": {
-						"result": {
-							"type": "string",
-							"const": "t_door_unlocked"
-						},
-						"duration": {
-							"type": "string",
-							"const": "1 seconds"
-						},
-						"message": {
-							"type": "string",
-							"const": "The door opens."
-						},
-						"sound": {
-							"type": "string",
-							"const": "Gachunk!"
-						},
-						"byproducts": {
-							"type": "array",
-							"items": [
-								{
-									"type": "object",
-									"properties": {
-										"item": {
-											"type": "string",
-											"const": "scrap"
-										},
-										"2x4": {
-											"type": "number",
-											"const": 3
-										}
-									},
-									"required": [
-										"2x4",
-										"item"
-									]
-								}
-							],
-							"minItems": 1,
-							"maxItems": 1
-						}
-					},
-					"required": [
-						"byproducts",
-						"duration",
-						"message",
-						"result",
-						"sound"
-					]
-				},
-				"hacksaw": {
-					"type": "object",
-					"properties": {
-						"result": {
-							"type": "string",
-							"const": "t_door_unlocked"
-						},
-						"duration": {
-							"type": "string",
-							"const": "12 seconds"
-						},
-						"message": {
-							"type": "string",
-							"const": "The door is hacksawed open!"
-						},
-						"sound": {
-							"type": "string",
-							"const": "Gachunk!"
-						},
-						"byproducts": {
-							"type": "array",
-							"items": [
-								{
-									"type": "object",
-									"properties": {
-										"item": {
-											"type": "string",
-											"const": "scrap"
-										},
-										"2x4": {
-											"type": "number",
-											"const": 13
-										}
-									},
-									"required": [
-										"2x4",
-										"item"
-									]
-								}
-							],
-							"minItems": 1,
-							"maxItems": 1
-						}
-					},
-					"required": [
-						"byproducts",
-						"duration",
-						"message",
-						"result",
-						"sound"
-					]
-				},
-				"oxytorch": {
-					"type": "object",
-					"properties": {
-						"result": {
-							"type": "string",
-							"const": "t_door_unlocked"
-						},
-						"duration": {
-							"type": "string",
-							"const": "60 seconds"
-						},
-						"message": {
-							"type": "string",
-							"const": "The door opens!"
-						},
-						"byproducts": {
-							"type": "array",
-							"items": [
-								{
-									"type": "object",
-									"properties": {
-										"item": {
-											"type": "string",
-											"const": "scrap"
-										},
-										"count": {
-											"type": "number",
-											"const": 10
-										}
-									},
-									"required": [
-										"count",
-										"item"
-									]
-								}
-							],
-							"minItems": 1,
-							"maxItems": 1
-						}
-					},
-					"required": [
-						"byproducts",
-						"duration",
-						"message",
-						"result"
-					]
-				},
-				"prying": {
-					"type": "object",
-					"properties": {
-						"result": {
-							"type": "string",
-							"const": "t_fence_post"
-						},
-						"duration": {
-							"type": "string",
-							"const": "30 seconds"
-						},
-						"message": {
-							"type": "string",
-							"const": "You pry out the fence post."
-						},
-						"byproducts": {
-							"type": "array",
-							"items": [
-								{
-									"type": "object",
-									"properties": {
-										"item": {
-											"type": "string",
-											"const": "nail"
-										},
-										"count": {
-											"type": "number",
-											"const": 6
-										}
-									},
-									"required": [
-										"count",
-										"item"
-									]
-								},
-								{
-									"type": "object",
-									"properties": {
-										"item": {
-											"type": "string",
-											"const": "2x4"
-										},
-										"count": {
-											"type": "number",
-											"const": 3
-										}
-									},
-									"required": [
-										"count",
-										"item"
-									]
-								}
-							],
-							"minItems": 2,
-							"maxItems": 2
-						},
-						"prying_data": {
-							"type": "object",
-							"properties": {
-								"prying_nails": {
-									"type": "boolean",
-									"const": true
-								}
-							},
-							"required": [
-								"prying_nails"
-							]
-						}
-					},
-					"required": [
-						"byproducts",
-						"duration",
-						"message",
-						"prying_data",
-						"result"
-					]
 				}
 			},
 			"required": [
-				"alias",
-				"allowed_template_ids",
-				"bash",
-				"boltcut",
-				"close",
-				"color",
-				"connect_groups",
-				"connects_to",
-				"deconstruct",
-				"examine_action",
+				"city_distance",
+				"city_sizes",
+				"connections",
 				"flags",
-				"hacksaw",
-				"harvest_by_season",
-				"harvestable",
 				"id",
-				"light_emitted",
-				"lockpick_message",
-				"lockpick_result",
-				"looks_like",
-				"max_volume",
-				"move_cost",
-				"name",
-				"open",
-				"oxytorch",
-				"prying",
-				"roof",
-				"rotates_to",
-				"shoot",
-				"symbol",
-				"transforms_into",
-				"trap",
+				"locations",
+				"occurrences",
+				"overmaps",
 				"type"
 			]
 		},
-		"__type_119": {
+		"__type_125": {
 			"description": "任务定义",
 			"type": "object",
 			"properties": {
@@ -90172,7 +90949,7 @@
 				"value"
 			]
 		},
-		"__type_120": {
+		"__type_126": {
 			"description": "活动类型",
 			"type": "object",
 			"properties": {
@@ -90257,7 +91034,7 @@
 				"verb"
 			]
 		},
-		"__type_121": {
+		"__type_127": {
 			"description": "EOC",
 			"type": "object",
 			"properties": {
@@ -91756,7 +92533,7 @@
 				"type"
 			]
 		},
-		"__type_122": {
+		"__type_128": {
 			"description": "伤害类型",
 			"type": "object",
 			"properties": {
@@ -91860,7 +92637,7 @@
 				"type"
 			]
 		},
-		"__type_123": {
+		"__type_129": {
 			"description": "伤害信息顺序",
 			"type": "object",
 			"properties": {
@@ -91936,7 +92713,7 @@
 				"type"
 			]
 		},
-		"__type_124": {
+		"__type_130": {
 			"description": "弹药类型",
 			"type": "object",
 			"properties": {
@@ -91964,7 +92741,7 @@
 				"type"
 			]
 		},
-		"__type_125": {
+		"__type_131": {
 			"description": "数学函数",
 			"type": "object",
 			"properties": {
@@ -91991,7 +92768,7 @@
 				"type"
 			]
 		},
-		"__type_126": {
+		"__type_132": {
 			"description": "县市层级",
 			"type": "object",
 			"properties": {
@@ -92029,7 +92806,7 @@
 				"type"
 			]
 		},
-		"__type_127": {
+		"__type_133": {
 			"description": "mod图包",
 			"type": "object",
 			"properties": {
@@ -92058,7 +92835,7 @@
 				"type"
 			]
 		},
-		"__type_128": {
+		"__type_134": {
 			"description": "需求组",
 			"type": "object",
 			"properties": {

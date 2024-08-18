@@ -11,7 +11,7 @@
   "author": "zwa73",
   "license": "ISC",
   "dependencies": {
-    "@zwa73/utils": "*"
+    "@zwa73/utils": "^1.0.149"
   },
   "devDependencies": {
     "@types/fluent-ffmpeg": "^2.1.24",

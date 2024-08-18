@@ -7,9 +7,11 @@ export type TerrainID = CddaID<"TERRAIN">;
 export type Terrain = {
     type: "terrain";
     id: TerrainID;
-    name: DescText;
+    name: (DescText);
     /**ascii显示符号 */
     symbol: string;
+};
+type TU = {
     looks_like: "pit";
     color: "ltred";
     move_cost: 10;
@@ -73,4 +75,4 @@ export type Terrain = {
         byproducts: [{ item: "nail"; count: 6 }, { item: "2x4"; count: 3 }];
         prying_data: { prying_nails: true };
     };
-};
+}

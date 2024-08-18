@@ -1,47 +1,51 @@
+import { FurnitureID } from "./Furniture";
 import { CddaID } from "./GenericDefine";
 import { AnyItemID } from "./Item";
 import { ItemGroupID } from "./ItemGroup";
 import { MonsterID } from "./Monster";
+import { OvermapTerrainID } from "./OvermapTerrain";
 import { Palette, PaletteID } from "./Palette";
 import { TerrainID } from "./Terrain";
 import { VehicleID } from "./Vehicle";
 
-/**大地图地块 */
-export type OvermapTerrainID = CddaID<"OMTERR">;
+
 /**嵌套地块 */
 export type NestedMapgenID = CddaID<"NESTMPG">;
 
-export type GroupPlace = {
-    /**重复n次 */
+type Place<T> = T&{
+    /**放置的x坐标 固定值或范围随机 */
+    x: number|[number, number];
+    /**放置的y坐标 固定值或范围随机 */
+    y: number|[number, number];
+    /**重复放置n次 */
     repeat: number|[number, number];
-    group: ItemGroupID;
+    /**放置概率 */
     chance: number;
-    x:number;
-    y:number;
-    magazine:number;
-};
-export type ItemPlace = {
-    /**重复n次 */
-    repeat: number|[number, number];
+}
+export type FurnPlace = Place<{
+    furn: FurnitureID;
+}>;
+export type ItemPlace = Place<{
     item: AnyItemID;
-    chance: number;
-};
-export type MonsterPlace = {
+}>;
+export type GroupPlace = Place<{
+    group: ItemGroupID;
+    magazine:number;
+}>;
+export type MonsterPlace = Place<{
     monster: MonsterID;
-    x: [number, number];
-    y: [number, number];
-    repeat: number|[number, number];
     density: number;
-}
-
-export type VehiclePlace = {
+}>;
+export type VehiclePlace = Place<{
     vehicle: VehicleID;
-    x: number;
-    y: number;
     chance: number;
-    status: 1;
+    /**车辆状态 */
+    status:1|-1;
+    /**角度 0~360 */
     rotation: number;
-}
+    /**燃料 0~100 */
+    fuel: number;
+}>;
 
 /**嵌套生成子地图生成定义 */
 export type NestMapgen = {
@@ -51,6 +55,7 @@ export type NestMapgen = {
         rotation: [ number, number ],
     }
 }&Omit<Mapgen,'om_terrain'>;
+
 /**地图生成定义 */
 export type Mapgen = {
     type: "mapgen";
@@ -61,7 +66,8 @@ export type Mapgen = {
         fill_ter?: TerrainID;
         rows: string[];
         palettes?: PaletteID[];
-        items?: { [key: string]: ItemPlace[]; };
+        place_furniture?: FurnPlace[];
+        place_item?: ItemPlace[];
         place_loot?: GroupPlace[];
         place_monsters?: MonsterPlace[];
         place_vehicles?: VehiclePlace[];

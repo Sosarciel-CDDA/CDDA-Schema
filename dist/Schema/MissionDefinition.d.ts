@@ -1,8 +1,8 @@
 import { EocEffect, IDObj, LocObj, NumObj } from "./Eoc";
 import { CddaID, DescText } from "./GenericDefine";
 import { AnyItemID } from "./Item";
-import { OvermapTerrainID } from "./Mapgen";
 import { OverMapSpecialID } from "./OvermapSpecial";
+import { OvermapTerrainID } from "./OvermapTerrain";
 /**任务定义ID */
 export type MissionDefinitionID = CddaID<"MISDEF">;
 /**任务定义 */

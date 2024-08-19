@@ -1,4 +1,4 @@
-import { CddaID, DescText, Volume } from "./GenericDefine";
+import { CddaID, CharSymbol, DescText, Volume } from "./GenericDefine";
 
 /**TalkTopic ID格式 */
 export type TerrainID = CddaID<"TERRAIN">;
@@ -9,7 +9,7 @@ export type Terrain = {
     id: TerrainID;
     name: (DescText);
     /**ascii显示符号 */
-    symbol: string;
+    symbol: (CharSymbol);
 };
 type TU = {
     looks_like: "pit";

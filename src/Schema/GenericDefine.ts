@@ -29,6 +29,7 @@ import { OverMapSpecial } from "./OvermapSpecial";
 import { Mapgen } from "./Mapgen";
 import { Palette } from "./Palette";
 import { Furniture } from "./Furniture";
+import { MonsterGroup } from "./MonsterGroup";
 
 /**描述性文本 */
 export type DescText = string|{
@@ -41,6 +42,10 @@ export type DescText = string|{
     /**翻译上下文 */
     ctxt?: string;
 };
+
+/**单字符 */
+export type CharSymbol = string;
+
 /**辅助Schema解析的字符串构造浮点数字 */
 type SchemaNumber = `${number}${"."|""}${number|""}`;
 /**重量 */
@@ -370,6 +375,6 @@ export type AnyCddaJson = AnyItem|Eoc|Mutation|DamageType|DamageInfoOrder|
     NpcClass|NpcInstance|OverlayOrdering|SoundEffect|Requirement|
     Effect|Spell|MathFunction|AmmoEffect|MissionDefinition|
     ModTileset|ActivityType|VehiclePart|ToolQuality|TalkTopic|Terrain|
-    OverMapSpecial|Mapgen|Palette|Furniture;
+    OverMapSpecial|Mapgen|Palette|Furniture|MonsterGroup;
 /**任何Cdda的Json 组成的数组*/
 export type AnyCddaJsonList = (AnyCddaJson)[];

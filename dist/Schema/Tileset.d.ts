@@ -59,7 +59,10 @@ export type PkgSpriteCfg = {
 export type SpriteCfg = {
     /**前景 */
     fg: ImageCfg;
-    /**背景 */
+    /**背景
+     * 单个值表示视野外遮罩
+     * [number, number]时第一个值表示底图, 第二个值为视野外遮罩
+     */
     bg?: ImageCfg;
 } & SpriteCfgBase;
 /**用于描述待打包的Tileset png合集 的格式 */

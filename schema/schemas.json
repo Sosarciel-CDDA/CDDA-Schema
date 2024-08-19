@@ -99,7 +99,7 @@
 			]
 		},
 		"Flag": {
-			"$ref": "#/definitions/__type_109"
+			"$ref": "#/definitions/__type_110"
 		},
 		"DefineLimbScoreID": {
 			"enum": [
@@ -335,7 +335,7 @@
 			]
 		},
 		"Effect": {
-			"$ref": "#/definitions/__type_110"
+			"$ref": "#/definitions/__type_111"
 		},
 		"EffectVitaminsMod": {
 			"description": "效果维生素修正",
@@ -683,7 +683,7 @@
 			]
 		},
 		"AmmoEffect": {
-			"$ref": "#/definitions/__type_111"
+			"$ref": "#/definitions/__type_112"
 		},
 		"AmmoAoe": {
 			"description": "弹药AOE效果",
@@ -1009,8 +1009,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -1807,8 +1807,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -2951,8 +2951,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -4190,8 +4190,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -4940,7 +4940,7 @@
 			]
 		},
 		"NpcClass": {
-			"$ref": "#/definitions/__type_112"
+			"$ref": "#/definitions/__type_113"
 		},
 		"ShopItemGroup": {
 			"$ref": "#/definitions/ShopItemGroup_1"
@@ -5808,7 +5808,7 @@
 			]
 		},
 		"ToolQuality": {
-			"$ref": "#/definitions/__type_113"
+			"$ref": "#/definitions/__type_114"
 		},
 		"ToolID": {
 			"description": "TOOL ID格式",
@@ -6161,8 +6161,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -7418,8 +7418,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -8331,8 +8331,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -8999,8 +8999,8 @@
 					"type": "number"
 				},
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -9942,8 +9942,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -10733,8 +10733,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -11680,8 +11680,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -12506,8 +12506,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -13226,8 +13226,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -14341,8 +14341,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -15135,8 +15135,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -16180,8 +16180,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -16830,7 +16830,7 @@
 			]
 		},
 		"ItemGroup": {
-			"$ref": "#/definitions/__type_114"
+			"$ref": "#/definitions/__type_115"
 		},
 		"ItemGroupEntrie": {
 			"description": "一项Entry",
@@ -17283,7 +17283,7 @@
 			]
 		},
 		"TalkTopic": {
-			"$ref": "#/definitions/__type_115"
+			"$ref": "#/definitions/__type_116"
 		},
 		"Resp": {
 			"description": "玩家的回复  \n等同于无条件技能鉴定成功  \n转到 success topic",
@@ -24220,7 +24220,7 @@
 			]
 		},
 		"Monster": {
-			"$ref": "#/definitions/__type_116"
+			"$ref": "#/definitions/__type_117"
 		},
 		"MonBP": {
 			"description": "怪物的身体类型",
@@ -24905,7 +24905,7 @@
 			]
 		},
 		"Spell": {
-			"$ref": "#/definitions/__type_118"
+			"$ref": "#/definitions/__type_119"
 		},
 		"SpellTarget": {
 			"enum": [
@@ -25059,7 +25059,7 @@
 			]
 		},
 		"Enchantment": {
-			"$ref": "#/definitions/__type_119"
+			"$ref": "#/definitions/__type_120"
 		},
 		"InlineEnchantment": {
 			"$ref": "#/definitions/__type_1"
@@ -25984,7 +25984,7 @@
 			]
 		},
 		"Mutation": {
-			"$ref": "#/definitions/__type_120"
+			"$ref": "#/definitions/__type_121"
 		},
 		"BPWetProte": {
 			"description": "肢体的潮湿保护",
@@ -26055,7 +26055,7 @@
 			]
 		},
 		"NpcInstance": {
-			"$ref": "#/definitions/__type_121"
+			"$ref": "#/definitions/__type_122"
 		},
 		"NpcAttitude": {
 			"description": "NPC态度",
@@ -26107,67 +26107,7 @@
 			]
 		},
 		"Furniture": {
-			"description": "家具",
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"const": "furniture"
-				},
-				"id": {
-					"$ref": "#/definitions/FurnitureID"
-				},
-				"name": {
-					"$ref": "#/definitions/DescText_1"
-				},
-				"symbol": {
-					"type": "string"
-				},
-				"looks_like": {
-					"type": "string",
-					"const": "chair"
-				},
-				"color": {
-					"$ref": "#/definitions/Color_1"
-				},
-				"crafting_pseudo_item": {
-					"description": "当这个家具在范围内时  \n可用于制作的物品 (工具）的 ID（家具充当该类型的物品)",
-					"const": "anvil",
-					"type": "string"
-				},
-				"workbench": {
-					"description": "可以在这里制作。\n超过这些限制的质量/体积会导致速度惩罚。\n必须与 \"workbench\" examine_action 配对才能工作。",
-					"type": "object",
-					"properties": {
-						"multiplier": {
-							"description": "制作加速倍率",
-							"type": "number",
-							"const": 1.1
-						},
-						"mass": {
-							"$ref": "#/definitions/Weight",
-							"description": "允许的质量"
-						},
-						"volume": {
-							"$ref": "#/definitions/Volume",
-							"description": "允许的体积"
-						}
-					},
-					"required": [
-						"mass",
-						"multiplier",
-						"volume"
-					]
-				}
-			},
-			"required": [
-				"color",
-				"id",
-				"looks_like",
-				"name",
-				"symbol",
-				"type"
-			]
+			"$ref": "#/definitions/__type_123"
 		},
 		"U": {
 			"type": "object",
@@ -26497,6 +26437,28 @@
 				"rotates_to"
 			]
 		},
+		"MonsterGroupID": {
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"type": "object",
+							"properties": {}
+						},
+						{
+							"type": "string"
+						}
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "^MONG_.*$"
+				}
+			]
+		},
+		"MonsterGroup": {
+			"$ref": "#/definitions/__type_124"
+		},
 		"OvermapTerrainID": {
 			"description": "大地图地块ID",
 			"anyOf": [
@@ -26517,8 +26479,11 @@
 				}
 			]
 		},
+		"OMSpawn": {
+			"$ref": "#/definitions/__type_88"
+		},
 		"OvermapTerrain": {
-			"description": "大地图地块显示设置  \n生成设置位于mapgen",
+			"description": "大地图地块显示设置\n生成设置位于mapgen",
 			"type": "object",
 			"properties": {
 				"type": {
@@ -26526,10 +26491,29 @@
 					"const": "overmap_terrain"
 				},
 				"id": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/OvermapTerrainID"
-					}
+					"anyOf": [
+						{
+							"allOf": [
+								{
+									"type": "object",
+									"properties": {}
+								},
+								{
+									"type": "string"
+								}
+							]
+						},
+						{
+							"type": "string",
+							"pattern": "^OMTERR_.*$"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/OvermapTerrainID"
+							}
+						}
+					]
 				},
 				"copy-from": {
 					"$ref": "#/definitions/OvermapTerrainID_1"
@@ -26538,16 +26522,20 @@
 					"$ref": "#/definitions/DescText_1"
 				},
 				"sym": {
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol"
 				},
 				"color": {
 					"$ref": "#/definitions/Color_1"
+				},
+				"spawns": {
+					"$ref": "#/definitions/OMSpawn"
 				}
 			},
 			"required": [
 				"color",
 				"id",
 				"name",
+				"spawns",
 				"sym",
 				"type"
 			]
@@ -26573,7 +26561,7 @@
 			]
 		},
 		"Terrain": {
-			"$ref": "#/definitions/__type_122"
+			"$ref": "#/definitions/__type_125"
 		},
 		"TU": {
 			"type": "object",
@@ -27130,28 +27118,28 @@
 			]
 		},
 		"PaletteTerrainMap": {
-			"$ref": "#/definitions/__type_88"
-		},
-		"PaletteFurnitureMap": {
 			"$ref": "#/definitions/__type_89"
 		},
-		"PaletteLiquidsMap": {
+		"PaletteFurnitureMap": {
 			"$ref": "#/definitions/__type_90"
 		},
-		"PaletteMonstersMap": {
-			"$ref": "#/definitions/__type_92"
-		},
-		"PaletteNestMap": {
+		"PaletteLiquidsMap": {
 			"$ref": "#/definitions/__type_91"
 		},
-		"PaletteVehiclesMap": {
+		"PaletteMonstersMap": {
 			"$ref": "#/definitions/__type_93"
 		},
-		"PaletteItemMap": {
+		"PaletteNestMap": {
+			"$ref": "#/definitions/__type_92"
+		},
+		"PaletteVehiclesMap": {
 			"$ref": "#/definitions/__type_94"
 		},
+		"PaletteItemMap": {
+			"$ref": "#/definitions/__type_95"
+		},
 		"Palette": {
-			"$ref": "#/definitions/__type_123"
+			"$ref": "#/definitions/__type_126"
 		},
 		"NestedMapgenID": {
 			"description": "嵌套地块",
@@ -27810,7 +27798,7 @@
 			]
 		},
 		"Mapgen": {
-			"$ref": "#/definitions/__type_95"
+			"$ref": "#/definitions/__type_96"
 		},
 		"AnyMapgen": {
 			"description": "任意地图生成定义",
@@ -27945,7 +27933,7 @@
 			]
 		},
 		"OverMapSpecial": {
-			"$ref": "#/definitions/__type_124"
+			"$ref": "#/definitions/__type_127"
 		},
 		"MissionDefinitionID": {
 			"description": "任务定义ID",
@@ -27968,7 +27956,7 @@
 			]
 		},
 		"MissionDefinition": {
-			"$ref": "#/definitions/__type_125"
+			"$ref": "#/definitions/__type_128"
 		},
 		"MissionGoal": {
 			"description": "任务目标",
@@ -28044,7 +28032,7 @@
 			]
 		},
 		"ActivityType": {
-			"$ref": "#/definitions/__type_126"
+			"$ref": "#/definitions/__type_129"
 		},
 		"EocEffect": {
 			"description": "Eoc效果",
@@ -33349,7 +33337,7 @@
 			"type": "string"
 		},
 		"Eoc": {
-			"$ref": "#/definitions/__type_127"
+			"$ref": "#/definitions/__type_130"
 		},
 		"EocType": {
 			"description": "EOC类型",
@@ -33466,10 +33454,10 @@
 			]
 		},
 		"DamageType": {
-			"$ref": "#/definitions/__type_128"
+			"$ref": "#/definitions/__type_131"
 		},
 		"DamageInfoOrder": {
-			"$ref": "#/definitions/__type_129"
+			"$ref": "#/definitions/__type_132"
 		},
 		"DmgInfo": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
@@ -33945,8 +33933,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -34663,7 +34651,7 @@
 			]
 		},
 		"AmmunitionType": {
-			"$ref": "#/definitions/__type_130"
+			"$ref": "#/definitions/__type_133"
 		},
 		"MathFunctionID": {
 			"description": "数学函数的ID",
@@ -34686,10 +34674,10 @@
 			]
 		},
 		"MathFunction": {
-			"$ref": "#/definitions/__type_131"
+			"$ref": "#/definitions/__type_134"
 		},
 		"OverlayOrdering": {
-			"$ref": "#/definitions/__type_132"
+			"$ref": "#/definitions/__type_135"
 		},
 		"TilesetCfgBase": {
 			"description": "通用tileset配置",
@@ -34939,7 +34927,7 @@
 						},
 						"bg": {
 							"$ref": "#/definitions/ImageCfg_1",
-							"description": "背景"
+							"description": "背景\n单个值表示视野外遮罩\n[number, number]时第一个值表示底图, 第二个值为视野外遮罩"
 						}
 					},
 					"required": [
@@ -35084,7 +35072,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_101",
+						"$ref": "#/definitions/__type_102",
 						"description": "未打包的图片对象格式"
 					}
 				},
@@ -35094,7 +35082,7 @@
 			]
 		},
 		"PkgImageCfgObj": {
-			"$ref": "#/definitions/__type_101"
+			"$ref": "#/definitions/__type_102"
 		},
 		"ImageCfg": {
 			"description": "已打包的图片格式",
@@ -35112,7 +35100,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/__type_100",
+						"$ref": "#/definitions/__type_101",
 						"description": "已打包的图片对象格式"
 					}
 				},
@@ -35122,10 +35110,10 @@
 			]
 		},
 		"ImageCfgObj": {
-			"$ref": "#/definitions/__type_100"
+			"$ref": "#/definitions/__type_101"
 		},
 		"ModTileset": {
-			"$ref": "#/definitions/__type_133"
+			"$ref": "#/definitions/__type_136"
 		},
 		"RequirementID": {
 			"description": "需求组ID",
@@ -35148,7 +35136,7 @@
 			]
 		},
 		"Requirement": {
-			"$ref": "#/definitions/__type_134"
+			"$ref": "#/definitions/__type_137"
 		},
 		"ReqFormat": {
 			"description": "需求格式  \n[ID , 消耗的数量]  \nNO_RECOVER为不可恢复  \nLIST为标记其是一个需求组",
@@ -35965,6 +35953,10 @@
 					"type": "string"
 				}
 			]
+		},
+		"CharSymbol": {
+			"description": "单字符",
+			"type": "string"
 		},
 		"SchemaNumber": {
 			"anyOf": [
@@ -36975,8 +36967,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -37766,8 +37758,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -38713,8 +38705,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -39539,8 +39531,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -40259,8 +40251,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -41374,8 +41366,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -42168,8 +42160,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -43213,8 +43205,8 @@
 									"type": "number"
 								},
 								"symbol": {
-									"description": "ascii显示符号",
-									"type": "string"
+									"$ref": "#/definitions/CharSymbol",
+									"description": "ascii显示符号"
 								},
 								"color": {
 									"$ref": "#/definitions/Color",
@@ -43762,6 +43754,13 @@
 				{
 					"$ref": "#/definitions/NpcInstance",
 					"description": "Npc实例"
+				},
+				{
+					"$ref": "#/definitions/Furniture",
+					"description": "家具"
+				},
+				{
+					"$ref": "#/definitions/MonsterGroup"
 				},
 				{
 					"$ref": "#/definitions/Terrain",
@@ -65993,8 +65992,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -66805,6 +66804,10 @@
 				}
 			}
 		},
+		"CharSymbol_1": {
+			"description": "单字符",
+			"type": "string"
+		},
 		"AmmunitionTypeID_1": {
 			"description": "弹药类型ID格式",
 			"anyOf": [
@@ -66939,8 +66942,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -68068,8 +68071,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -69455,8 +69458,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -70966,8 +70969,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -72356,8 +72359,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"sub": {
 					"$ref": "#/definitions/ToolID_1",
@@ -73322,8 +73325,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -74538,8 +74541,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -75329,8 +75332,8 @@
 			"type": "object",
 			"properties": {
 				"symbol": {
-					"description": "ascii显示符号",
-					"type": "string"
+					"$ref": "#/definitions/CharSymbol_1",
+					"description": "ascii显示符号"
 				},
 				"color": {
 					"$ref": "#/definitions/Color",
@@ -81510,11 +81513,40 @@
 				}
 			]
 		},
+		"__type_88": {
+			"type": "object",
+			"properties": {
+				"group": {
+					"$ref": "#/definitions/MonsterGroupID"
+				},
+				"population": {
+					"type": "array",
+					"items": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						}
+					],
+					"minItems": 2,
+					"maxItems": 2
+				},
+				"chance": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"chance",
+				"group",
+				"population"
+			]
+		},
 		"PaletteTerrainMap_1": {
 			"description": "地形映射",
 			"$ref": "#/definitions/PaletteTerrainMap"
 		},
-		"__type_88": {
+		"__type_89": {
 			"description": "地形映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81576,7 +81608,7 @@
 			"description": "家具映射",
 			"$ref": "#/definitions/PaletteFurnitureMap"
 		},
-		"__type_89": {
+		"__type_90": {
 			"description": "家具映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81638,7 +81670,7 @@
 			"description": "液体映射",
 			"$ref": "#/definitions/PaletteLiquidsMap"
 		},
-		"__type_90": {
+		"__type_91": {
 			"description": "液体映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81671,7 +81703,7 @@
 			"description": "嵌套地图映射",
 			"$ref": "#/definitions/PaletteNestMap"
 		},
-		"__type_91": {
+		"__type_92": {
 			"description": "嵌套地图映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81723,7 +81755,7 @@
 			"description": "怪物映射",
 			"$ref": "#/definitions/PaletteMonstersMap"
 		},
-		"__type_92": {
+		"__type_93": {
 			"description": "怪物映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81742,7 +81774,7 @@
 			"description": "载具映射",
 			"$ref": "#/definitions/PaletteVehiclesMap"
 		},
-		"__type_93": {
+		"__type_94": {
 			"description": "载具映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81765,7 +81797,7 @@
 			"description": "物品映射",
 			"$ref": "#/definitions/PaletteItemMap"
 		},
-		"__type_94": {
+		"__type_95": {
 			"description": "物品映射",
 			"type": "object",
 			"additionalProperties": {
@@ -81947,7 +81979,7 @@
 				}
 			}
 		},
-		"__type_95": {
+		"__type_96": {
 			"description": "地图生成定义",
 			"type": "object",
 			"properties": {
@@ -82065,7 +82097,7 @@
 				"weight"
 			]
 		},
-		"__type_96": {
+		"__type_97": {
 			"description": "任务效果",
 			"type": "object",
 			"properties": {
@@ -83504,7 +83536,7 @@
 			}
 		},
 		"MissionEffect_1": {
-			"$ref": "#/definitions/__type_96"
+			"$ref": "#/definitions/__type_97"
 		},
 		"MissionDefinitionID_1": {
 			"description": "任务定义ID",
@@ -83526,7 +83558,7 @@
 				}
 			]
 		},
-		"__type_97": {
+		"__type_98": {
 			"description": "任务对话字典",
 			"type": "object",
 			"properties": {
@@ -83580,7 +83612,7 @@
 			]
 		},
 		"MissionDialog_1": {
-			"$ref": "#/definitions/__type_97"
+			"$ref": "#/definitions/__type_98"
 		},
 		"EocID_1": {
 			"description": "EOC ID格式",
@@ -83601,7 +83633,7 @@
 		"{[Pin`npc_${K}`]?:undefined;}": {
 			"type": "object"
 		},
-		"__type_98": {
+		"__type_99": {
 			"description": "确定在物品信息的指定部分中此伤害类型的顺序和可见性",
 			"type": "object",
 			"properties": {
@@ -83616,7 +83648,7 @@
 			}
 		},
 		"DmgInfo_1": {
-			"$ref": "#/definitions/__type_98"
+			"$ref": "#/definitions/__type_99"
 		},
 		"Array_2": {
 			"description": "燃烧数据",
@@ -83667,7 +83699,7 @@
 		"MateBurnData_1": {
 			"$ref": "#/definitions/Array_2"
 		},
-		"__type_99": {
+		"__type_100": {
 			"description": "燃料数据",
 			"type": "object",
 			"properties": {
@@ -83734,12 +83766,12 @@
 			]
 		},
 		"FuelData_1": {
-			"$ref": "#/definitions/__type_99"
+			"$ref": "#/definitions/__type_100"
 		},
 		"Record<`${string}.png`,PkgTilesetCfg>": {
 			"type": "object"
 		},
-		"__type_100": {
+		"__type_101": {
 			"description": "已打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -83792,7 +83824,7 @@
 				}
 			]
 		},
-		"__type_101": {
+		"__type_102": {
 			"description": "未打包的图片对象格式",
 			"type": "object",
 			"properties": {
@@ -83935,7 +83967,7 @@
 				}
 			]
 		},
-		"__type_102": {
+		"__type_103": {
 			"description": "车辆部件的操作需求",
 			"type": "object",
 			"properties": {
@@ -83972,9 +84004,9 @@
 			]
 		},
 		"VPRequirement_1": {
-			"$ref": "#/definitions/__type_102"
+			"$ref": "#/definitions/__type_103"
 		},
-		"__type_103": {
+		"__type_104": {
 			"description": "控制要求",
 			"type": "object",
 			"properties": {
@@ -84005,9 +84037,9 @@
 			}
 		},
 		"ControlReq_1": {
-			"$ref": "#/definitions/__type_103"
+			"$ref": "#/definitions/__type_104"
 		},
-		"__type_104": {
+		"__type_105": {
 			"type": "object",
 			"properties": {
 				"all": {
@@ -84076,7 +84108,7 @@
 			}
 		},
 		"Partial_31": {
-			"$ref": "#/definitions/__type_104"
+			"$ref": "#/definitions/__type_105"
 		},
 		"Copyfrom_8": {
 			"description": "copyfrom变体",
@@ -84120,7 +84152,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_105"
+					"$ref": "#/definitions/__type_106"
 				}
 			]
 		},
@@ -84144,7 +84176,7 @@
 		"Partial_32": {
 			"$ref": "#/definitions/Partial_33"
 		},
-		"__type_105": {
+		"__type_106": {
 			"type": "object",
 			"properties": {
 				"color": {
@@ -84732,7 +84764,7 @@
 			"$ref": "#/definitions/Partial_31"
 		},
 		"Partial_33": {
-			"$ref": "#/definitions/__type_105"
+			"$ref": "#/definitions/__type_106"
 		},
 		"T_2": {
 			"type": "object",
@@ -84794,7 +84826,7 @@
 					]
 				},
 				{
-					"$ref": "#/definitions/__type_106"
+					"$ref": "#/definitions/__type_107"
 				}
 			]
 		},
@@ -84822,11 +84854,11 @@
 		"Partial_35": {
 			"$ref": "#/definitions/Partial_36"
 		},
-		"__type_106": {
+		"__type_107": {
 			"type": "object"
 		},
 		"Partial_36": {
-			"$ref": "#/definitions/__type_106"
+			"$ref": "#/definitions/__type_107"
 		},
 		"Pick<T,CopyfromResFD>_1": {
 			"type": "object",
@@ -84852,11 +84884,11 @@
 		"Partial_37": {
 			"$ref": "#/definitions/Partial_38"
 		},
-		"__type_107": {
+		"__type_108": {
 			"type": "object"
 		},
 		"Partial_38": {
-			"$ref": "#/definitions/__type_107"
+			"$ref": "#/definitions/__type_108"
 		},
 		"JToken": {
 			"description": "可以序列化为JSON文件的对象",
@@ -84882,7 +84914,7 @@
 				}
 			]
 		},
-		"__type_108": {
+		"__type_109": {
 			"description": "在stringify输出时 值为 undefine 的键会被忽略",
 			"type": "object",
 			"additionalProperties": {
@@ -84890,7 +84922,7 @@
 			}
 		},
 		"JObject": {
-			"$ref": "#/definitions/__type_108"
+			"$ref": "#/definitions/__type_109"
 		},
 		"Array_5": {
 			"description": "在stringify输出时 值为 undefine 的成员会被转为 null",
@@ -84906,7 +84938,7 @@
 			"description": "可以保存为JToken的类",
 			"type": "object"
 		},
-		"__type_109": {
+		"__type_110": {
 			"description": "一个自定义的Flag",
 			"type": "object",
 			"properties": {
@@ -84962,7 +84994,7 @@
 				"type"
 			]
 		},
-		"__type_110": {
+		"__type_111": {
 			"description": "效果",
 			"type": "object",
 			"properties": {
@@ -85559,7 +85591,7 @@
 				"type"
 			]
 		},
-		"__type_111": {
+		"__type_112": {
 			"description": "弹药效果",
 			"type": "object",
 			"properties": {
@@ -85606,7 +85638,7 @@
 				"type"
 			]
 		},
-		"__type_112": {
+		"__type_113": {
 			"description": "Npc职业",
 			"type": "object",
 			"properties": {
@@ -85773,7 +85805,7 @@
 				"type"
 			]
 		},
-		"__type_113": {
+		"__type_114": {
 			"description": "工具品质",
 			"type": "object",
 			"properties": {
@@ -85817,7 +85849,7 @@
 				"type"
 			]
 		},
-		"__type_114": {
+		"__type_115": {
 			"description": "ItemGroup",
 			"type": "object",
 			"properties": {
@@ -85871,7 +85903,7 @@
 				"type"
 			]
 		},
-		"__type_115": {
+		"__type_116": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -86040,7 +86072,7 @@
 				"type"
 			]
 		},
-		"__type_116": {
+		"__type_117": {
 			"description": "怪物",
 			"type": "object",
 			"properties": {
@@ -86822,7 +86854,7 @@
 				"weight"
 			]
 		},
-		"__type_117": {
+		"__type_118": {
 			"description": "音效",
 			"type": "object",
 			"properties": {
@@ -86877,9 +86909,9 @@
 			]
 		},
 		"SoundEffect_1": {
-			"$ref": "#/definitions/__type_117"
+			"$ref": "#/definitions/__type_118"
 		},
-		"__type_118": {
+		"__type_119": {
 			"description": "法术",
 			"type": "object",
 			"properties": {
@@ -89501,7 +89533,7 @@
 				"valid_targets"
 			]
 		},
-		"__type_119": {
+		"__type_120": {
 			"description": "附魔",
 			"type": "object",
 			"properties": {
@@ -89859,7 +89891,7 @@
 				"type"
 			]
 		},
-		"__type_120": {
+		"__type_121": {
 			"description": "变异",
 			"type": "object",
 			"properties": {
@@ -90517,7 +90549,7 @@
 				"type"
 			]
 		},
-		"__type_121": {
+		"__type_122": {
 			"description": "Npc实例",
 			"type": "object",
 			"properties": {
@@ -90673,7 +90705,113 @@
 				"type"
 			]
 		},
-		"__type_122": {
+		"__type_123": {
+			"description": "家具",
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"const": "furniture"
+				},
+				"id": {
+					"$ref": "#/definitions/FurnitureID"
+				},
+				"name": {
+					"$ref": "#/definitions/DescText_1"
+				},
+				"symbol": {
+					"$ref": "#/definitions/CharSymbol"
+				},
+				"looks_like": {
+					"type": "string",
+					"const": "chair"
+				},
+				"color": {
+					"$ref": "#/definitions/Color_1"
+				},
+				"crafting_pseudo_item": {
+					"description": "当这个家具在范围内时  \n可用于制作的物品 (工具）的 ID（家具充当该类型的物品)",
+					"const": "anvil",
+					"type": "string"
+				},
+				"workbench": {
+					"description": "可以在这里制作。\n超过这些限制的质量/体积会导致速度惩罚。\n必须与 \"workbench\" examine_action 配对才能工作。",
+					"type": "object",
+					"properties": {
+						"multiplier": {
+							"description": "制作加速倍率",
+							"type": "number",
+							"const": 1.1
+						},
+						"mass": {
+							"$ref": "#/definitions/Weight",
+							"description": "允许的质量"
+						},
+						"volume": {
+							"$ref": "#/definitions/Volume",
+							"description": "允许的体积"
+						}
+					},
+					"required": [
+						"mass",
+						"multiplier",
+						"volume"
+					]
+				}
+			},
+			"required": [
+				"color",
+				"id",
+				"looks_like",
+				"name",
+				"symbol",
+				"type"
+			]
+		},
+		"__type_124": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"const": "monstergroup"
+				},
+				"name": {
+					"$ref": "#/definitions/MonsterGroupID"
+				},
+				"is_animal": {
+					"type": "boolean"
+				},
+				"monsters": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"monster": {
+								"$ref": "#/definitions/MonsterID"
+							},
+							"weight": {
+								"type": "number"
+							},
+							"cost_multiplier": {
+								"type": "number"
+							}
+						},
+						"required": [
+							"cost_multiplier",
+							"monster",
+							"weight"
+						]
+					}
+				}
+			},
+			"required": [
+				"is_animal",
+				"monsters",
+				"name",
+				"type"
+			]
+		},
+		"__type_125": {
 			"description": "对话选项",
 			"type": "object",
 			"properties": {
@@ -90699,7 +90837,7 @@
 				"type"
 			]
 		},
-		"__type_123": {
+		"__type_126": {
 			"description": "地图符号定义",
 			"type": "object",
 			"properties": {
@@ -90744,7 +90882,7 @@
 				"type"
 			]
 		},
-		"__type_124": {
+		"__type_127": {
 			"type": "object",
 			"properties": {
 				"type": {
@@ -90869,7 +91007,7 @@
 				"type"
 			]
 		},
-		"__type_125": {
+		"__type_128": {
 			"description": "任务定义",
 			"type": "object",
 			"properties": {
@@ -90949,7 +91087,7 @@
 				"value"
 			]
 		},
-		"__type_126": {
+		"__type_129": {
 			"description": "活动类型",
 			"type": "object",
 			"properties": {
@@ -91034,7 +91172,7 @@
 				"verb"
 			]
 		},
-		"__type_127": {
+		"__type_130": {
 			"description": "EOC",
 			"type": "object",
 			"properties": {
@@ -92533,7 +92671,7 @@
 				"type"
 			]
 		},
-		"__type_128": {
+		"__type_131": {
 			"description": "伤害类型",
 			"type": "object",
 			"properties": {
@@ -92637,7 +92775,7 @@
 				"type"
 			]
 		},
-		"__type_129": {
+		"__type_132": {
 			"description": "伤害信息顺序",
 			"type": "object",
 			"properties": {
@@ -92713,7 +92851,7 @@
 				"type"
 			]
 		},
-		"__type_130": {
+		"__type_133": {
 			"description": "弹药类型",
 			"type": "object",
 			"properties": {
@@ -92741,7 +92879,7 @@
 				"type"
 			]
 		},
-		"__type_131": {
+		"__type_134": {
 			"description": "数学函数",
 			"type": "object",
 			"properties": {
@@ -92768,7 +92906,7 @@
 				"type"
 			]
 		},
-		"__type_132": {
+		"__type_135": {
 			"description": "县市层级",
 			"type": "object",
 			"properties": {
@@ -92806,7 +92944,7 @@
 				"type"
 			]
 		},
-		"__type_133": {
+		"__type_136": {
 			"description": "mod图包",
 			"type": "object",
 			"properties": {
@@ -92835,7 +92973,7 @@
 				"type"
 			]
 		},
-		"__type_134": {
+		"__type_137": {
 			"description": "需求组",
 			"type": "object",
 			"properties": {

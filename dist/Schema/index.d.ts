@@ -18,6 +18,7 @@ export * from './OverlayOrdering';
 export * from './NpcInstance';
 export * from './NpcClass';
 export * from './Mutation';
+export * from './MonsterGroup';
 export * from './Monster';
 export * from './ModTileset';
 export * from './MissionDefinition';

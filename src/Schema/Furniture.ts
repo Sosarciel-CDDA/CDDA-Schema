@@ -1,4 +1,4 @@
-import { CddaID, Color, DescText, Volume, Weight } from "./GenericDefine";
+import { CddaID, CharSymbol, Color, DescText, Volume, Weight } from "./GenericDefine";
 
 /**家具ID */
 export type FurnitureID = CddaID<"FURN">;
@@ -7,11 +7,11 @@ export type Furniture = {
     type: "furniture";
     id: FurnitureID;
     name: (DescText);
-    symbol: string;
+    symbol: CharSymbol;
     looks_like: "chair";
     color: Color;
     /**当这个家具在范围内时  
-     * 可用于制作的物品 (工具）的 ID（家具充当该类型的物品) 
+     * 可用于制作的物品 (工具）的 ID（家具充当该类型的物品)  
      */
     crafting_pseudo_item?: "anvil";
     /**可以在这里制作。

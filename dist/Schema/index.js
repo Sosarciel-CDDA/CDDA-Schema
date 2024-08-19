@@ -35,6 +35,7 @@ __exportStar(require("./OverlayOrdering"), exports);
 __exportStar(require("./NpcInstance"), exports);
 __exportStar(require("./NpcClass"), exports);
 __exportStar(require("./Mutation"), exports);
+__exportStar(require("./MonsterGroup"), exports);
 __exportStar(require("./Monster"), exports);
 __exportStar(require("./ModTileset"), exports);
 __exportStar(require("./MissionDefinition"), exports);

@@ -2,7 +2,7 @@ import { DamageTypeID } from "./DameType";
 import { EffectID } from "./Effect";
 import { EmitID } from "./Emit";
 import { FakeSpell } from "./Enchantment";
-import { BodyPartParam, CddaID, Color, DefineMonFaction, Phase, Time, Volume, Weight } from "./GenericDefine";
+import { BodyPartParam, CddaID, CharSymbol, Color, DefineMonFaction, Phase, Time, Volume, Weight } from "./GenericDefine";
 import { AnyItemID } from "./Item";
 import { InlineItemGroup, ItemGroupID } from "./ItemGroup";
 import { MaterialID } from "./Material";
@@ -29,7 +29,7 @@ export type Monster = {
     /**重量 */
     weight: (Weight);
     /**ASCII模式的显示 */
-    symbol: string;
+    symbol: (CharSymbol);
     /**颜色 */
     color?: Color;
     /**默认阵营 */

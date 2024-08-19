@@ -1,7 +1,7 @@
 import { AmmunitionTypeID } from "../AmmiunitionType";
 import { EnchantmentID, InlineEnchantment } from "../Enchantment";
 import { CustomFlagID } from "../Flag";
-import { CddaID, Color, CopyfromVar, DescText, Explosion, Length, MeleeDamage, Phase, PocketData, Price, Time, Volume, Weight } from "../GenericDefine";
+import { CddaID, CharSymbol, Color, CopyfromVar, DescText, Explosion, Length, MeleeDamage, Phase, PocketData, Price, Time, Volume, Weight } from "../GenericDefine";
 import { Ammo, AmmoID } from "./Ammo";
 import { Gun } from "./Gun";
 import { WeaponCategoryID } from "../WeaponCategory";
@@ -75,7 +75,7 @@ export type GenericBase = {
      */
     degradation_multiplier?: number;
     /**ascii显示符号 */
-    symbol: string;
+    symbol: CharSymbol;
     /**颜色 */
     color?: Color;
     /**材质 */

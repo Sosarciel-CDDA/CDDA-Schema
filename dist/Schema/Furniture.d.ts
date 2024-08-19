@@ -1,4 +1,4 @@
-import { CddaID, Color, DescText, Volume, Weight } from "./GenericDefine";
+import { CddaID, CharSymbol, Color, DescText, Volume, Weight } from "./GenericDefine";
 /**家具ID */
 export type FurnitureID = CddaID<"FURN">;
 /**家具 */
@@ -6,7 +6,7 @@ export type Furniture = {
     type: "furniture";
     id: FurnitureID;
     name: (DescText);
-    symbol: string;
+    symbol: CharSymbol;
     looks_like: "chair";
     color: Color;
     /**当这个家具在范围内时

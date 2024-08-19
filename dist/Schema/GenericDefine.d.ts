@@ -28,6 +28,7 @@ import { OverMapSpecial } from "./OvermapSpecial";
 import { Mapgen } from "./Mapgen";
 import { Palette } from "./Palette";
 import { Furniture } from "./Furniture";
+import { MonsterGroup } from "./MonsterGroup";
 /**描述性文本 */
 export type DescText = string | {
     /**单数名 */
@@ -39,6 +40,8 @@ export type DescText = string | {
     /**翻译上下文 */
     ctxt?: string;
 };
+/**单字符 */
+export type CharSymbol = string;
 /**重量 */
 export type Weight = number | `${number} ${"kg" | "g"}`;
 /**体积 */
@@ -266,6 +269,6 @@ export declare const MessageRatTypeList: readonly ["good", "neutral", "bad", "mi
  */
 export type MessageRatType = typeof MessageRatTypeList[number];
 /**任何Cdda的Json */
-export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic | Terrain | OverMapSpecial | Mapgen | Palette | Furniture;
+export type AnyCddaJson = AnyItem | Eoc | Mutation | DamageType | DamageInfoOrder | AmmunitionType | Enchantment | Flag | ItemGroup | Monster | NpcClass | NpcInstance | OverlayOrdering | SoundEffect | Requirement | Effect | Spell | MathFunction | AmmoEffect | MissionDefinition | ModTileset | ActivityType | VehiclePart | ToolQuality | TalkTopic | Terrain | OverMapSpecial | Mapgen | Palette | Furniture | MonsterGroup;
 /**任何Cdda的Json 组成的数组*/
 export type AnyCddaJsonList = (AnyCddaJson)[];

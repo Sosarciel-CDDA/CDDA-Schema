@@ -8,7 +8,8 @@ type GenPos = {
     point: [number, number, number];
 };
 type OverMapGen = GenPos & {
-    overmap: OmTerrainIDWithDirection;
+    overmap?: OmTerrainIDWithDirection;
+    locations?: string[];
 };
 export type OverMapSpecial = {
     type: "overmap_special";

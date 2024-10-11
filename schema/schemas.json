@@ -26,15 +26,12 @@
 			"description": "地块附着物ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -59,15 +56,12 @@
 			"description": "自定的FlagID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -83,15 +77,8 @@
 			"description": "Flag ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
 				},
 				{
 					"type": "string"
@@ -123,15 +110,12 @@
 			"description": "肢体分数ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -244,15 +228,12 @@
 			"description": "维生素ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -291,15 +272,12 @@
 			"description": "效果ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -568,15 +546,12 @@
 			"description": "区域效果生成器ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -627,15 +602,12 @@
 			"description": "弹药效果ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -697,15 +669,12 @@
 			"description": "Ammo ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -1513,15 +1482,12 @@
 			"description": "技能",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -1566,15 +1532,12 @@
 			"description": "弹夹 ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -2311,15 +2274,12 @@
 			"description": "弹夹可用的flag",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -2385,15 +2345,12 @@
 			"description": "Gun Mod ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -3459,15 +3416,12 @@
 			"description": "GUN ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -4820,15 +4774,12 @@
 			"description": "枪械可用的flag",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -4923,15 +4874,12 @@
 			"description": "NpcClass ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -4965,15 +4913,12 @@
 					"description": "目标技能 ALL为全部",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -5246,15 +5191,12 @@
 			"description": "物品动作ID  \n实际可用动作参见 UseAction",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -5700,15 +5642,12 @@
 			"description": "工具品质ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -5814,15 +5753,12 @@
 			"description": "TOOL ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -6679,15 +6615,12 @@
 			"description": "工具可用的flag",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -6782,15 +6715,12 @@
 			"description": "Comestible ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -6858,15 +6788,12 @@
 									"description": "消费后运行的条件影响。支持内联或字符串id",
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "object",
@@ -6964,15 +6891,12 @@
 											"items": {
 												"anyOf": [
 													{
-														"allOf": [
-															{
-																"type": "object",
-																"properties": {}
-															},
-															{
-																"type": "string"
-															}
-														]
+														"$ref": "#/definitions/AnyString",
+														"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+													},
+													{
+														"type": "string",
+														"pattern": "^.*$"
 													},
 													{
 														"type": "object",
@@ -7932,15 +7856,12 @@
 			"description": "消耗品Flag",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -8077,15 +7998,12 @@
 			"description": "Generic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -9647,15 +9565,12 @@
 			"description": "通用物品的flag",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -9715,15 +9630,12 @@
 			"description": "物品的材质 字符串时为材质类型",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -13781,15 +13693,12 @@
 									"description": "消费后运行的条件影响。支持内联或字符串id",
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "object",
@@ -13887,15 +13796,12 @@
 											"items": {
 												"anyOf": [
 													{
-														"allOf": [
-															{
-																"type": "object",
-																"properties": {}
-															},
-															{
-																"type": "string"
-															}
-														]
+														"$ref": "#/definitions/AnyString",
+														"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+													},
+													{
+														"type": "string",
+														"pattern": "^.*$"
 													},
 													{
 														"type": "object",
@@ -16792,15 +16698,12 @@
 			"description": "ItemGroup ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -17103,15 +17006,12 @@
 			"description": "物品组快速定义  \n物品组id 或者 [物品组id,概率(100为100%)]",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -17244,15 +17144,12 @@
 			"description": "TalkTopic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -24203,15 +24100,12 @@
 			"description": "Monster ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -24831,15 +24725,12 @@
 			"description": "音效ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -24851,15 +24742,12 @@
 			"description": "音效变体ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -24881,15 +24769,12 @@
 			"description": "法术ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -25042,15 +24927,12 @@
 			"description": "附魔ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -25068,15 +24950,12 @@
 			"description": "作为参数传入的附魔",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -25963,15 +25842,12 @@
 			"description": "Mutation ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -26038,15 +25914,12 @@
 			"description": "NpcInstance ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -26090,15 +25963,12 @@
 			"description": "家具ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -26440,15 +26310,12 @@
 		"MonsterGroupID": {
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -26463,15 +26330,12 @@
 			"description": "大地图地块ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -26493,15 +26357,12 @@
 				"id": {
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -26544,15 +26405,12 @@
 			"description": "TalkTopic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -27082,15 +26940,12 @@
 		"VehicleID": {
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -27101,15 +26956,12 @@
 		"PaletteID": {
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -27145,15 +26997,12 @@
 			"description": "嵌套地块",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -27817,15 +27666,12 @@
 			"description": "大地图特殊地点",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -27850,6 +27696,22 @@
 				{
 					"type": "string",
 					"pattern": "^_west$"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*SchemaString_north$"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*SchemaString_south$"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*SchemaString_east$"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*SchemaString_west$"
 				},
 				{
 					"type": "string",
@@ -27924,11 +27786,14 @@
 					"properties": {
 						"overmap": {
 							"$ref": "#/definitions/OmTerrainIDWithDirection"
+						},
+						"locations": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						}
-					},
-					"required": [
-						"overmap"
-					]
+					}
 				}
 			]
 		},
@@ -27939,15 +27804,12 @@
 			"description": "任务定义ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -28015,15 +27877,12 @@
 			"description": "活动ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -28198,10 +28057,10 @@
 				{
 					"allOf": [
 						{
-							"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+							"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 						},
 						{
-							"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+							"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 						},
 						{
 							"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -28211,10 +28070,10 @@
 				{
 					"allOf": [
 						{
-							"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+							"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 						},
 						{
-							"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+							"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 						},
 						{
 							"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -29441,10 +29300,10 @@
 				{
 					"allOf": [
 						{
-							"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+							"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 						},
 						{
-							"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+							"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 						},
 						{
 							"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -29454,10 +29313,10 @@
 				{
 					"allOf": [
 						{
-							"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+							"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 						},
 						{
-							"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+							"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 						},
 						{
 							"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -29664,15 +29523,12 @@
 					"description": "物品的材料",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -29781,15 +29637,12 @@
 					}
 				},
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -29860,15 +29713,12 @@
 			"description": "参数Eoc",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "object",
@@ -29966,15 +29816,12 @@
 					"items": {
 						"anyOf": [
 							{
-								"allOf": [
-									{
-										"type": "object",
-										"properties": {}
-									},
-									{
-										"type": "string"
-									}
-								]
+								"$ref": "#/definitions/AnyString",
+								"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+							},
+							{
+								"type": "string",
+								"pattern": "^.*$"
 							},
 							{
 								"type": "object",
@@ -31513,15 +31360,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -33414,15 +33258,12 @@
 			"description": "伤害类型ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -33467,15 +33308,12 @@
 			"description": "材料ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -33618,15 +33456,12 @@
 			"description": "Armor ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -34540,15 +34375,12 @@
 		"ArmorFlag": {
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -34627,15 +34459,12 @@
 			"description": "弹药类型ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -34657,15 +34486,12 @@
 			"description": "数学函数的ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -35119,15 +34945,12 @@
 			"description": "需求组ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -35187,15 +35010,12 @@
 			"description": "载具部件ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -35280,15 +35100,12 @@
 									"description": "当车辆部件被销毁时, 此物品组中的物品 (参见 ITEM_SPAWN.md) 将在地面上的部件周围生成。  \n或者只是物品组的 id。",
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "string",
@@ -36163,15 +35980,12 @@
 			"description": "自定义的肢体",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -36282,15 +36096,12 @@
 			"description": "肢体",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -36317,15 +36128,12 @@
 			"description": "目标肢体参数  \nwhole body为全身  \nRANDOM为随机",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "object",
@@ -40806,15 +40614,12 @@
 									"description": "消费后运行的条件影响。支持内联或字符串id",
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "object",
@@ -40912,15 +40717,12 @@
 											"items": {
 												"anyOf": [
 													{
-														"allOf": [
-															{
-																"type": "object",
-																"properties": {}
-															},
-															{
-																"type": "string"
-															}
-														]
+														"$ref": "#/definitions/AnyString",
+														"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+													},
+													{
+														"type": "string",
+														"pattern": "^.*$"
 													},
 													{
 														"type": "object",
@@ -43891,15 +43693,12 @@
 									"description": "当车辆部件被销毁时, 此物品组中的物品 (参见 ITEM_SPAWN.md) 将在地面上的部件周围生成。  \n或者只是物品组的 id。",
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "string",
@@ -44436,15 +44235,12 @@
 			"description": "武器类型ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -44478,6 +44274,18 @@
 						"SHORT_SWORDS",
 						"SPEARS"
 					],
+					"type": "string"
+				}
+			]
+		},
+		"AnyString": {
+			"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)",
+			"allOf": [
+				{
+					"type": "object",
+					"properties": {}
+				},
+				{
 					"type": "string"
 				}
 			]
@@ -49173,15 +48981,8 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
 				},
 				{
 					"type": "object",
@@ -49623,15 +49424,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "object",
@@ -50193,15 +49991,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -50397,15 +50192,12 @@
 			"description": "肢体",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -50443,15 +50235,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -50943,15 +50732,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -51077,15 +50863,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -51545,15 +51328,12 @@
 			"description": "Mutation ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -51615,15 +51395,12 @@
 			"description": "地块附着物ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -51887,15 +51664,12 @@
 					"items": {
 						"anyOf": [
 							{
-								"allOf": [
-									{
-										"type": "object",
-										"properties": {}
-									},
-									{
-										"type": "string"
-									}
-								]
+								"$ref": "#/definitions/AnyString",
+								"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+							},
+							{
+								"type": "string",
+								"pattern": "^.*$"
 							},
 							{
 								"type": "object",
@@ -52185,10 +51959,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -52198,10 +51972,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -52901,10 +52675,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -52914,10 +52688,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -53721,15 +53495,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "object",
@@ -53985,15 +53756,12 @@
 								"description": "物品的材料",
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "string",
@@ -54016,15 +53784,12 @@
 					"description": "如果物品被成功选中, 所有true_eocs都会运行, 否则所有false_eocs都会运行;  \n选中的物品作为npc返回;  \n例如, n_hp()返回物品的hp",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "object",
@@ -54122,15 +53887,12 @@
 							"items": {
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "object",
@@ -54232,15 +53994,12 @@
 					"description": "如果未选择物品, 将运行的eoc",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "object",
@@ -54338,15 +54097,12 @@
 							"items": {
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "object",
@@ -55235,15 +54991,12 @@
 					"items": {
 						"anyOf": [
 							{
-								"allOf": [
-									{
-										"type": "object",
-										"properties": {}
-									},
-									{
-										"type": "string"
-									}
-								]
+								"$ref": "#/definitions/AnyString",
+								"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+							},
+							{
+								"type": "string",
+								"pattern": "^.*$"
 							},
 							{
 								"type": "string",
@@ -55259,15 +55012,12 @@
 									{
 										"anyOf": [
 											{
-												"allOf": [
-													{
-														"type": "object",
-														"properties": {}
-													},
-													{
-														"type": "string"
-													}
-												]
+												"$ref": "#/definitions/AnyString",
+												"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+											},
+											{
+												"type": "string",
+												"pattern": "^.*$"
 											},
 											{
 												"type": "string",
@@ -55633,7 +55383,7 @@
 		"{npc_remove_item_with?:undefined;}": {
 			"type": "object"
 		},
-		"Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">": {
+		"Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">": {
 			"type": "object",
 			"properties": {
 				"container": {
@@ -55721,21 +55471,14 @@
 				}
 			}
 		},
-		"{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}": {
+		"{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}": {
 			"type": "object",
 			"properties": {
 				"npc_spawn_item": {
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
 						},
 						{
 							"type": "object",
@@ -55833,21 +55576,14 @@
 		"{u_spawn_item?:undefined;}": {
 			"type": "object"
 		},
-		"{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}": {
+		"{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}": {
 			"type": "object",
 			"properties": {
 				"u_spawn_item": {
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
 						},
 						{
 							"type": "object",
@@ -56087,15 +55823,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -56190,15 +55923,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -56296,15 +56026,12 @@
 					"description": "成功施法后运行的eoc",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "object",
@@ -56402,15 +56129,12 @@
 							"items": {
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "object",
@@ -56512,15 +56236,12 @@
 					"description": "施法失败后运行的eoc",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "object",
@@ -56618,15 +56339,12 @@
 							"items": {
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "object",
@@ -59181,15 +58899,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -59284,15 +58999,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -60355,15 +60067,12 @@
 			"description": "专用于某种ID的字符串对象",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -61163,10 +60872,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -61176,10 +60885,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -61879,10 +61588,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -61892,10 +61601,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -63114,10 +62823,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -63127,10 +62836,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -63816,10 +63525,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -63829,10 +63538,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -64751,10 +64460,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -64764,10 +64473,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -65586,15 +65295,12 @@
 					"description": "产生的地形效果",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -66812,15 +66518,12 @@
 			"description": "弹药类型ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -66851,15 +66554,12 @@
 			"description": "Ammo ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -67947,15 +67647,12 @@
 			"description": "技能",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -70946,15 +70643,12 @@
 			"description": "TOOL ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -73214,15 +72908,12 @@
 			"description": "材料ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -73234,15 +72925,12 @@
 			"description": "Comestible ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -74108,15 +73796,12 @@
 					"description": "消费后运行的条件影响。支持内联或字符串id",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "object",
@@ -74214,15 +73899,12 @@
 							"items": {
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "object",
@@ -76156,15 +75838,12 @@
 			"description": "ItemGroup ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -76281,15 +75960,12 @@
 					"description": "添加为创建项目的内容。  \n不检查它们是否可以放入项目中。  \n这允许水, 其中包含一本书, 其中包含一个钢架, 其中包含一具尸体。",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -78844,15 +78520,12 @@
 			"description": "TalkTopic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -79109,10 +78782,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -79122,10 +78795,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -79811,10 +79484,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -79824,10 +79497,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -80465,15 +80138,12 @@
 			"description": "Monster ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81002,15 +80672,12 @@
 			"description": "区域效果生成器ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81163,15 +80830,12 @@
 			"description": "伤害类型ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81206,15 +80870,12 @@
 			"description": "音效ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81226,15 +80887,12 @@
 			"description": "音效变体ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81497,15 +81155,12 @@
 			"description": "大地图地块ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81552,15 +81207,12 @@
 			"additionalProperties": {
 				"anyOf": [
 					{
-						"allOf": [
-							{
-								"type": "object",
-								"properties": {}
-							},
-							{
-								"type": "string"
-							}
-						]
+						"$ref": "#/definitions/AnyString",
+						"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+					},
+					{
+						"type": "string",
+						"pattern": "^.*$"
 					},
 					{
 						"type": "string",
@@ -81571,15 +81223,12 @@
 						"items": {
 							"anyOf": [
 								{
-									"allOf": [
-										{
-											"type": "object",
-											"properties": {}
-										},
-										{
-											"type": "string"
-										}
-									]
+									"$ref": "#/definitions/AnyString",
+									"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+								},
+								{
+									"type": "string",
+									"pattern": "^.*$"
 								},
 								{
 									"type": "string",
@@ -81614,15 +81263,12 @@
 			"additionalProperties": {
 				"anyOf": [
 					{
-						"allOf": [
-							{
-								"type": "object",
-								"properties": {}
-							},
-							{
-								"type": "string"
-							}
-						]
+						"$ref": "#/definitions/AnyString",
+						"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+					},
+					{
+						"type": "string",
+						"pattern": "^.*$"
 					},
 					{
 						"type": "string",
@@ -81633,15 +81279,12 @@
 						"items": {
 							"anyOf": [
 								{
-									"allOf": [
-										{
-											"type": "object",
-											"properties": {}
-										},
-										{
-											"type": "string"
-										}
-									]
+									"$ref": "#/definitions/AnyString",
+									"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+								},
+								{
+									"type": "string",
+									"pattern": "^.*$"
 								},
 								{
 									"type": "string",
@@ -81717,15 +81360,12 @@
 								{
 									"anyOf": [
 										{
-											"allOf": [
-												{
-													"type": "object",
-													"properties": {}
-												},
-												{
-													"type": "string"
-												}
-											]
+											"$ref": "#/definitions/AnyString",
+											"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+										},
+										{
+											"type": "string",
+											"pattern": "^.*$"
 										},
 										{
 											"type": "string",
@@ -81930,15 +81570,12 @@
 			"description": "TalkTopic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -81994,15 +81631,12 @@
 				"om_terrain": {
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -82265,10 +81899,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -82278,10 +81912,10 @@
 						{
 							"allOf": [
 								{
-									"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+									"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 								},
 								{
-									"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+									"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 								},
 								{
 									"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -82967,10 +82601,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -82980,10 +82614,10 @@
 									{
 										"allOf": [
 											{
-												"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+												"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 											},
 											{
-												"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+												"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 											},
 											{
 												"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -83542,15 +83176,12 @@
 			"description": "任务定义ID",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -83908,15 +83539,12 @@
 			"description": "Generic ID格式",
 			"anyOf": [
 				{
-					"allOf": [
-						{
-							"type": "object",
-							"properties": {}
-						},
-						{
-							"type": "string"
-						}
-					]
+					"$ref": "#/definitions/AnyString",
+					"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+				},
+				{
+					"type": "string",
+					"pattern": "^.*$"
 				},
 				{
 					"type": "string",
@@ -84427,15 +84055,12 @@
 					"description": "当车辆部件被销毁时, 此物品组中的物品 (参见 ITEM_SPAWN.md) 将在地面上的部件周围生成。  \n或者只是物品组的 id。",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -85690,15 +85315,12 @@
 								"description": "目标技能 ALL为全部",
 								"anyOf": [
 									{
-										"allOf": [
-											{
-												"type": "object",
-												"properties": {}
-											},
-											{
-												"type": "string"
-											}
-										]
+										"$ref": "#/definitions/AnyString",
+										"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+									},
+									{
+										"type": "string",
+										"pattern": "^.*$"
 									},
 									{
 										"type": "string",
@@ -85915,15 +85537,12 @@
 					"description": "此对话的id 或是在哪些对话上扩展选项",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -86476,15 +86095,12 @@
 					"description": "(字符串或物品组) 当怪物死亡时生成的物品组",
 					"anyOf": [
 						{
-							"allOf": [
-								{
-									"type": "object",
-									"properties": {}
-								},
-								{
-									"type": "string"
-								}
-							]
+							"$ref": "#/definitions/AnyString",
+							"description": "不影响智能补全的任意字符串\n(string&Object)\n(string&String)"
+						},
+						{
+							"type": "string",
+							"pattern": "^.*$"
 						},
 						{
 							"type": "string",
@@ -91354,10 +90970,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -91367,10 +90983,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"
@@ -92070,10 +91686,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{npc_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{npc_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{u_spawn_item?:undefined;}"
@@ -92083,10 +91699,10 @@
 							{
 								"allOf": [
 									{
-										"$ref": "#/definitions/Omit<{spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
+										"$ref": "#/definitions/Omit<{spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;count?:number|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|NumMathExp|Arithmetic|undefined;container?:IDObj<string>|undefined;use_item_group?:boolean|undefined;suppress_message?:boolean|undefined;},\"spawn_item\">"
 									},
 									{
-										"$ref": "#/definitions/{u_spawn_item:string|(string&{})|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
+										"$ref": "#/definitions/{u_spawn_item:string|AnyString|{global_val:string;}|{u_val:string;}|{npc_val:string;}|{context_val:string;}|{var_val:string;}|MutatorsMonFaction|MutatorsGameOption|MutatorsMaTechName|MutatorsMaTechDesc|MutatorsVaildTech|MutatorsLocRelative|MutatorsTopicItem;}"
 									},
 									{
 										"$ref": "#/definitions/{npc_spawn_item?:undefined;}"

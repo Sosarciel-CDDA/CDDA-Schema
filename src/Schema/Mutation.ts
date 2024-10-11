@@ -64,11 +64,11 @@ export type Mutation = {
     restricts_gear?: BodyPartID[];
     /**突变时将删除任何刚性装甲的身体部位列表 任何综合装甲物品都直接考虑 */
     remove_rigid?: BodyPartID[];
-    /**如果有“restricts_gear”列表, 则设置该位置是否仍然允许由软材料制成的物品  
+    /**如果有"restricts_gear"列表, 则设置该位置是否仍然允许由软材料制成的物品  
      * 只有其中一种类型需要是软的才能被视为软 默认值:false  
      */
     allow_soft_gear?: boolean;
-    /**如果为 true, 则在突变时会销毁“restricts_gear”位置中的齿轮 (默认值: false) */
+    /**如果为 true, 则在突变时会销毁"restricts_gear"位置中的齿轮 (默认值: false) */
     destroys_gear?: boolean;
     /**变异带来的累赘度 */
     encumbrance_always?: [BodyPartID,number][];
@@ -84,7 +84,7 @@ export type Mutation = {
     active?: boolean;
     /**当为true时, 这个'active'突变开始活动 (默认值: false, 需要'active') */
     starts_active?: boolean;
-    /**激活此突变的成本。需要将饥饿、口渴或疲劳值设置为true (默认值: 0) */
+    /**激活此突变的成本。需要将饥饿, 口渴或疲劳值设置为true (默认值: 0) */
     cost?: number;
     /**设置需要经过多少时间单位 (回合 * 当前玩家速度)才能再次支付成本。需要大于一才有任何效果 (默认值: 0) */
     time?: number;
@@ -160,7 +160,7 @@ export type Mutation = {
     anger_relations?: [string, number][];
     /**可食用材料列表 (默认值: 空) */
     can_only_eat?: MaterialID[];
-    /**你受限于的`MED`列表, 包括变异剂、血清、阿司匹林、绷带等 (默认值: 空) */
+    /**你受限于的`MED`列表, 包括变异剂, 血清, 阿司匹林, 绷带等 (默认值: 空) */
     can_only_heal_with?: AnyItemID[];
     /**只对你有效的`MED`列表。查看`CANT_HEAL_EVERYONE`标志项 (默认值: 空) */
     can_heal_with?: AnyItemID[];
@@ -198,7 +198,7 @@ export type Mutation = {
     movecost_modifier?: number;
     /**在平坦地形上的移动速度成本修饰符, 没有障碍 (0.9是10%更快, 1.1是10%更慢) */
     movecost_flatground_modifier?: number;
-    /**在粗糙、不平坦地形上的移动速度成本修饰符 (0.9是10%更快, 1.1是10%更慢) */
+    /**在粗糙, 不平坦地形上的移动速度成本修饰符 (0.9是10%更快, 1.1是10%更慢) */
     movecost_obstacle_modifier?: number;
     /**游泳速度成本修饰符 (0.9是10%更快, 1.1是10%更慢) */
     movecost_swim_modifier?: number;
@@ -249,6 +249,15 @@ export type Mutation = {
     flags?: MutFlag[];
     /**怪物摄像机, 能够使用列表中友好怪物作为额外视觉来源的能力。最大视距等于怪物的白天视觉。数字指定它可以向化身"传输"视觉的范围。*/
     moncams?: [MonsterID, number][];
+    /**将角色的外观更改为具有指定 ID 和图块类别的另一个指定事物  
+     * 请确保 ID 与图块类别相对应  
+     * 有效的图块类别为"none", "vehicle_part", "terrain", "item", "furniture", "trap", "field", "lighting",  
+     * "monster", "bullet", "hit_entity", "weather", "overmap_terrain", "map_extra", "overmap_note"  
+     */
+    override_look?: {
+        id: string;
+        tile_category: "none"|"vehicle_part"|"terrain"|"item"|"furniture"|"trap"|"field"|"lighting"|"monster"|"bullet"|"hit_entity"|"weather"|"overmap_terrain"|"map_extra"|"overmap_note";
+    }
 };
 
 /**肢体的潮湿保护 */

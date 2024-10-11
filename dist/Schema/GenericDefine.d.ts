@@ -1,3 +1,4 @@
+import { AnyString } from "@zwa73/utils";
 import { AmmunitionType } from "./AmmiunitionType";
 import { Effect } from "./Effect";
 import { Enchantment } from "./Enchantment";
@@ -77,7 +78,7 @@ export type CustBP = CddaID<"BP">;
 /**自定义的ID
  * @TJS-type string
  */
-export type CddaID<T extends string> = string & {} | `${T}_${string}`;
+export type CddaID<T extends string> = AnyString | `${T}_${string}` | SchemaString;
 /**Copyfrom的保留字段 */
 export type CopyfromResFD = "id" | "type";
 /**可以复制的物体 */

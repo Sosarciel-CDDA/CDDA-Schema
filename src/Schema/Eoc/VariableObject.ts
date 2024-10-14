@@ -99,6 +99,7 @@ export const NoParamTalkerCondList = [
     "is_item"             ,//是物品
     "is_furnitur"         ,//是家具
     "driving"             ,//正在驾驶
+    "exists"              ,//talker是否存在
 ] as const;
 
 /**双Talker无参条件 */
@@ -266,7 +267,7 @@ export type BoolOperaAnd = {
 };
 /**比较字符串是否相等 */
 export type BoolOperaCompStr = {
-    /**比较字符串是否相等 */
+    /**比较字符串是否相等 可以用'yes'进行空值判断 */
     compare_string: [AnyObj,AnyObj]
 };
 

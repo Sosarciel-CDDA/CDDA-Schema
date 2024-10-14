@@ -236,7 +236,7 @@ export type BoolOperaAnd = {
 };
 /**比较字符串是否相等 */
 export type BoolOperaCompStr = {
-    /**比较字符串是否相等 */
+    /**比较字符串是否相等 可以用'yes'进行空值判断 */
     compare_string: [AnyObj, AnyObj];
 };
 /**专用于某种ID的字符串对象  */

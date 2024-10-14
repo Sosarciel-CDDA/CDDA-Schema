@@ -21,6 +21,7 @@ export type EocEffectList = [
     QueueEoc,
     EocSelector,
     RunInvEocs,
+    MapRunItemEocs,
     RunEocWith,
     RunEocUntil,
     WeightedListEocs,
@@ -64,7 +65,7 @@ export type NoParamEffect = [
     NoParamTalkerEffect
 ][number];
 /**双Talker无参效果表 */
-export declare const NoParamTalkerEffectList: readonly ["prevent_death"];
+export declare const NoParamTalkerEffectList: readonly ["prevent_death", "die"];
 /**双Talker无参效果 */
 export type NoParamTalkerEffect = `${`u_` | `npc_`}${typeof NoParamTalkerEffectList[number]}`;
 /**math赋值表达式 */
@@ -81,8 +82,9 @@ type RunEocUntil = {
     /**循环运行Eoc */
     run_eoc_until: (ParamsEoc);
     /**循环条件, 为真时循环 */
-    condition: (BoolObj);
-    /**最大循环限制, 超过时停止并报错 默认100*/
+    condition?: (BoolObj);
+    /**最大循环限制, 超过时停止并报错
+     * 不设置条件时为指定循环次数 默认100*/
     iteration?: (NumObj);
 };
 /**延迟队列eoc */
@@ -99,6 +101,10 @@ type RunEocWith = {
     variables?: Record<string, string | boolean | number>;
     /**将loc所在位置的单位作为beta talker */
     beta_loc?: (LocObj);
+    /**将loc所在位置的单位作为alpha talker */
+    alpha_loc?: (LocObj);
+    alpha_talker?: (NumObj);
+    beta_talker?: (NumObj);
 };
 /**Eoc选项 */
 type EocSelector = {
@@ -410,7 +416,7 @@ type RunInvEocs = TalkerVar<{
      * worn_only    - 如果为true, 只返回穿着的物品;
      * wielded_only - 如果为true, 只返回手持的物品
      */
-    search_data?: InvSearchData[];
+    search_data?: ItemSearchData[];
     /**如果使用了manual或manual_mult, 将显示的菜单的名称 */
     title?: (StrObj);
     /**如果物品被成功选中, 所有true_eocs都会运行, 否则所有false_eocs都会运行;
@@ -421,8 +427,47 @@ type RunInvEocs = TalkerVar<{
     /**如果未选择物品, 将运行的eoc */
     false_eocs?: (ParamsEoc);
 }, "run_inv_eocs">;
+/**在地图上遍历某loc内所有物品
+ * 以物品为u运行eoc
+ */
+type MapRunItemEocs = TalkerVar<{
+    /**物品的选择方式;
+     * 可选值包括:
+     * all          - 所有符合条件的物品都会被选中;
+     * random       - 从所有符合条件的物品中随机选择一个;
+     * manual       - 打开一个菜单, 列出所有可以选择的物品, 你可以从中选择一个;
+     * manual_mult  - 与manual相同, 但可以选择多个物品
+     */
+    map_run_item_eocs: "all" | "random" | "manual" | "manual_mult";
+    /**扫描物品的位置；如果没有指定位置，则只扫描talker所在的格子 */
+    loc?: (LocObj);
+    /**围绕位置/talker的搜索半径 */
+    min_radius?: (NumObj);
+    /**围绕位置/talker的搜索半径 */
+    max_radius?: (NumObj);
+    /**如果使用了manual或manual_mult, 将显示的菜单的名称 */
+    title?: (StrObj);
+    /**设置目标物品的条件;
+     * 缺少search_data意味着可以选择任何物品;
+     * 条件可以是:
+     * id           - 特定物品的id;
+     * category     - 物品的类别 (区分大小写, 应始终使用小写);
+     * flags        - 物品具有的标志
+     * material     - 物品的材料;
+     * worn_only    - 如果为true, 只返回穿着的物品;
+     * wielded_only - 如果为true, 只返回手持的物品
+     */
+    search_data: ItemSearchData[];
+    /**如果物品被成功选中, 所有true_eocs都会运行, 否则所有false_eocs都会运行;
+     * 选中的物品作为npc返回;
+     * 例如, n_hp()返回物品的hp
+     */
+    true_eocs?: (ParamsEoc);
+    /**如果未选择物品, 将运行的eoc */
+    false_eocs?: (ParamsEoc);
+}, 'map_run_item_eocs'>;
 /**背包筛选数据 */
-export type InvSearchData = {
+export type ItemSearchData = {
     /**特定物品的id */
     id?: IDObj<AnyItemID>;
     /**物品的类别 (区分大小写, 应始终使用小写) */
@@ -491,9 +536,9 @@ type TurnCost = {
     /**使 alpha 消耗一定时间 */
     turn_cost: (Time);
 };
-/**将 talker 的 character_id 传入对象字符串中 */
+/**将 talker 的 character_id 传入对象变量 */
 type SetTalker = TalkerVar<{
-    set_talker: (StrObj);
+    set_talker: (NumObj);
 }, "set_talker">;
 /**参数Eoc */
 export type ParamsEoc = (IDObj<EocID> | InlineEoc) | (IDObj<EocID> | InlineEoc)[];

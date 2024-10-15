@@ -67,6 +67,7 @@ export type EocEffectList = [
     Foreach             ,//遍历
     TurnCost            ,//消耗一定时间
     SetTalker           ,//获取talker的character_id
+    MakeSound           ,//制造声音
 ];
 
 /**无参效果 */
@@ -502,7 +503,6 @@ type MapRunItemEocs = TalkerVar<{
     false_eocs?: (ParamsEoc);
 },'map_run_item_eocs'>
 
-
 /**背包筛选数据 */
 export type ItemSearchData = {
     /**特定物品的id */
@@ -546,6 +546,14 @@ type SwitchCase = {
         effect:EocEffect|EocEffect[];
     }[];
 };
+
+/**制造文本声音 */
+type MakeSound = TalkerVar<{
+    make_sound: (StrObj);
+    /**音量 */
+    volume: (NumObj);
+},'make_sound'>
+
 
 /**遍历 */
 type Foreach = {

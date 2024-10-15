@@ -55,7 +55,8 @@ export type EocEffectList = [
     UnsetFlag,
     Foreach,
     TurnCost,
-    SetTalker
+    SetTalker,
+    MakeSound
 ];
 /**无参效果 */
 export type NoParamEffect = [
@@ -508,6 +509,12 @@ type SwitchCase = {
         effect: EocEffect | EocEffect[];
     }[];
 };
+/**制造文本声音 */
+type MakeSound = TalkerVar<{
+    make_sound: (StrObj);
+    /**音量 */
+    volume: (NumObj);
+}, 'make_sound'>;
 /**遍历 */
 type Foreach = {
     /**遍历类型  */

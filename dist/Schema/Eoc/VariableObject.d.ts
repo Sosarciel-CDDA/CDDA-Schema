@@ -92,7 +92,7 @@ export type NoParamCond = [
     "is_by_radio"
 ][number];
 /**双Talker无参条件列表 */
-export declare const NoParamTalkerCondList: readonly ["female", "male", "can_drop_weapon", "is_alive", "has_weapon", "is_avatar", "is_npc", "is_character", "is_monster", "is_item", "is_furnitur", "driving"];
+export declare const NoParamTalkerCondList: readonly ["female", "male", "can_drop_weapon", "is_alive", "has_weapon", "is_avatar", "is_npc", "is_character", "is_monster", "is_item", "is_furnitur", "driving", "exists"];
 /**双Talker无参条件 */
 export type NoParamTalkerCond = `${`u_` | `npc_`}${typeof NoParamTalkerCondList[number]}`;
 /**math比较表达式 */

@@ -138,7 +138,26 @@ export declare const RespTraitTypeList: readonly ["NONE", "LIE", "PERSUADE", "IN
 /**可用的社交技能 */
 export type RespTraitType = typeof RespTraitTypeList[number];
 /**预定义的对话 列表 */
-export declare const DefineTopicList: readonly ["TALK_DONE", "TALK_NONE", "TALK_FRIEND", "TALK_RADIO", "TALK_LEADER", "TALK_STOLE_ITEM", "TALK_WAKE_UP", "TALK_FRIEND_GUARD", "TALK_MUG", "TALK_STRANGER_AGGRESSIVE", "TALK_STRANGER_SCARED", "TALK_STRANGER_WARY", "TALK_STRANGER_FRIENDLY", "TALK_STRANGER_NEUTRAL", "TALK_COMBAT_COMMANDS", "TALK_LUO_ORDERS", "TALK_MISC_RULES"];
+export declare const DefineTopicList: readonly [
+    "TALK_DONE",
+    "TALK_NONE",
+    "TALK_FRIEND",
+    "TALK_RADIO",
+    "TALK_LEADER",
+    "TALK_STOLE_ITEM",
+    "TALK_WAKE_UP",
+    "TALK_FRIEND_GUARD",
+    "TALK_MUG",
+    "TALK_STRANGER_AGGRESSIVE",
+    "TALK_STRANGER_SCARED",
+    "TALK_STRANGER_WARY",
+    "TALK_STRANGER_FRIENDLY",
+    "TALK_STRANGER_NEUTRAL",
+    "TALK_COMBAT_COMMANDS",
+    "TALK_LUO_ORDERS",
+    "TALK_MISC_RULES"
+];
+
 /**预定义的对话 */
 export type DefineTopic = typeof DefineTopicList[number];
 /**动态回复构造器

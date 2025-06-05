@@ -9,6 +9,7 @@
         "rootDir": "./src",
         "declaration": true,
         "esModuleInterop": true,
+        "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
 			"@src/*" : ["./src/*"],

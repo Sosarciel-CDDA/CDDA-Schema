@@ -1,20 +1,21 @@
 {
-  "name": "cdda-schema",
+  "name": "@sosarciel-cdda/cdda-schema",
   "version": "1.0.0",
   "description": "cdda的schema验证",
   "main": "index.js",
   "scripts": {
     "expand-macro": "powershell scripts/expand-macro",
     "compile": "powershell scripts/compile",
+    "package": "powershell scripts/package",
     "build-schema": "powershell scripts/build-schema"
   },
   "author": "zwa73",
   "license": "ISC",
   "dependencies": {
+    "@zwa73/dev-utils": "^1.0.88",
     "@zwa73/utils": "^1.0.149"
   },
   "devDependencies": {
-    "@types/fluent-ffmpeg": "^2.1.24",
-    "@zwa73/dev-utils": "*"
+    "@types/fluent-ffmpeg": "^2.1.24"
   }
 }

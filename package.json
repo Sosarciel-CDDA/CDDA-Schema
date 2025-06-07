@@ -1,5 +1,5 @@
 {
-  "name": "@sosarciel-cdda/cdda-schema",
+  "name": "@sosarciel-cdda/schema",
   "version": "1.0.0",
   "description": "cdda的schema验证",
   "main": "index.js",

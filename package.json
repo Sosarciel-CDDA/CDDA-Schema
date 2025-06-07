@@ -17,5 +17,10 @@
   },
   "devDependencies": {
     "@types/fluent-ffmpeg": "^2.1.24"
-  }
+  },
+  "files": [
+    "dist",
+    "index.d.ts",
+    "index.js"
+  ]
 }
